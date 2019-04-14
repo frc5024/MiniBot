@@ -3,9 +3,11 @@
 import wpilib
 from commandbased import CommandBasedRobot
 from wpilib.command import Scheduler
+import os.path
 
 import Subsystems
 import Commands
+import Autonomous
 
 from oi import OI
 
@@ -18,15 +20,25 @@ class Robot(CommandBasedRobot):
         # Initalize the superclass
         super().robotInit()
 
+        # deploy location
+        self.deploy_path = os.path.dirname(__file__) + "/deploy"
+        print(self.deploy_path)
+
         # Subsystems
         self.DriveTrain = Subsystems.DriveTrain(self)
         self.OI = OI()
+        
 
-        # Commands
-        self.TriggerDrive = Commands.TriggerDrive(self)
+    def autonomousInit(self):
+        self.FrontHatch = Autonomous.FrontHatch(self, 15)
+        self.FrontHatch.start()
+        
+    def autonomousPeriodic(self):
+        Scheduler.getInstance().run()
 
     
     def teleopInit(self):
+        self.TriggerDrive = Commands.TriggerDrive(self)
         return super().teleopInit()
 
     def teleopPeriodic(self):

@@ -44,5 +44,5 @@ class PhysicsEngine:
         self.controller.distance_drive(x, y, angle)
 
         # Simulate encoders (NOTE: These values have not been calibrated yet.)
-        hal_data['CAN'][drivetrain["front_left"]]['quad_position'] -= int(lf_motor * drivetrain["ticks_per_rev"])
-        hal_data['CAN'][drivetrain["front_right"]]['quad_position'] += int(rf_motor * drivetrain["ticks_per_rev"])
+        hal_data['CAN'][drivetrain["front_left"]]['quad_position'] -= int(lf_motor / 5 * drivetrain["ticks_per_rev"])
+        hal_data['CAN'][drivetrain["front_right"]]['quad_position'] += int(rf_motor /5 * drivetrain["ticks_per_rev"])
