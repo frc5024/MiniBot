@@ -4,6 +4,7 @@ import wpilib
 from commandbased import CommandBasedRobot
 from wpilib.command import Scheduler
 import os.path
+from robotpy_ext.autonomous import AutonomousModeSelector
 
 import Subsystems
 import Commands
@@ -22,7 +23,7 @@ class Robot(CommandBasedRobot):
 
         # deploy location
         self.deploy_path = os.path.dirname(__file__) + "/deploy"
-        print(self.deploy_path)
+        print(f"Deploy Path: {self.deploy_path}")
 
         # Subsystems
         self.DriveTrain = Subsystems.DriveTrain(self)

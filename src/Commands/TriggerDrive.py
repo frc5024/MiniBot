@@ -5,6 +5,7 @@ from scipy.interpolate import interp1d
 from RobotMap import controllers, drive
 
 from raiderrobotics.Control.SlewLimiter import SlewLimiter
+from raiderrobotics.Control.EncoderRecorder import Recorder, Player
 
 simulation_map = interp1d([-1,1], [0, 1])
 
@@ -20,6 +21,9 @@ class TriggerDrive(Command):
 
         # Set acceleration limiter
         self.smoother = SlewLimiter(drive["acceleration_limit"])
+
+        # Speed multiplier (used to change direction on button press)
+        self.speed_multiplier = 1
 
     def execute(self):
         # Reset speed and rotation for safety
@@ -38,10 +42,14 @@ class TriggerDrive(Command):
         speed += right_trigger
         speed -= left_trigger
 
+        # Switch directions with x button
+        if self.driver_controller.getXButtonReleased():
+            self.speed_multiplier *= - 1
+
         # Pass speed through the smoother
         speed = self.smoother.Feed(speed)
 
         # Get rotation from joystick
         rotation += self.driver_controller.getX(GenericHID.Hand.kLeft) * -1
 
-        self.robot.DriveTrain.ArcadeDrive(speed*-1, rotation)
+        self.robot.DriveTrain.ArcadeDrive(speed*self.speed_multiplier*-1, rotation * 0.7)
