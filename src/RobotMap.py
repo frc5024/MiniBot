@@ -14,3 +14,8 @@ controllers = {
     "Driver": 0,
     "Operator": 1
 }
+
+## Drive Tuning ##
+drive = {
+    "acceleration_limit": 0.2
+}

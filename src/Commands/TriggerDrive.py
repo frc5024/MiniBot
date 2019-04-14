@@ -2,7 +2,9 @@ from wpilib.command import Command
 from wpilib.interfaces import GenericHID
 from scipy.interpolate import interp1d
 
-from RobotMap import controllers
+from RobotMap import controllers, drive
+
+from raiderrobotics.Control.SlewLimiter import SlewLimiter
 
 simulation_map = interp1d([-1,1], [0, 1])
 
@@ -15,6 +17,9 @@ class TriggerDrive(Command):
 
         # Set up xbox controller
         self.driver_controller = self.robot.OI.driver_controller
+
+        # Set acceleration limiter
+        self.smoother = SlewLimiter(drive["acceleration_limit"])
 
     def execute(self):
         # Reset speed and rotation for safety
@@ -33,6 +38,8 @@ class TriggerDrive(Command):
         speed += right_trigger
         speed -= left_trigger
 
+        # Pass speed through the smoother
+        speed = self.smoother.Feed(speed)
 
         # Get rotation from joystick
         rotation += self.driver_controller.getX(GenericHID.Hand.kLeft) * -1
