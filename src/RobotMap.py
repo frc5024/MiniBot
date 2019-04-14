@@ -6,7 +6,8 @@ drivetrain = {
     "front_left": 1,
     "back_left": 2,
     "front_right": 3,
-    "back_right": 4
+    "back_right": 4,
+    "ticks_per_rev":360
 }
 
 ## Xbox Controllers ##

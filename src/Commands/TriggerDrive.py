@@ -44,5 +44,6 @@ class TriggerDrive(Command):
         # Get rotation from joystick
         rotation += self.driver_controller.getX(GenericHID.Hand.kLeft) * -1
         
+        print(self.robot.DriveTrain.GetLeftEncoder())
 
         self.robot.DriveTrain.ArcadeDrive(speed, rotation)

@@ -3,9 +3,9 @@
         "robot": {
         "w": 2.5,
         "h": 2.5,
-        "starting_x": 25,
-        "starting_y": 17,
-        "starting_angle": 0
+        "starting_x": 6,
+        "starting_y": 10,
+        "starting_angle": 180
         },
         "analog": {
 

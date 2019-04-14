@@ -3,6 +3,7 @@ import wpilib
 
 from wpilib.command.subsystem import Subsystem
 from wpilib.drive import DifferentialDrive
+from wpilib.robotbase import RobotBase
 from ctre.wpi_talonsrx import WPI_TalonSRX
 
 from RobotMap import drivetrain
@@ -27,6 +28,14 @@ class DriveTrain(Subsystem):
         self.right_gearbox.front.setNeutralMode(ctre.NeutralMode.Brake)
         self.right_gearbox.back.setNeutralMode(ctre.NeutralMode.Brake)
 
+        # Configure encoders
+        if RobotBase.isReal():
+            self.left_gearbox.front.configFactoryDefault()
+            self.right_gearbox.front.configFactoryDefault()
+
+        self.left_gearbox.front.setSensorPhase(True)
+        self.right_gearbox.front.setSensorPhase(True)
+
         # WPILib drive
         self.drive = wpilib.drive.DifferentialDrive(self.left_gearbox.speedcontroller, self.right_gearbox.speedcontroller)
     
@@ -35,3 +44,9 @@ class DriveTrain(Subsystem):
 
     def initDefaultCommand(self):
         self.setDefaultCommand(TriggerDrive(self.robot))
+    
+    def GetLeftEncoder(self):
+        return self.left_gearbox.front.getSensorCollection().getQuadraturePosition()
+    
+    def GetLeftEncoder(self):
+        return self.right_gearbox.front.getSensorCollection().getQuadraturePosition()
