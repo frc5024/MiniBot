@@ -1,0 +1,29 @@
+{
+    "pyfrc": {
+        "robot": {
+        "w": 2.5,
+        "h": 2.5,
+        "starting_x": 25,
+        "starting_y": 17,
+        "starting_angle": 0
+        },
+        "analog": {
+
+        },
+        "pwm": {
+
+        },
+        "CAN": {
+            "1": "Front Left Drive Motor",
+            "2": "Rear Left Drive Motor",
+            "3": "Front Right Drive Motor",
+            "4": "Rear Right Drive Motor"
+        },
+        "solenoid": {
+
+        },
+      "field": {
+          "season": 2019
+      }
+    }
+}

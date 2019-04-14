@@ -1,0 +1,7 @@
+pygame
+pyfrc
+pynetworktables
+robotpy-cscore
+robotpy-ctre
+robotpy-navx
+scipy
