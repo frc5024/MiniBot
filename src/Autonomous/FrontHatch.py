@@ -8,18 +8,39 @@ class FrontHatch(TimedCommand):
 
         self.requires(self.robot.DriveTrain)
 
-        self.profile = self.robot.DriveTrain.GeneratePath(self.robot.deploy_path + "/output/fronthatch.pf1.csv")
+        self.profiles = []
+        pathfiles = self.robot.DriveTrain.Ungroup(self.robot.deploy_path + "/pathgroups/Rocket.json")
+
+        for path in pathfiles:
+            self.profiles.append(self.robot.DriveTrain.GeneratePath(self.robot.deploy_path + "/output/" + path["file"]))
 
     def initialize(self):
         self.robot.DriveTrain.ResetGyro()
-        drawTrajectory(self.profile)
+        drawTrajectory(self.profiles[0])
         pass
     
     def execute(self):
-        if not self.profile.left_follower.finished:
-            self.robot.DriveTrain.FollowPath(self.profile)
-        else:
+        if len(self.profiles) < 1:
+            print("Ran out of profiles to follow")
+            self.isFinished = lambda: True
+            return
+        
+        # If we are at the end of a path, stop drivetrain and reset
+        if self.profiles[0].left_follower.finished:
             self.robot.DriveTrain.Stop()
+            
+            print(f"Finished profile: {self.profiles[0].name}")
+            self.profiles = self.profiles[1:]
+
+            # Draw the next path in the simulator
+            try:
+                drawTrajectory(self.profiles[0])
+            except:
+                print("")
+            return
+        
+        self.robot.DriveTrain.FollowPath(self.profiles[0])
 
     def end(self):
         pass
+    

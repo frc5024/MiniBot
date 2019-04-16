@@ -1,0 +1,19 @@
+{
+    "paths":[
+        {
+            "name":"Front Hatch",
+            "file":"fronthatch.pf1.csv",
+            "pause":1
+        },
+        {
+            "name":"Transition",
+            "file":"aligntoloading.pf1.csv",
+            "pause":0
+        },
+        {
+            "name":"Second Hatch",
+            "file":"loadingstation.pf1.csv",
+            "pause":0
+        }
+    ]
+}

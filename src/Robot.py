@@ -31,8 +31,9 @@ class Robot(CommandBasedRobot):
         
 
     def autonomousInit(self):
-        self.FrontHatch = Autonomous.FrontHatch(self, 15)
-        self.FrontHatch.start()
+        # self.FrontHatch = Autonomous.PathGroup(self, "/pathgroups/Rocket.json")
+        # self.FrontHatch.start()
+        pass
         
     def autonomousPeriodic(self):
         Scheduler.getInstance().run()

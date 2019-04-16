@@ -1,5 +1,6 @@
 import ctre
 import wpilib
+import json
 
 from wpilib.command.subsystem import Subsystem
 from wpilib.drive import DifferentialDrive
@@ -50,19 +51,32 @@ class DriveTrain(Subsystem):
         # WPILib drive
         self.drive = wpilib.drive.DifferentialDrive(self.left_gearbox.speedcontroller, self.right_gearbox.speedcontroller)
         self.drive.setSafetyEnabled(False)
+
+        # Encoder reset values
+        self.encoder_reset = (0,0)
     
     def ArcadeDrive(self, speed, rotation):
         self.drive.arcadeDrive(speed, rotation, False)
+    
+    def CheesyDrive(self, speed, rotation, quick_turn):
+        self.drive.curvatureDrive(speed, rotation, quick_turn)
+    
+    def RawDrive(self, l, r):
+        self.left_gearbox.speedcontroller.set(l)
+        self.right_gearbox.speedcontroller.set(r)
 
     def initDefaultCommand(self):
         self.setDefaultCommand(TriggerDrive(self.robot))
     
     def GetLeftEncoder(self):
-        return self.left_gearbox.front.getSelectedSensorPosition()
+        return self.left_gearbox.front.getSelectedSensorPosition() - self.encoder_reset[0]
     
     def GetRightEncoder(self):
-        return self.right_gearbox.front.getSelectedSensorPosition()
+        return self.right_gearbox.front.getSelectedSensorPosition() - self.encoder_reset[1]
     
+    def ZeroEncoders(self):
+        self.encoder_reset = (self.GetLeftEncoder(), self.GetRightEncoder())
+
     def GeneratePath(self, file: str) -> TankProfile:
         # Load the profile 
         trajectory = pf.deserialize_csv(file)
@@ -91,8 +105,13 @@ class DriveTrain(Subsystem):
         )
         output.right_follower.configurePIDVA(pathfinder_pid["p"] + 0.0, pathfinder_pid["i"] + 0.0, pathfinder_pid["d"] + 0.0, 1 / robot["max_velocity"], 0)
 
+        # Set the name to the filepath
+        output.name = file
+
         return output
-        
+    
+    def Ungroup(self, file):
+        return json.load(open(file, "r"))["paths"]
     
     def FollowPath(self, profile):
 
@@ -111,8 +130,6 @@ class DriveTrain(Subsystem):
 
         l = l + turn
         r = r - turn
-
-        print(l)
         
         self.drive.tankDrive(-l, -r)
     

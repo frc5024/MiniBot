@@ -5,6 +5,7 @@ class TankProfile:
     right_follower = None
     left_trajectory = None
     right_trajectory = None
+    name = None
 
 
 def drawTrajectory(profile: TankProfile):

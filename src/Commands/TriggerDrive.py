@@ -52,4 +52,12 @@ class TriggerDrive(Command):
         # Get rotation from joystick
         rotation += self.driver_controller.getX(GenericHID.Hand.kLeft) * -1
 
-        self.robot.DriveTrain.ArcadeDrive(speed*self.speed_multiplier*-1, rotation * 0.7)
+        # rotation *= abs(speed*0.6) + 0.5
+        if speed > 0.8:
+            rotation *= 0.9
+        elif speed > 0.3:
+            rotation *= 0.7
+        else:
+            rotation *= 0.5
+
+        self.robot.DriveTrain.ArcadeDrive(speed*self.speed_multiplier*-1, rotation )

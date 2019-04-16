@@ -1,9 +1,10 @@
 pygame
+opencv-python
 pyfrc
 pynetworktables
 robotpy-cscore
 robotpy-ctre
 robotpy-navx
 scipy
-pybind11>=2.2
+pybind11
 robotpy-pathfinder

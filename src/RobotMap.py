@@ -21,8 +21,8 @@ robot = {
 
 ## Motion Profiling PID ##
 pathfinder_pid = {
-    "p": 0.08,
-    "i": 0.0,
+    "p": 0.06,
+    "i": 1.0,
     "d": 0.0
 }
 
