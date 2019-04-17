@@ -15,6 +15,7 @@ from Commands.TriggerDrive import TriggerDrive
 
 from raiderrobotics.GearBoxes.TalonGearBox import TalonGearBox
 from raiderrobotics.Motion.TankProfile import TankProfile
+from raiderrobotics.webview.components import register, unregister, ComponentType
 
 class DriveTrain(Subsystem):
     def __init__(self, robot):
@@ -22,6 +23,7 @@ class DriveTrain(Subsystem):
         super().__init__()
 
         self.robot = robot
+        register("DriveTrain", ComponentType["subsystem"])
 
         # Robot gyro
         self.gyro = AHRS.create_spi()
@@ -43,10 +45,10 @@ class DriveTrain(Subsystem):
             self.right_gearbox.front.configFactoryDefault()
 
         self.left_gearbox.front.setSensorPhase(True)
-        self.right_gearbox.front.setSensorPhase(True)
+        self.right_gearbox.front.setSensorPhase(False)
 
-        self.left_gearbox.front.setInverted(True)
-        self.right_gearbox.front.setInverted(True)
+        self.left_gearbox.front.setInverted(False)
+        self.right_gearbox.front.setInverted(False)
 
         # WPILib drive
         self.drive = wpilib.drive.DifferentialDrive(self.left_gearbox.speedcontroller, self.right_gearbox.speedcontroller)
@@ -138,3 +140,6 @@ class DriveTrain(Subsystem):
     
     def ResetGyro(self):
         self.gyro.reset()
+    
+    def end(self):
+        unregister("DriveTrain")

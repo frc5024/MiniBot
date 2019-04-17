@@ -6,9 +6,13 @@ from wpilib.command import Scheduler
 import os.path
 from robotpy_ext.autonomous import AutonomousModeSelector
 
+from raiderrobotics.webview.httpserver import HTTPServer
+
 import Subsystems
 import Commands
 import Autonomous
+
+from RobotMap import webview
 
 from oi import OI
 
@@ -24,6 +28,17 @@ class Robot(CommandBasedRobot):
         # deploy location
         self.deploy_path = os.path.dirname(__file__) + "/deploy"
         print(f"Deploy Path: {self.deploy_path}")
+
+        # Start webserver
+        try:
+            self.webview = HTTPServer(webview["port"])
+            self.webview_enabled = True
+        except:
+            print("Unable to start webserver. The port is probably in use")
+            self.webview_enabled = False
+        
+        if self.webview_enabled:
+            self.webview.Start()
 
         # Subsystems
         self.DriveTrain = Subsystems.DriveTrain(self)

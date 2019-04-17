@@ -3,7 +3,7 @@
         {
             "name":"Front Hatch",
             "file":"fronthatch.pf1.csv",
-            "pause":1
+            "pause":3
         },
         {
             "name":"Transition",

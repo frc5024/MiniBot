@@ -1,10 +1,13 @@
 from wpilib.command import TimedCommand
 from raiderrobotics.Motion.TankProfile import drawTrajectory
+from raiderrobotics.webview.components import register, unregister, ComponentType
 
 class FollowPath(TimedCommand):
     def __init__(self, robot, path, timeout):
-        super().__init__("Profiles to front cargo station", timeout)
+        super().__init__("FollowPath", timeout)
         self.robot = robot
+        register(f"FollowPath ({path['name']})", ComponentType["command"])
+        self.file_path = path
 
         self.requires(self.robot.DriveTrain)
 
@@ -29,3 +32,4 @@ class FollowPath(TimedCommand):
     def end(self):
         self.robot.DriveTrain.gyro.reset()
         self.robot.DriveTrain.ZeroEncoders()
+        unregister(f"FollowPath ({self.file_path['name']})")
