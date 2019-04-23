@@ -41,3 +41,14 @@ drive = {
 webview = {
     "port": 5800
 }
+
+config = {
+    "drivetrain":{
+        "motors":{
+            "lf":1,
+            "lr":2,
+            "rf":3,
+            "rr":4
+        }
+    }
+}
