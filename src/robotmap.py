@@ -9,5 +9,8 @@ config = {
     },
     "xbox_controllers":{
         "driver": 0
+    },
+    "webview":{
+        "port":5800
     }
 }

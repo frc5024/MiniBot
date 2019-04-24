@@ -7,7 +7,7 @@ import magicbot
 # import os.path
 # from robotpy_ext.autonomous import AutonomousModeSelector
 
-# from raiderrobotics.webview.httpserver import HTTPServer
+from raiderrobotics.webview.httpserver import HTTPServer
 
 # import Subsystems
 # import Commands
@@ -64,8 +64,25 @@ import magicbot
 
 from components.drive import drivetrain, triggerdrive
 
+from robotmap import config
+
 class Robot(magicbot.MagicRobot):
     drive: triggerdrive.TriggerDrive
+
+    def robotInit(self):
+        super().robotInit()
+
+        # Start webserver
+        try:
+            self.webview = HTTPServer(config["webview"]["port"])
+            self.webview_enabled = True
+        except:
+            print("Unable to start webserver. The port is probably in use")
+            self.webview_enabled = False
+        
+        if self.webview_enabled:
+            self.webview.Start()
+
 
     def createObjects(self):
         self.drivetrain = drivetrain.DriveTrain()

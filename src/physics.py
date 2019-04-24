@@ -37,8 +37,8 @@ class PhysicsEngine:
         rr_motor = hal_data['CAN'][drivetrain["back_right"]]['value']
 
         # Simulate movement.
-        speed, rotation = four_motor_drivetrain(lr_motor, rr_motor, lf_motor, rf_motor, speed=15)
-        self.controller.drive(speed, rotation / 2, tm_diff)
+        speed, rotation = four_motor_drivetrain(lr_motor, rr_motor, lf_motor, rf_motor, speed=10)
+        self.controller.drive(speed, rotation / 1.5, tm_diff)
 
         # x, y, angle = self.drivetrain.get_distance(lf_motor, rf_motor, tm_diff)
         # self.controller.distance_drive(x, y, angle)
