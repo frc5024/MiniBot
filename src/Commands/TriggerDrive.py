@@ -7,11 +7,14 @@ from scipy.interpolate import interp1d
 from RobotMap import controllers, drive
 
 from raiderrobotics.Control.SlewLimiter import SlewLimiter
+from raiderrobotics.Control.PControl import PControl
 from raiderrobotics.Control.EncoderRecorder import Recorder, Player
 from raiderrobotics.webview.components import register, unregister, ComponentType
 from raiderrobotics.Toggle import Toggle
 
 simulation_map = interp1d([-1,1], [0, 1])
+
+zeroLimit = lambda x: x if x >= 0 else 0
 
 class TriggerDrive(Command):
     def __init__(self, robot):
@@ -44,19 +47,19 @@ class TriggerDrive(Command):
         self.movement_limit.Feed()
 
         # Store trigger readings in seprate values for easy use in simulation edge case checks
-        right_trigger = self.driver_controller.getTriggerAxis(GenericHID.Hand.kRight)
-        left_trigger = self.driver_controller.getTriggerAxis(GenericHID.Hand.kLeft)
+        speed += zeroLimit(self.driver_controller.getTriggerAxis(GenericHID.Hand.kRight))
+        speed -= zeroLimit(self.driver_controller.getTriggerAxis(GenericHID.Hand.kLeft))
 
         # Get rotation from joystick
         rotation += self.driver_controller.getX(GenericHID.Hand.kLeft) * -1
 
         # Saftey checks for simulations on @ewpratten's laptop with a steam controller
-        if left_trigger < 0:
-            left_trigger = 0.0
+        # if left_trigger < 0:
+        #     left_trigger = 0.0
 
         # Get speed from differential of triggers
-        speed += right_trigger
-        speed -= left_trigger
+        # speed += right_trigger
+        # speed -= left_trigger
 
         # Switch directions with x button
         if self.driver_controller.getXButtonReleased():

@@ -14,4 +14,7 @@ def register(name: str, type: ComponentType):
     components[name] = {"type": reverse_ComponentType[str(type)]}
 
 def unregister(name: str):
-    del components[name]
+    try:
+        del components[name]
+    except:
+        print(f"Tried to unregister {name} but failed")
