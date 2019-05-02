@@ -25,4 +25,15 @@ public class GearBox{
         // Currently broken. The internet is of no help.
         // this.speedcontroller = SpeedControllerGroup(front, rear);
     }
+
+    public void limitCurrent(int peakCurrent, int holdCurrent, int peakDuration){
+        int timeout = 0;
+        this.front.configPeakCurrentLimit(peakCurrent, timeout);
+        this.front.configPeakCurrentDuration(peakDuration, timeout);
+        this.front.configContinuousCurrentLimit(holdCurrent, timeout);
+
+        this.rear.configPeakCurrentLimit(peakCurrent, timeout);
+        this.rear.configPeakCurrentDuration(peakDuration, timeout);
+        this.rear.configContinuousCurrentLimit(holdCurrent, timeout);
+    }
 }

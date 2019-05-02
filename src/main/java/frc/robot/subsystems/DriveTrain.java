@@ -12,20 +12,26 @@ import frc.robot.Constants;
  * An example subsystem.  You can replace me with your own Subsystem.
  */
 public class DriveTrain extends Subsystem {
-  GearBox leftGearbox;
-  GearBox rightGearbox;
+  GearBox mLeftGearbox;
+  GearBox mRightGearbox;
 
-  DifferentialDrive drivebase;
+  DifferentialDrive mDrivebase;
+
+  private static DriveTrain mInstance = new DriveTrain();
 
 
   public DriveTrain(){
     /* Create both gearbox objects */
-    leftGearbox = new GearBox(new WPI_TalonSRX(Constants.leftFrontMotor), new WPI_TalonSRX(Constants.leftRearMotor));
-    rightGearbox = new GearBox(new WPI_TalonSRX(Constants.rightFrontMotor), new WPI_TalonSRX(Constants.rightRearMotor));
+    mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.leftFrontMotor), new WPI_TalonSRX(Constants.leftRearMotor));
+    mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.rightFrontMotor), new WPI_TalonSRX(Constants.rightRearMotor));
+
+    /* Enable current limiting on each gearbox */
+    mLeftGearbox.limitCurrent(Constants.drivetrainPeakCurrent, Constants.drivetrainHoldCurrent, Constants.drivetrainCurrentTimeout);
+    mRightGearbox.limitCurrent(Constants.drivetrainPeakCurrent, Constants.drivetrainHoldCurrent, Constants.drivetrainCurrentTimeout);
 
     /* Create a DifferentialDrive out of each gearbox */
-    drivebase = new DifferentialDrive(leftGearbox.front, rightGearbox.front);
-    drivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
+    mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);
+    mDrivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
   }
 
   @Override
@@ -35,10 +41,10 @@ public class DriveTrain extends Subsystem {
   }
 
   public void arcadeDrive(double speed, double rotation){
-    drivebase.arcadeDrive(speed, rotation, false);
+    mDrivebase.arcadeDrive(speed, rotation, false);
   }
 
   public void arcadeDrive(double speed, double rotation, boolean isInputsSquared){
-    drivebase.arcadeDrive(speed, rotation, isInputsSquared);
+    mDrivebase.arcadeDrive(speed, rotation, isInputsSquared);
   }
 }

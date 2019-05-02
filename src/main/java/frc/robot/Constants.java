@@ -21,6 +21,9 @@ public class Constants {
   public static final int rightFrontMotor = 3;
   public static final int rightRearMotor = 4;
 
+  public static final int drivetrainPeakCurrent = 35;
+  public static final int drivetrainHoldCurrent = 33;
+  public static final int drivetrainCurrentTimeout = 30;
 
   /* TriggerDrive */
   public static final double accLimit = 0.15;
