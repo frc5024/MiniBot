@@ -18,4 +18,9 @@ public class SlewLimiter {
         this.output += error;
         return this.output;
     }
+
+    public void reset(){
+        this.output = 0.0;
+    }
+    
 }

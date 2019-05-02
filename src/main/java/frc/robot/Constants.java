@@ -26,7 +26,8 @@ public class Constants {
   public static final int drivetrainCurrentTimeout = 30;
 
   /* TriggerDrive */
-  public static final double accLimit = 0.15;
+  public static final double accelerationStep = 0.15;
+  public static final double gearshiftZone = 0.75;
 
   /* CameraServer */
   public static final int cameraserverPort = 1181;

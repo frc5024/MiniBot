@@ -1,10 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -15,13 +8,12 @@ import java.lang.Math;
 import frc.robot.Robot;
 import frc.robot.Constants;
 import frc.robot.common.SlewLimiter;
+import frc.robot.common.VirtualGearShifter;
 
-/**
- * An example command.  You can replace me with your own command.
- */
 public class TriggerDrive extends Command {
   XboxController driverController = Robot.m_oi.driverController;
-  SlewLimiter accelerationLimiter = new SlewLimiter(Constants.accLimit);
+  SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
+  VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone);
 
   public TriggerDrive() {
     requires(Robot.m_driveTrain);
@@ -46,15 +38,25 @@ public class TriggerDrive extends Command {
     double rotation = 0.0;
 
     /* Get Speed from triggers */
-    speed += limitTrigger(driverController.getTriggerAxis(GenericHID.Hand.kRight));
-    speed -= limitTrigger(driverController.getTriggerAxis(GenericHID.Hand.kLeft));
+    speed += limitTrigger(this.driverController.getTriggerAxis(GenericHID.Hand.kRight));
+    speed -= limitTrigger(this.driverController.getTriggerAxis(GenericHID.Hand.kLeft));
 
     /* Get rotation from joystick */
     rotation += driverController.getX(GenericHID.Hand.kLeft);
     rotation = (Math.abs(rotation) < 0.1) ? 0.0 : rotation;
+
+    /* Handle gearshifting on Y button hold */
+    if(this.driverController.getYButtonPressed()){
+      this.accelerator.reset();
+      this.gearShifter.shift(true);
+    } else if (this.driverController.getYButtonReleased()){
+      this.accelerator.reset();
+      this.gearShifter.shift(false);
+    }
     
-    /* Acceleration Limit */
-    speed = this.accelerationLimiter.feed(speed);
+    /* Feed the accelerator and gearshifter */
+    speed = this.gearShifter.feed(speed);
+    speed = this.accelerator.feed(speed);
 
     Robot.m_driveTrain.arcadeDrive(speed, rotation);
   }
