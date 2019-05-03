@@ -5,12 +5,13 @@ import jaci.pathfinder.PathfinderFRC;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.followers.EncoderFollower;
 import edu.wpi.first.wpilibj.Notifier;
+import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.common.TankTrajectory;
 import frc.robot.common.GearBox;
 
 public class PathingHelper{
-    public TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, boolean swap_paths, boolean invert_gyro){
+    public TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro){
         /* Load file into a left and right path */
         Trajectory left_trajectory;
         Trajectory right_trajectory;
@@ -25,11 +26,11 @@ public class PathingHelper{
             }
         }  catch (Exception e) {
             System.out.println("FATAL: Unable to load trajectory "+ filename +"!");
-            return new TankTrajectory(left_gearbox, right_gearbox, 0.02);
+            return new TankTrajectory(left_gearbox, right_gearbox, gyro, 0.02, false);
         }
 
         /* Create the object to be outputted */
-        TankTrajectory output = new TankTrajectory(left_gearbox, right_gearbox, left_trajectory.get(0).dt);
+        TankTrajectory output = new TankTrajectory(left_gearbox, right_gearbox, gyro, left_trajectory.get(0).dt, invert_gyro);
 
         /* Initialize the encoder followers */
         output.left_encoderfollower = new EncoderFollower(left_trajectory);
