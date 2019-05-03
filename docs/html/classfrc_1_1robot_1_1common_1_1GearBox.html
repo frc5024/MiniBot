@@ -95,10 +95,13 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1GearBox
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abebe782e789f68c09781ae6c4cc9cbd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#abebe782e789f68c09781ae6c4cc9cbd1">GearBox</a> (WPI_TalonSRX <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a63e1210d00c5cbcd0f07bdea0d9099e1">front</a>, WPI_TalonSRX rear)</td></tr>
+<tr class="memdesc:abebe782e789f68c09781ae6c4cc9cbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a> Constructor.  <a href="#abebe782e789f68c09781ae6c4cc9cbd1">More...</a><br /></td></tr>
 <tr class="separator:abebe782e789f68c09781ae6c4cc9cbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ba6a188271406b1fb170e9d7bd4826e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a7ba6a188271406b1fb170e9d7bd4826e">limitCurrent</a> (int peakCurrent, int holdCurrent, int peakDuration)</td></tr>
+<tr class="memdesc:a7ba6a188271406b1fb170e9d7bd4826e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper method around the WPI_TalonSRX current limiting functionality.  <a href="#a7ba6a188271406b1fb170e9d7bd4826e">More...</a><br /></td></tr>
 <tr class="separator:a7ba6a188271406b1fb170e9d7bd4826e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a523908890513399a09811fbd6c5f6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a1a523908890513399a09811fbd6c5f6b">getTicks</a> ()</td></tr>
+<tr class="memdesc:a1a523908890513399a09811fbd6c5f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper around the encoder for the front or master talon.  <a href="#a1a523908890513399a09811fbd6c5f6b">More...</a><br /></td></tr>
 <tr class="separator:a1a523908890513399a09811fbd6c5f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -139,7 +142,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00015">15</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a> Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">front</td><td>The front or master talon in the gearbox </td></tr>
+    <tr><td class="paramname">rear</td><td>The rear or slave talon in the gearbox </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00021">21</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
@@ -159,7 +171,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00040">40</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p>Wrapper around the encoder for the front or master talon. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of ticks reported by the front or master talon </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00058">58</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
@@ -195,7 +210,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00029">29</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p>Wrapper method around the WPI_TalonSRX current limiting functionality. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">peakCurrent</td><td>The current threshold that must be passed before the limiter kicks in </td></tr>
+    <tr><td class="paramname">holdCurrent</td><td>The current to hold the motors at once the threshold has been passed </td></tr>
+    <tr><td class="paramname">peakDuration</td><td>The duration of the corrent limit </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00042">42</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>

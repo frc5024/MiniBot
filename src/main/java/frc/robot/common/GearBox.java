@@ -5,13 +5,19 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.SpeedController;
 
 /**
- * A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has an encoder attached
+ * A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has an encoder attached.
  */
 public class GearBox{
     public WPI_TalonSRX front, rear;
 
     public SpeedControllerGroup speedcontroller;
 
+    /**
+     * GearBox Constructor
+     * 
+     * @param front The front or master talon in the gearbox
+     * @param rear The rear or slave talon in the gearbox
+     */
     public GearBox(WPI_TalonSRX front, WPI_TalonSRX rear){
         /* Store both Talons */
         this.front = front;
@@ -26,6 +32,13 @@ public class GearBox{
         // this.speedcontroller = SpeedControllerGroup(front, rear);
     }
 
+    /**
+     * Wrapper method around the WPI_TalonSRX current limiting functionality
+     * 
+     * @param peakCurrent The current threshold that must be passed before the limiter kicks in
+     * @param holdCurrent The current to hold the motors at once the threshold has been passed
+     * @param peakDuration The duration of the corrent limit
+     */
     public void limitCurrent(int peakCurrent, int holdCurrent, int peakDuration){
         int timeout = 0;
         this.front.configPeakCurrentLimit(peakCurrent, timeout);
@@ -37,6 +50,11 @@ public class GearBox{
         this.rear.configContinuousCurrentLimit(holdCurrent, timeout);
     }
 
+    /**
+     * Wrapper around the encoder for the front or master talon
+     * 
+     * @return Number of ticks reported by the front or master talon
+     */
     public int getTicks(){
         return this.front.getSelectedSensorPosition();
     }
