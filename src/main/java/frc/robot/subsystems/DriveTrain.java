@@ -2,7 +2,9 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.common.GearBox;
@@ -40,11 +42,41 @@ public class DriveTrain extends Subsystem {
     setDefaultCommand(new TriggerDrive());
   }
 
+  public static DriveTrain getInstance(){
+    return mInstance;
+  }
+
   public void arcadeDrive(double speed, double rotation){
     mDrivebase.arcadeDrive(speed, rotation, false);
   }
 
   public void arcadeDrive(double speed, double rotation, boolean isInputsSquared){
     mDrivebase.arcadeDrive(speed, rotation, isInputsSquared);
+  }
+
+  public void cheesyDrive(double speed, double rotation, boolean isQuickTurn){
+    mDrivebase.curvatureDrive(speed, rotation, isQuickTurn);
+  }
+
+  public void setBrakes(boolean on){
+    NeutralMode mode = on ? NeutralMode.Brake : NeutralMode.Coast;
+
+    this.mLeftGearbox.front.setNeutralMode(mode);
+    this.mLeftGearbox.rear.setNeutralMode(mode);
+    this.mRightGearbox.front.setNeutralMode(mode);
+    this.mRightGearbox.rear.setNeutralMode(mode);
+  }
+
+  public int getLeftGearboxTicks(){
+    return this.mLeftGearbox.getTicks();
+  }
+
+  public int getRightGearboxTicks(){
+    return this.mRightGearbox.getTicks();
+  }
+
+  public void outputTelemetry(){
+    SmartDashboard.putNumber("DriveTrin Left Gearbox Ticks", getLeftGearboxTicks());
+    SmartDashboard.putNumber("DriveTrin Right Gearbox Ticks", getRightGearboxTicks());
   }
 }

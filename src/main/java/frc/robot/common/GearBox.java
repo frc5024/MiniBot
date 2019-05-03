@@ -36,4 +36,8 @@ public class GearBox{
         this.rear.configPeakCurrentDuration(peakDuration, timeout);
         this.rear.configContinuousCurrentLimit(holdCurrent, timeout);
     }
+
+    public int getTicks(){
+        return this.front.getSelectedSensorPosition();
+    }
 }

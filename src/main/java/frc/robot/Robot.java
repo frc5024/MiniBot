@@ -30,8 +30,8 @@ import frc.robot.subsystems.DriveTrain;
 public class Robot extends TimedRobot {
 
   /* Sybsystems */
-  public static DriveTrain m_driveTrain;
-  public static OI m_oi;
+  public static DriveTrain mDriveTrain;
+  public static OI mOI;
 
   /**
    * This function is run when the robot is first started up and should be
@@ -46,8 +46,8 @@ public class Robot extends TimedRobot {
     cameraServer.setSource(camera);
     System.out.println("DONE");
 
-    m_oi = new OI();
-    m_driveTrain = new DriveTrain();
+    mOI = new OI();
+    mDriveTrain = new DriveTrain();
   }
 
   /**
@@ -78,25 +78,11 @@ public class Robot extends TimedRobot {
     Scheduler.getInstance().run();
   }
 
-  /**
-   * This autonomous (along with the chooser code above) shows how to select
-   * between different autonomous modes using the dashboard. The sendable
-   * chooser code works with the Java SmartDashboard. If you prefer the
-   * LabVIEW Dashboard, remove all of the chooser code and uncomment the
-   * getString code to get the auto name from the text box below the Gyro
-   *
-   * <p>You can add additional auto modes by adding additional commands to the
-   * chooser code above (like the commented example) or additional comparisons
-   * to the switch structure below with additional strings & commands.
-   */
   @Override
   public void autonomousInit() {
     SmartDashboard.putString("Robot Mode", "AUTO");
   }
 
-  /**
-   * This function is called periodically during autonomous.
-   */
   @Override
   public void autonomousPeriodic() {
     Scheduler.getInstance().run();
@@ -108,18 +94,18 @@ public class Robot extends TimedRobot {
     
   }
 
-  /**
-   * This function is called periodically during operator control.
-   */
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+    updateSmartdashboard();
   }
 
-  /**
-   * This function is called periodically during test mode.
-   */
   @Override
   public void testPeriodic() {
   }
+
+  private void updateSmartdashboard(){
+    mDriveTrain.outputTelemetry();
+  }
+
 }

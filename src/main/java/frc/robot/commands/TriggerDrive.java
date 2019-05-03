@@ -11,12 +11,12 @@ import frc.robot.common.SlewLimiter;
 import frc.robot.common.VirtualGearShifter;
 
 public class TriggerDrive extends Command {
-  XboxController driverController = Robot.m_oi.driverController;
+  XboxController driverController = Robot.mOI.driverController;
   SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
   VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone);
 
   public TriggerDrive() {
-    requires(Robot.m_driveTrain);
+    requires(Robot.mDriveTrain);
   }
 
   // Called just before this Command runs the first time
@@ -58,7 +58,7 @@ public class TriggerDrive extends Command {
     speed = this.gearShifter.feed(speed);
     speed = this.accelerator.feed(speed);
 
-    Robot.m_driveTrain.arcadeDrive(speed, rotation);
+    Robot.mDriveTrain.arcadeDrive(speed, rotation);
   }
 
   // Make this return true when this Command no longer needs to run execute()
