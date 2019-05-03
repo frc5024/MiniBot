@@ -1,10 +1,8 @@
 package frc.robot.common;
 
-import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.PathfinderFRC;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.followers.EncoderFollower;
-import edu.wpi.first.wpilibj.Notifier;
 import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.common.TankTrajectory;
