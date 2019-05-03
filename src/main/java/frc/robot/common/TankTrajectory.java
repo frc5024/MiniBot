@@ -68,6 +68,8 @@ public class TankTrajectory{
 
     public void stop(){
         this.follower_notifier.stop();
+        this.left_gearbox.front.set(0.0);
+        this.right_gearbox.front.set(0.0);
     }
 
     private void feed(){
