@@ -28,7 +28,7 @@ doxygen ./doxygen.config
 
 The documentation will the be automattically pushed to the website for this repo.
 
-5024 members should not worry about this because the documentation is automatically built during our code review process.
+5024 members should not worry about this because the documentation is automatically deployed on every push, and once per day by travis-ci.
 
 ## Pull requests
 Pull requests is our prefered method of merging code. For a PR to be merged, it must:
