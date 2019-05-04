@@ -1,4 +1,4 @@
-# MiniBot
+# MiniBot [![Build Status](https://travis-ci.org/frc5024/MiniBot.svg?branch=master)](https://travis-ci.org/frc5024/MiniBot)
 This is the code behing MiniBot for the 2019 offseason.
 
 ## Installation
