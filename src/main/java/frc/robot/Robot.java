@@ -3,6 +3,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.cameraserver.CameraServer;
@@ -14,6 +15,7 @@ import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
+  public double last_timestamp = Timer.getFPGATimestamp();
 
   /* Sybsystems */
   public static DriveTrain mDriveTrain;
@@ -56,6 +58,10 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledPeriodic() {
     Scheduler.getInstance().run();
+
+    /* Run all updaters */
+    updateSmartdashboard();
+    updateTimestamp();
   }
 
   @Override
@@ -66,6 +72,10 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousPeriodic() {
     Scheduler.getInstance().run();
+
+    /* Run all updaters */
+    updateSmartdashboard();
+    updateTimestamp();
   }
 
   @Override
@@ -77,15 +87,28 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+
+    /* Run all updaters */
     updateSmartdashboard();
+    updateTimestamp();
   }
 
   @Override
   public void testPeriodic() {
   }
 
-  private void updateSmartdashboard(){
+  /**
+   * Asks all Subsystems to push their telemetry data to SmartDashboard
+   */
+  private void updateSmartdashboard() {
     mDriveTrain.outputTelemetry();
+  }
+  
+  /**
+   * Asks the FPGA how long it has been powered on, then stores the value in last_timestamp
+   */
+  private void updateTimestamp() {
+    this.last_timestamp = Timer.getFPGATimestamp();
   }
 
 }
