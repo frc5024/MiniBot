@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniBot: MiniBot</title>
+<title>MiniBot: MiniBot [![Build Status](https://travis-ci.org/frc5024/MiniBot.svg?branch=master)](https://travis-ci.org/frc5024/MiniBot)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,10 +81,43 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">MiniBot </div>  </div>
+<div class="title">MiniBot [![Build Status](<a href="https://travis-ci.org/frc5024/MiniBot.svg?branch=master">https://travis-ci.org/frc5024/MiniBot.svg?branch=master</a>)](<a href="https://travis-ci.org/frc5024/MiniBot">https://travis-ci.org/frc5024/MiniBot</a>) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><p>This is the code behing MiniBot for the 2019 offseason.</p>
+<h2>Installation</h2>
+<p>This code can be "installed" in one of two ways. First, is via an official release:</p>
+<p>These are the steps:</p><ul>
+<li>Get the latest release from github</li>
+<li>Unpack the compressed archive</li>
+<li>Open it as a folder in vscode</li>
+<li>Set your team number in wpilib</li>
+<li>Deploy using wpilib</li>
+</ul>
+<p>The second way is to use rolling release / waterfall. Just do the steps above, but use git to clone the master branch instead of grabbing the latest release.</p>
+<p>NOTE: 5024 members should always use the second method.</p>
+<h2>Generating documentation</h2>
+<h3>Writing comments</h3>
+<p>To add comments that are pushed to the website, follow the <a href="https://en.wikipedia.org/wiki/Javadoc">javadoc</a> guidelines.</p>
+<h3>Deploying to the website</h3>
+<p>To build the documentation, make sure you have doxygen installed, then run:</p>
+<div class="fragment"><div class="line">doxygen ./doxygen.config </div></div><!-- fragment --><p>The documentation will the be automattically pushed to the website for this repo.</p>
+<p>5024 members should not worry about this because the documentation is automatically deployed on every push, and once per day by travis-ci.</p>
+<h2>Pull requests</h2>
+<p>Pull requests is our prefered method of merging code. For a PR to be merged, it must:</p><ul>
+<li>Pass style checking</li>
+<li>Be approved by a mentor or team lead</li>
+<li>Compile without any errors or warnings</li>
+</ul>
+<h2>Deployment</h2>
+<p>When deploying code to our robots we have a problem where, on the first few tries, the deployment fails due to not being able to find the RIO. Just keep trying, and it will eventually work.</p>
+<h2>The team</h2>
+<p>This codebase is built and tested by the <a href="https://github.com/frc5024">5024 programming team</a> with help from our mentors:</p><ul>
+<li><a href="https://github.com/johnlownie"></a></li>
+<li><a href="https://github.com/LordMichaelmort"></a></li>
+<li><a href="https://github.com/awpratten"></a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
