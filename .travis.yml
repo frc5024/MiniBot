@@ -1,4 +1,8 @@
 language: java
+jdk:
+ - oraclejdk11
+before_script:
+ - ./gradlew installToolchain
 script:
  - ./gradlew assemble
  - ./gradlew test
