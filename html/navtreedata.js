@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "MiniBot", "index.html", [
+    [ "MiniBot [![Build Status](https://travis-ci.org/frc5024/MiniBot.svg?branch=master)](https://travis-ci.org/frc5024/MiniBot)", "index.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ]
     ] ],
