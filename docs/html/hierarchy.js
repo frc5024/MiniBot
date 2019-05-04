@@ -7,6 +7,7 @@ var hierarchy =
     [ "frc.robot.Main", "classfrc_1_1robot_1_1Main.html", null ],
     [ "frc.robot.OI", "classfrc_1_1robot_1_1OI.html", null ],
     [ "frc.robot.common.PathingHelper", "classfrc_1_1robot_1_1common_1_1PathingHelper.html", null ],
+    [ "frc.robot.common.control.PID", "classfrc_1_1robot_1_1common_1_1control_1_1PID.html", null ],
     [ "frc.robot.common.SlewLimiter", "classfrc_1_1robot_1_1common_1_1SlewLimiter.html", null ],
     [ "frc.robot.common.TankTrajectory", "classfrc_1_1robot_1_1common_1_1TankTrajectory.html", null ],
     [ "frc.robot.common.VirtualGearShifter", "classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html", null ],

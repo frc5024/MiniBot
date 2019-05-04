@@ -10,6 +10,8 @@ var classfrc_1_1robot_1_1Robot =
     [ "teleopPeriodic", "classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7", null ],
     [ "testPeriodic", "classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e", null ],
     [ "updateSmartdashboard", "classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8", null ],
+    [ "updateTimestamp", "classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a", null ],
+    [ "last_timestamp", "classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf", null ],
     [ "mDriveTrain", "classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07", null ],
     [ "mOI", "classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef", null ]
 ];
