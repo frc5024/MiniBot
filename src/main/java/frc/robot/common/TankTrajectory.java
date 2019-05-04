@@ -11,6 +11,11 @@ import frc.robot.common.GearBox;
 
 /**
  * A Wrapper around a pair of EncoderFollowers 
+ * 
+ * This code is based off of this example:
+ * http://wpilib.screenstepslive.com/s/currentCS/m/84338/l/1021631-integrating-path-following-into-a-robot-program
+ * 
+ * And uses Jaci's pathfinder library
  */
 public class TankTrajectory{
     GearBox left_gearbox;
