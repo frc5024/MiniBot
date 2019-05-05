@@ -109,29 +109,41 @@ $(document).ready(function(){initNavTree('VirtualGearShifter_8java_source.html',
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html">    3</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html">VirtualGearShifter</a>{</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">boolean</span> isHighGear = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">double</span> lowGearLimit;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#aaa70da4f9e0c6db3552c507c4a616161">    7</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#aaa70da4f9e0c6db3552c507c4a616161">VirtualGearShifter</a>(<span class="keywordtype">double</span> lowGearLimit){</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        this.lowGearLimit = lowGearLimit;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">feed</a>(<span class="keywordtype">double</span> value){</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">if</span> (this.isHighGear){</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> value * this.lowGearLimit;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">double</span> lowGearLimit, coast_timeout;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">double</span> coast_timer = 0.0; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a22999e76e419b1db5fb9713302df40bf">    8</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a22999e76e419b1db5fb9713302df40bf">VirtualGearShifter</a>(<span class="keywordtype">double</span> lowGearLimit, <span class="keywordtype">double</span> acceleration_step){</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        this.lowGearLimit = lowGearLimit;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        this.coast_timeout = 1 / acceleration_step;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">feed</a>(<span class="keywordtype">double</span> value) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6">shouldCoast</a>()) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            this.coast_timer -= 1.0;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">shift</a>(<span class="keywordtype">boolean</span> doShift){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        this.isHighGear = doShift;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_ad980a530fa84f3e04da658c60ccf77b7"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">frc.robot.common.VirtualGearShifter.shift</a></div><div class="ttdeci">void shift(boolean doShift)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00019">VirtualGearShifter.java:19</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_af35a1df05308624b0f0fae24cb7e4980"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">frc.robot.common.VirtualGearShifter.feed</a></div><div class="ttdeci">double feed(double value)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00011">VirtualGearShifter.java:11</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (this.isHighGear){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> value * this.lowGearLimit;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">shift</a>(<span class="keywordtype">boolean</span> doShift) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this.isHighGear = doShift;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.coast_timer = this.coast_timeout;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6">shouldCoast</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> this.coast_timer &gt; 0.0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_a8c2a291ed907f389d05bba9dba43eab6"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6">frc.robot.common.VirtualGearShifter.shouldCoast</a></div><div class="ttdeci">boolean shouldCoast()</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00030">VirtualGearShifter.java:30</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_ad980a530fa84f3e04da658c60ccf77b7"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7">frc.robot.common.VirtualGearShifter.shift</a></div><div class="ttdeci">void shift(boolean doShift)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00025">VirtualGearShifter.java:25</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_af35a1df05308624b0f0fae24cb7e4980"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980">frc.robot.common.VirtualGearShifter.feed</a></div><div class="ttdeci">double feed(double value)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00013">VirtualGearShifter.java:13</a></div></div>
 <div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html">frc.robot.common.VirtualGearShifter</a></div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00003">VirtualGearShifter.java:3</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_aaa70da4f9e0c6db3552c507c4a616161"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#aaa70da4f9e0c6db3552c507c4a616161">frc.robot.common.VirtualGearShifter.VirtualGearShifter</a></div><div class="ttdeci">VirtualGearShifter(double lowGearLimit)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00007">VirtualGearShifter.java:7</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1common_1_1VirtualGearShifter_html_a22999e76e419b1db5fb9713302df40bf"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a22999e76e419b1db5fb9713302df40bf">frc.robot.common.VirtualGearShifter.VirtualGearShifter</a></div><div class="ttdeci">VirtualGearShifter(double lowGearLimit, double acceleration_step)</div><div class="ttdef"><b>Definition:</b> <a href="VirtualGearShifter_8java_source.html#l00008">VirtualGearShifter.java:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
