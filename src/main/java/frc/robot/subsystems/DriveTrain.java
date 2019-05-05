@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.TriggerDrive;
 import frc.robot.common.GearBox;
 import frc.robot.Constants;
+import frc.robot.common.SlewLimiter;
+import frc.robot.common.VirtualGearShifter;
 
 /**
  * The Subsystem in control of the robot's drivebase.
@@ -20,6 +22,9 @@ public class DriveTrain extends Subsystem {
     DifferentialDrive mDrivebase;
 
     private static DriveTrain mInstance = new DriveTrain();
+
+    SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
+    VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone, Constants.accelerationStep);
 
 
     public DriveTrain(){
@@ -59,7 +64,22 @@ public class DriveTrain extends Subsystem {
      * @param speed Forward speed (from -1.0 to 1.0)
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
-    public void arcadeDrive(double speed, double rotation){
+    public void arcadeDrive(double speed, double rotation) {
+        mDrivebase.arcadeDrive(speed, rotation, false);
+    }
+
+    /**
+     * Drive the robot with artificial acceleration and gear shifting
+     */
+    public void raiderDrive(double speed, double rotation) {
+        /* Feed the accelerator and gearshifter */
+        speed = this.gearShifter.feed(speed);
+        speed = this.accelerator.feed(speed);
+
+        /* Deal with coasting during a shift */
+        setBrakes(!this.gearShifter.shouldCoast());
+
+        /* Send motor data to the mDrivebase */
         mDrivebase.arcadeDrive(speed, rotation, false);
     }
 
@@ -117,8 +137,18 @@ public class DriveTrain extends Subsystem {
      * 
      * @return Number of ticks
      */
-    public int getRightGearboxTicks(){
+    public int getRightGearboxTicks() {
         return this.mRightGearbox.getTicks();
+    }
+    
+    /**
+     * Shifts to high gear and emulates a clutch
+     * 
+     * @param high Should the gearing be set high?
+     */
+    public void gearShift(boolean high) {
+        this.accelerator.reset();
+        this.gearShifter.shift(high);
     }
 
     /**
