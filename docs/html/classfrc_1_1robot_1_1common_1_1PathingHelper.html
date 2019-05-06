@@ -93,17 +93,17 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1Pathing
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a622f63cdee823942609bcb6307c546ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html">TankTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1PathingHelper.html#a622f63cdee823942609bcb6307c546ee">loadTankProfile</a> (String filename, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> left_gearbox, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro)</td></tr>
-<tr class="memdesc:a622f63cdee823942609bcb6307c546ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for generating and configuring <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> objects.  <a href="#a622f63cdee823942609bcb6307c546ee">More...</a><br /></td></tr>
-<tr class="separator:a622f63cdee823942609bcb6307c546ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace76ad93dff9704b6bc04cee0653c6f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html">TankTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1PathingHelper.html#ace76ad93dff9704b6bc04cee0653c6f6">loadTankProfile</a> (String filename, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> left_gearbox, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro, boolean invert_path)</td></tr>
+<tr class="memdesc:ace76ad93dff9704b6bc04cee0653c6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for generating and configuring <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> objects.  <a href="#ace76ad93dff9704b6bc04cee0653c6f6">More...</a><br /></td></tr>
+<tr class="separator:ace76ad93dff9704b6bc04cee0653c6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility class for simplifying motion profiling. </p>
 
 <p class="definition">Definition at line <a class="el" href="PathingHelper_8java_source.html#l00014">14</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a622f63cdee823942609bcb6307c546ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a622f63cdee823942609bcb6307c546ee">&#9670;&nbsp;</a></span>loadTankProfile()</h2>
+<a id="ace76ad93dff9704b6bc04cee0653c6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace76ad93dff9704b6bc04cee0653c6f6">&#9670;&nbsp;</a></span>loadTankProfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +142,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>invert_gyro</em>&#160;</td>
+          <td class="paramname"><em>invert_gyro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>invert_path</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,13 +166,14 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">right_gearbox</td><td>The right <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a> of the robot's DrieTrain </td></tr>
     <tr><td class="paramname">gyro</td><td>The NAVX gyro object </td></tr>
     <tr><td class="paramname">swap_paths</td><td>Should the left and right paths be swapped? (This will fix the 2019 pathing issue) </td></tr>
-    <tr><td class="paramname">invert_gyro</td><td>Should the gyro be inverted?</td></tr>
+    <tr><td class="paramname">invert_gyro</td><td>Should the gyro be inverted? </td></tr>
+    <tr><td class="paramname">invert_path</td><td>Should the robot follow the path backwards? (Usefull for backing up in a path)</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pre-configured <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="PathingHelper_8java_source.html#l00027">27</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PathingHelper_8java_source.html#l00028">28</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
 
 </div>
 </div>

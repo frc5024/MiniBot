@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniBot: Member List</title>
+<title>MiniBot: Inverse Motion Profiling</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1GearBox.html','');});
+$(document).ready(function(){initNavTree('md_docs_inversemotion.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -81,21 +81,22 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1GearBox
 
 <div class="header">
   <div class="headertitle">
-<div class="title">frc.robot.common.GearBox Member List</div>  </div>
+<div class="title">Inverse Motion Profiling </div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a63e1210d00c5cbcd0f07bdea0d9099e1">front</a></td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#abebe782e789f68c09781ae6c4cc9cbd1">GearBox</a>(WPI_TalonSRX front, WPI_TalonSRX rear)</td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a31b2d617ccc0cab78245317fc9c20fea">getInverseMotion</a>()</td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a1a523908890513399a09811fbd6c5f6b">getTicks</a>()</td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a7c19c56ee9254079e25ffcb910b8e44e">is_inverse_motion</a></td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a7ba6a188271406b1fb170e9d7bd4826e">limitCurrent</a>(int peakCurrent, int holdCurrent, int peakDuration)</td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a9986789910371a2fea0a22d7bef99a7c">setInverseMotion</a>(boolean is_inverted)</td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a0bb8404796c3a8c466bd2684e6b20966">speedcontroller</a></td><td class="entry"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">frc.robot.common.GearBox</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="textblock"><p>Pathfinder is not capable of following a path backwards. This leads to some problems.</p>
+<h2>The Problem</h2>
+<p>Let's say that you want the robot to back up during a motion profile. Due to pathfinder's "feature", this is impossible.</p>
+<p>So here is how we did it</p>
+<h2>The Solution</h2>
+<p>In order to follow a path backwards, it should be drawn as normal in pathweaver, then the <code>invert_path</code> flag should be set in <code>PathingHelper</code>.</p>
+<p>This will do the following to the path:</p><ul>
+<li>Flip left for right</li>
+<li>Invert all motors</li>
+<li>Reverse the sensor phase of all encoders</li>
+</ul>
+<p>When the path has been finished, or the <code>stop()</code> function has been called, all motors and encoders will be set back to normal settings. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

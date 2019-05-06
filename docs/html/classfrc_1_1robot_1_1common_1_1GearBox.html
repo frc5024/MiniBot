@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1GearBox
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classfrc_1_1robot_1_1common_1_1GearBox-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">frc.robot.common.GearBox Class Reference</div>  </div>
@@ -103,6 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a523908890513399a09811fbd6c5f6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a1a523908890513399a09811fbd6c5f6b">getTicks</a> ()</td></tr>
 <tr class="memdesc:a1a523908890513399a09811fbd6c5f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper around the encoder for the front or master talon.  <a href="#a1a523908890513399a09811fbd6c5f6b">More...</a><br /></td></tr>
 <tr class="separator:a1a523908890513399a09811fbd6c5f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9986789910371a2fea0a22d7bef99a7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a9986789910371a2fea0a22d7bef99a7c">setInverseMotion</a> (boolean is_inverted)</td></tr>
+<tr class="memdesc:a9986789910371a2fea0a22d7bef99a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips the sensor phase of the <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a>'s encoder.  <a href="#a9986789910371a2fea0a22d7bef99a7c">More...</a><br /></td></tr>
+<tr class="separator:a9986789910371a2fea0a22d7bef99a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b2d617ccc0cab78245317fc9c20fea"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a31b2d617ccc0cab78245317fc9c20fea">getInverseMotion</a> ()</td></tr>
+<tr class="memdesc:a31b2d617ccc0cab78245317fc9c20fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the gearbox currently in inverse motion mode?  <a href="#a31b2d617ccc0cab78245317fc9c20fea">More...</a><br /></td></tr>
+<tr class="separator:a31b2d617ccc0cab78245317fc9c20fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -110,6 +117,11 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a63e1210d00c5cbcd0f07bdea0d9099e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb8404796c3a8c466bd2684e6b20966"><td class="memItemLeft" align="right" valign="top">SpeedControllerGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a0bb8404796c3a8c466bd2684e6b20966">speedcontroller</a></td></tr>
 <tr class="separator:a0bb8404796c3a8c466bd2684e6b20966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7c19c56ee9254079e25ffcb910b8e44e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html#a7c19c56ee9254079e25ffcb910b8e44e">is_inverse_motion</a> = false</td></tr>
+<tr class="separator:a7c19c56ee9254079e25ffcb910b8e44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a> is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has an encoder attached. </p>
@@ -151,11 +163,33 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00021">21</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00023">23</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a31b2d617ccc0cab78245317fc9c20fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b2d617ccc0cab78245317fc9c20fea">&#9670;&nbsp;</a></span>getInverseMotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean frc.robot.common.GearBox.getInverseMotion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is the gearbox currently in inverse motion mode? </p>
+<dl class="section return"><dt>Returns</dt><dd>Is inverse motion? </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00080">80</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+
+</div>
+</div>
 <a id="a1a523908890513399a09811fbd6c5f6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a523908890513399a09811fbd6c5f6b">&#9670;&nbsp;</a></span>getTicks()</h2>
 
@@ -174,7 +208,7 @@ Public Attributes</h2></td></tr>
 <p>Wrapper around the encoder for the front or master talon. </p>
 <dl class="section return"><dt>Returns</dt><dd>Number of ticks reported by the front or master talon </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00058">58</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00060">60</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
@@ -220,7 +254,36 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00042">42</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00044">44</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+
+</div>
+</div>
+<a id="a9986789910371a2fea0a22d7bef99a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9986789910371a2fea0a22d7bef99a7c">&#9670;&nbsp;</a></span>setInverseMotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frc.robot.common.GearBox.setInverseMotion </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>is_inverted</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flips the sensor phase of the <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a>'s encoder. </p>
+<p>This is mainly used for inverse motion profiling</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_inverted</td><td>Should the phase be inverted? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00071">71</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
@@ -238,6 +301,30 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00011">11</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
+
+</div>
+</div>
+<a id="a7c19c56ee9254079e25ffcb910b8e44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c19c56ee9254079e25ffcb910b8e44e">&#9670;&nbsp;</a></span>is_inverse_motion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean frc.robot.common.GearBox.is_inverse_motion = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="GearBox_8java_source.html#l00015">15</a> of file <a class="el" href="GearBox_8java_source.html">GearBox.java</a>.</p>
 
 </div>
 </div>
