@@ -21,10 +21,11 @@ public class PathingHelper {
      * @param gyro The NAVX gyro object
      * @param swap_paths Should the left and right paths be swapped? (This will fix the 2019 pathing issue)
      * @param invert_gyro Should the gyro be inverted?
+     * @param invert_path Should the robot follow the path backwards? (Usefull for backing up in a path)
      * 
      * @return A pre-configured TankTrajectory
      */
-    public TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro){
+    public TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro, boolean invert_path){
         /* Load file into a left and right path */
         Trajectory left_trajectory;
         Trajectory right_trajectory;
@@ -39,11 +40,11 @@ public class PathingHelper {
             }
         }  catch (Exception e) {
             System.out.println("FATAL: Unable to load trajectory "+ filename +"!");
-            return new TankTrajectory(left_gearbox, right_gearbox, gyro, 0.02, false);
+            return new TankTrajectory(left_gearbox, right_gearbox, gyro, 0.02, false, false);
         }
 
         /* Create the object to be outputted */
-        TankTrajectory output = new TankTrajectory(left_gearbox, right_gearbox, gyro, left_trajectory.get(0).dt, invert_gyro);
+        TankTrajectory output = new TankTrajectory(left_gearbox, right_gearbox, gyro, left_trajectory.get(0).dt, invert_gyro, invert_path);
 
         /* Initialize the encoder followers */
         output.left_encoderfollower = new EncoderFollower(left_trajectory);

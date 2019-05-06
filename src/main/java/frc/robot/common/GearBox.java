@@ -12,6 +12,8 @@ public class GearBox{
 
     public SpeedControllerGroup speedcontroller;
 
+    private boolean is_inverse_motion = false;
+
     /**
      * GearBox Constructor
      * 
@@ -55,7 +57,27 @@ public class GearBox{
      * 
      * @return Number of ticks reported by the front or master talon
      */
-    public int getTicks(){
+    public int getTicks() {
         return this.front.getSelectedSensorPosition();
+    }
+    
+    /**
+     * Flips the sensor phase of the GearBox's encoder
+     * 
+     * This is mainly used for inverse motion profiling
+     * 
+     * @param is_inverted Should the phase be inverted?
+     */
+    public void setInverseMotion(boolean is_inverted) {
+        this.front.setSensorPhase(is_inverted);
+    }
+
+    /**
+     * Is the gearbox currently in inverse motion mode?
+     * 
+     * @return Is inverse motion?
+     */
+    public boolean getInverseMotion() {
+        return this.is_inverse_motion;
     }
 }

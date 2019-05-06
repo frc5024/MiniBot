@@ -70,6 +70,9 @@ public class DriveTrain extends Subsystem {
 
     /**
      * Drive the robot with artificial acceleration and gear shifting
+     * 
+     * @param speed Forward speed (from -1.0 to 1.0)
+     * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
     public void raiderDrive(double speed, double rotation) {
         /* Feed the accelerator and gearshifter */

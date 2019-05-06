@@ -26,6 +26,8 @@ public class TankTrajectory{
     double max_velocity = 0.0;
     double period;
     boolean gyro_inverted;
+    boolean is_finished = false;
+    boolean path_inverted;
 
     EncoderFollower left_encoderfollower;
     EncoderFollower right_encoderollower;
@@ -40,8 +42,9 @@ public class TankTrajectory{
      * @param gyro The NAVX gyro object
      * @param period The trajectory period time in seconds
      * @param gyro_inverted Should the gyro readings be inverted?
+     * @param path_inverted Should the robot follow the path backwards? (Usefull for backing up in a path)
      */
-    public TankTrajectory(GearBox left_gearbox,  GearBox right_gearbox, AHRS gyro, double period, boolean gyro_inverted){
+    public TankTrajectory(GearBox left_gearbox,  GearBox right_gearbox, AHRS gyro, double period, boolean gyro_inverted, boolean path_inverted){
         this.left_gearbox = left_gearbox;
         this.right_gearbox = right_gearbox;
 
@@ -50,6 +53,7 @@ public class TankTrajectory{
         this.period = period;
 
         this.gyro_inverted = gyro_inverted;
+        this.path_inverted = path_inverted;
     }
 
     /**
@@ -97,6 +101,13 @@ public class TankTrajectory{
      */
     public void start(){
         this.follower_notifier.startPeriodic(this.period);
+        this.is_finished = false;
+
+        /* Set inverse motion mode on gearboxes if needed */
+        if (this.path_inverted) {
+            this.left_gearbox.setInverseMotion(!this.left_gearbox.getInverseMotion());
+            this.right_gearbox.setInverseMotion(!this.right_gearbox.getInverseMotion());
+        }
     }
 
     /**
@@ -106,21 +117,31 @@ public class TankTrajectory{
         this.follower_notifier.stop();
         this.left_gearbox.front.set(0.0);
         this.right_gearbox.front.set(0.0);
+        this.is_finished = true;
+
+        /* Reset inverse motion mode on gearboxes if needed */
+        if (this.path_inverted) {
+            this.left_gearbox.setInverseMotion(!this.left_gearbox.getInverseMotion());
+            this.right_gearbox.setInverseMotion(!this.right_gearbox.getInverseMotion());
+        }
     }
 
     /**
      * Called by the notifier to control the motors based on sensor readings
      */
-    private void feed(){
-        if(this.left_encoderfollower.isFinished() || this.right_encoderollower.isFinished()){
+    private void feed() {
+        if (this.left_encoderfollower.isFinished() || this.right_encoderollower.isFinished()) {
             stop();
         } else {
-            double left_speed = this.left_encoderfollower.calculate(this.left_gearbox.getTicks());
-            double right_speed = this.right_encoderollower.calculate(this.right_gearbox.getTicks());
+            int left_ticks = (this.path_inverted) ? this.right_gearbox.getTicks() : this.left_gearbox.getTicks();
+            int right_ticks = (this.path_inverted) ? this.left_gearbox.getTicks() : this.right_gearbox.getTicks();
+            
+            double left_speed = this.left_encoderfollower.calculate(left_ticks);
+            double right_speed = this.right_encoderollower.calculate(right_ticks);
 
             double heading;
 
-            if(this.gyro_inverted){
+            if (this.gyro_inverted) {
                 heading = -this.gyro.getAngle();
             } else {
                 heading = this.gyro.getAngle();
@@ -129,11 +150,27 @@ public class TankTrajectory{
             double desired_heading = Pathfinder.r2d(this.left_encoderfollower.getHeading());
             double heading_difference = Pathfinder.boundHalfDegrees(desired_heading - heading);
 
-            double turn =  0.8 * (-1.0/80.0) * heading_difference;
+            double turn = 0.8 * (-1.0 / 80.0) * heading_difference;
 
-            this.left_gearbox.front.set(left_speed + turn);
-            this.right_gearbox.front.set(right_speed - turn);
+            if (this.path_inverted) {
+                this.left_gearbox.front.set((right_speed - turn)*-1);
+                this.right_gearbox.front.set((left_speed + turn)*-1);
+            } else {
+                this.left_gearbox.front.set(left_speed + turn);
+                this.right_gearbox.front.set(right_speed - turn);
+            }
         }
     }
+    
+    /**
+     * Has the path been finished?
+     * 
+     * This is useful for running motion profiles sequentially in a command group
+     * 
+     * @return Has the path finished?
+     */
+    public boolean isFinished() {
+        return this.is_finished;
+    };
 
 }
