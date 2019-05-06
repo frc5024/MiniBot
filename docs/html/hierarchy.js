@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "frc.robot.Constants", "classfrc_1_1robot_1_1Constants.html", null ],
+    [ "frc.robot.common.EncoderWrapper", "classfrc_1_1robot_1_1common_1_1EncoderWrapper.html", null ],
     [ "frc.robot.common.GearBox", "classfrc_1_1robot_1_1common_1_1GearBox.html", null ],
     [ "frc.robot.common.IntentManager", "classfrc_1_1robot_1_1common_1_1IntentManager.html", null ],
     [ "frc.robot.common.Logger", "classfrc_1_1robot_1_1common_1_1Logger.html", null ],

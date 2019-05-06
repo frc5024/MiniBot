@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gearbox',['GearBox',['../classfrc_1_1robot_1_1common_1_1GearBox.html',1,'frc::robot::common']]]
+  ['encoderwrapper',['EncoderWrapper',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html',1,'frc::robot::common']]]
 ];

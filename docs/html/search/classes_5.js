@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['Main',['../classfrc_1_1robot_1_1Main.html',1,'frc::robot']]]
+  ['logger',['Logger',['../classfrc_1_1robot_1_1common_1_1Logger.html',1,'frc::robot::common']]]
 ];
