@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1Pathing
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,16 +118,16 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1Pathing
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a622f63cdee823942609bcb6307c546ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html">TankTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1PathingHelper.html#a622f63cdee823942609bcb6307c546ee">loadTankProfile</a> (String filename, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> left_gearbox, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro)</td></tr>
-<tr class="memdesc:a622f63cdee823942609bcb6307c546ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for generating and configuring <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> objects.  <a href="#a622f63cdee823942609bcb6307c546ee">More...</a><br/></td></tr>
-<tr class="separator:a622f63cdee823942609bcb6307c546ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace76ad93dff9704b6bc04cee0653c6f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html">TankTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1PathingHelper.html#ace76ad93dff9704b6bc04cee0653c6f6">loadTankProfile</a> (String filename, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> left_gearbox, <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html">GearBox</a> right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro, boolean invert_path)</td></tr>
+<tr class="memdesc:ace76ad93dff9704b6bc04cee0653c6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for generating and configuring <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> objects.  <a href="#ace76ad93dff9704b6bc04cee0653c6f6">More...</a><br/></td></tr>
+<tr class="separator:ace76ad93dff9704b6bc04cee0653c6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility class for simplifying motion profiling. </p>
 
 <p>Definition at line <a class="el" href="PathingHelper_8java_source.html#l00014">14</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a622f63cdee823942609bcb6307c546ee"></a>
+<a class="anchor" id="ace76ad93dff9704b6bc04cee0653c6f6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -164,7 +165,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>invert_gyro</em>&#160;</td>
+          <td class="paramname"><em>invert_gyro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>invert_path</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,13 +189,14 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">right_gearbox</td><td>The right <a class="el" href="classfrc_1_1robot_1_1common_1_1GearBox.html" title="A GearBox is a wrapper for any pair of WPI_TalonSRX motor controllers where the first controller has ...">GearBox</a> of the robot's DrieTrain </td></tr>
     <tr><td class="paramname">gyro</td><td>The NAVX gyro object </td></tr>
     <tr><td class="paramname">swap_paths</td><td>Should the left and right paths be swapped? (This will fix the 2019 pathing issue) </td></tr>
-    <tr><td class="paramname">invert_gyro</td><td>Should the gyro be inverted?</td></tr>
+    <tr><td class="paramname">invert_gyro</td><td>Should the gyro be inverted? </td></tr>
+    <tr><td class="paramname">invert_path</td><td>Should the robot follow the path backwards? (Usefull for backing up in a path)</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pre-configured <a class="el" href="classfrc_1_1robot_1_1common_1_1TankTrajectory.html" title="A Wrapper around a pair of EncoderFollowers. ">TankTrajectory</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="PathingHelper_8java_source.html#l00027">27</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
+<p>Definition at line <a class="el" href="PathingHelper_8java_source.html#l00028">28</a> of file <a class="el" href="PathingHelper_8java_source.html">PathingHelper.java</a>.</p>
 
 </div>
 </div>

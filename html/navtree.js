@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "MiniBot", "index.html", [
+    [ "Inverse Motion Profiling", "md_docs_inversemotion.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ]
     ] ],

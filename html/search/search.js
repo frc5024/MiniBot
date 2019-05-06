@@ -12,7 +12,8 @@ var indexSectionsWithContent =
   2: "f",
   3: "cdgilmoprstv",
   4: "acdefgilmoprstuv",
-  5: "acdfgiklmprs"
+  5: "acdfgiklmprs",
+  6: "i"
 };
 
 var indexSectionNames =
@@ -22,7 +23,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables"
+  5: "variables",
+  6: "pages"
 };
 
 function convertToId(search)

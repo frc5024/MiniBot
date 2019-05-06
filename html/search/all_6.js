@@ -6,5 +6,8 @@ var searchData=
   ['intentmanager',['IntentManager',['../classfrc_1_1robot_1_1common_1_1IntentManager.html',1,'frc::robot::common']]],
   ['intentmanager_2ejava',['IntentManager.java',['../IntentManager_8java.html',1,'']]],
   ['interrupted',['interrupted',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aec0cedb47f3ad559592f10498a5f19ea',1,'frc::robot::commands::TriggerDrive']]],
-  ['isfinished',['isFinished',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c',1,'frc::robot::commands::TriggerDrive']]]
+  ['inversemotion_2emd',['inversemotion.md',['../inversemotion_8md.html',1,'']]],
+  ['is_5finverse_5fmotion',['is_inverse_motion',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a7c19c56ee9254079e25ffcb910b8e44e',1,'frc::robot::common::GearBox']]],
+  ['isfinished',['isFinished',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c',1,'frc.robot.commands.TriggerDrive.isFinished()'],['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#ad8959aebeee21f3803b8fbf9ff8e7e1e',1,'frc.robot.common.TankTrajectory.isFinished()']]],
+  ['inverse_20motion_20profiling',['Inverse Motion Profiling',['../md_docs_inversemotion.html',1,'']]]
 ];
