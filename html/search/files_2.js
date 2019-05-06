@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gearbox_2ejava',['GearBox.java',['../GearBox_8java.html',1,'']]]
+  ['encoderwrapper_2ejava',['EncoderWrapper.java',['../EncoderWrapper_8java.html',1,'']]]
 ];

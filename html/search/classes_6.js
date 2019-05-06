@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oi',['OI',['../classfrc_1_1robot_1_1OI.html',1,'frc::robot']]]
+  ['main',['Main',['../classfrc_1_1robot_1_1Main.html',1,'frc::robot']]]
 ];

@@ -1,6 +1,9 @@
 var dir_50d7f2cb14735d564b2bf4e2be886222 =
 [
     [ "control", "dir_1856d157d771b7ca77051272ca741adb.html", "dir_1856d157d771b7ca77051272ca741adb" ],
+    [ "EncoderWrapper.java", "EncoderWrapper_8java.html", [
+      [ "EncoderWrapper", "classfrc_1_1robot_1_1common_1_1EncoderWrapper.html", "classfrc_1_1robot_1_1common_1_1EncoderWrapper" ]
+    ] ],
     [ "GearBox.java", "GearBox_8java.html", [
       [ "GearBox", "classfrc_1_1robot_1_1common_1_1GearBox.html", "classfrc_1_1robot_1_1common_1_1GearBox" ]
     ] ],
