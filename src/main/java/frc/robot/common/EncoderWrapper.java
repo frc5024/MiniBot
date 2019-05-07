@@ -2,10 +2,6 @@ package frc.robot.common;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-
-enum Units {
-    kInches, kFeet, kCentimetres, kMetres
-}
 /**
  * A high level wrapper class for an encoder attached to a WPI_TalonSRX.
  */
@@ -18,7 +14,15 @@ public class EncoderWrapper {
     int offset = 0;
     double circumference;
 
-    
+    /**
+     * Mesurement unit type
+     */
+    enum Units {
+        kInches, 
+        kFeet, 
+        kCentimetres, 
+        kMetres
+    }
 
     /**
      * EncoderWrapper Constructor
@@ -35,11 +39,13 @@ public class EncoderWrapper {
     public void configDefault() {
         talon.configFactoryDefault();
     }
-
+    
     /**
+     * Configure the encoder
      * 
-     * @param phase
-     * @param wheel_circ
+     * @param phase Is the encoder backwards?
+     * @param wheel_circ Circumference of the output wheel or gear in inches
+     * @param ticks_per_rev Number of ticks reported by the encoder per revolution of the wheel
      */
     public void config(boolean phase, double wheel_circ, int ticks_per_rev) {
         talon.setSensorPhase(phase);
@@ -47,7 +53,7 @@ public class EncoderWrapper {
         this.ticks_per_rev = ticks_per_rev;
         this.has_configured = true;
     }  
-
+    
     /**
      * Set the encoder sensor phase
      * 

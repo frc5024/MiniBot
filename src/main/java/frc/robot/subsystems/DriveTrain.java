@@ -74,13 +74,15 @@ public class DriveTrain extends Subsystem {
      * @param speed Forward speed (from -1.0 to 1.0)
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
-    public void raiderDrive(double speed, double rotation) {
+    public void raiderDrive(double speed, double rotation, boolean override_brakes) {
         /* Feed the accelerator and gearshifter */
         speed = this.gearShifter.feed(speed);
         speed = this.accelerator.feed(speed);
 
         /* Deal with coasting during a shift */
-        setBrakes(!this.gearShifter.shouldCoast());
+        if (!override_brakes) {
+            setBrakes(!this.gearShifter.shouldCoast());
+        }
 
         /* Send motor data to the mDrivebase */
         mDrivebase.arcadeDrive(speed, rotation, false);

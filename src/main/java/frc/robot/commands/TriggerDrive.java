@@ -61,7 +61,7 @@ public class TriggerDrive extends Command {
     // speed = this.accelerator.feed(speed);
 
     // Robot.mDriveTrain.arcadeDrive(speed, rotation);
-    Robot.mDriveTrain.raiderDrive(speed, rotation);
+    Robot.mDriveTrain.raiderDrive(speed, rotation, false);
   }
 
   // Make this return true when this Command no longer needs to run execute()
