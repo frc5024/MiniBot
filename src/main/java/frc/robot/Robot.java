@@ -8,10 +8,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.cameraserver.CameraServer;
-import edu.wpi.cscore.MjpegServer;
-import edu.wpi.cscore.UsbCamera;
-import edu.wpi.cscore.VideoMode;
+
+import frc.robot.common.Camera;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
@@ -21,6 +19,7 @@ public class Robot extends TimedRobot {
 
   /* Telemetry */
   ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
+  Camera main_camera;
 
   /* Sybsystems */
   public static DriveTrain mDriveTrain;
@@ -31,11 +30,13 @@ public class Robot extends TimedRobot {
 
     /* Start the CameraServer for the default USBCamera */
     System.out.print("Starting CameraServer... ");
-    UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-    camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
-    MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
-    cameraServer.setSource(camera);
+    // UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+    // camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
+    // MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
+    // cameraServer.setSource(camera);
     // Shuffleboard.getTab("Driver View").add("Camera Feed", camera);
+
+    this.main_camera = new Camera("Main Camera", 1181);
     System.out.println("DONE");
 
     /* Construct all Subsystems */
