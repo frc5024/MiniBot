@@ -46,7 +46,7 @@ public class DriveTrain extends Subsystem {
      * Called by WPIlib's Scheduler during initalization
      */
     public void initDefaultCommand() {
-        setDefaultCommand(new TriggerDrive());
+        // setDefaultCommand(new TriggerDrive());
     }
 
     /**

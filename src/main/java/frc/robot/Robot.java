@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.cscore.MjpegServer;
@@ -16,6 +18,9 @@ import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
   public double last_timestamp = Timer.getFPGATimestamp();
+
+  /* Telemetry */
+  ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
 
   /* Sybsystems */
   public static DriveTrain mDriveTrain;
@@ -30,6 +35,7 @@ public class Robot extends TimedRobot {
     camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
     MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
     cameraServer.setSource(camera);
+    // Shuffleboard.getTab("Driver View").add("Camera Feed", camera);
     System.out.println("DONE");
 
     /* Construct all Subsystems */
@@ -46,7 +52,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotPeriodic() {
-    
   }
 
 
