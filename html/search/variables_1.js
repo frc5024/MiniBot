@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['cameraserverport',['cameraserverPort',['../classfrc_1_1robot_1_1Constants.html#ab207edb103e7c68e86a2ec7bac68ecb8',1,'frc::robot::Constants']]]
+  ['deploy_5fpath',['deploy_path',['../classfrc_1_1robot_1_1Constants.html#a9d2f08ed908edc1996ab8f30b78fd79d',1,'frc::robot::Constants']]],
+  ['drivercontroller',['driverController',['../classfrc_1_1robot_1_1OI.html#af59e575b40a8d43f4bb5eecbe3b5641f',1,'frc::robot::OI']]],
+  ['drivetraincurrenttimeout',['drivetrainCurrentTimeout',['../classfrc_1_1robot_1_1Constants.html#a404559da0f8a0d187621577d6e46629f',1,'frc::robot::Constants']]],
+  ['drivetrainholdcurrent',['drivetrainHoldCurrent',['../classfrc_1_1robot_1_1Constants.html#af47d3a3e37ff7055269216b5eb305f9f',1,'frc::robot::Constants']]],
+  ['drivetrainpeakcurrent',['drivetrainPeakCurrent',['../classfrc_1_1robot_1_1Constants.html#a60e19832cb7eb1d0cc3ab9205c4db181',1,'frc::robot::Constants']]]
 ];

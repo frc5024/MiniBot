@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['logger_2ejava',['Logger.java',['../Logger_8java.html',1,'']]]
+  ['intentmanager_2ejava',['IntentManager.java',['../IntentManager_8java.html',1,'']]],
+  ['inversemotion_2emd',['inversemotion.md',['../inversemotion_8md.html',1,'']]]
 ];
