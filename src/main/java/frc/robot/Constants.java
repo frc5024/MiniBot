@@ -1,7 +1,6 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.Filesystem;
-
+import frc.robot.common.FileUtils;
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -9,7 +8,7 @@ import edu.wpi.first.wpilibj.Filesystem;
  * floating around.
  */
 public class Constants {
-  public static final String deploy_path = Filesystem.getDeployDirectory().getPath() + "/";
+  public static final String deploy_path = FileUtils.getDeployPath();
 
   /* DriveTrain */
   public static final int leftFrontMotor = 1;
