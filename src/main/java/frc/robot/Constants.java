@@ -1,5 +1,7 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Filesystem;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -7,6 +9,7 @@ package frc.robot;
  * floating around.
  */
 public class Constants {
+  public static final String deploy_path = Filesystem.getDeployDirectory().getPath() + "/";
 
   /* DriveTrain */
   public static final int leftFrontMotor = 1;
@@ -23,7 +26,10 @@ public class Constants {
   public static final double gearshiftZone = 0.75;
 
   /* CameraServer */
-  public static final int cameraserverPort = 1181;
+  public class MainCamera {
+    public static final String name = "Main Camera";
+    public static final int http_port = 1181;
+  }
 
   /* PCM */
   public static final int pcmCanId = 11;

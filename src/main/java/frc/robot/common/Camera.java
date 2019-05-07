@@ -5,6 +5,8 @@ import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.VideoMode;
 
+import frc.robot.common.FileUtils;
+
 public class Camera {
     UsbCamera camera;
     MjpegServer camera_server;
@@ -25,5 +27,14 @@ public class Camera {
 
     public void setResolution(int height, int width, int fps) {
         this.camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, height, width, fps);
+    }
+
+    public void loadJsonConfig(String filepath) {
+        try {
+            String config = FileUtils.readFile(filepath);
+            this.camera.setConfigJson(config);
+        } catch (Exception e) {
+            System.out.println("WARNING: Unable to load camera config file: " + filepath);
+        }  
     }
 }

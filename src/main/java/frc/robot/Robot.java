@@ -36,7 +36,8 @@ public class Robot extends TimedRobot {
     // cameraServer.setSource(camera);
     // Shuffleboard.getTab("Driver View").add("Camera Feed", camera);
 
-    this.main_camera = new Camera("Main Camera", 1181);
+    this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
+    this.main_camera.loadJsonConfig(Constants.deploy_path + "maincamera.json");
     System.out.println("DONE");
 
     /* Construct all Subsystems */
