@@ -24,13 +24,13 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    /* Start the CameraServer for the default USBCamera */
-    System.out.print("Starting CameraServer... ");
-    UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-    camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
-    MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
-    cameraServer.setSource(camera);
-    System.out.println("DONE");
+//    /* Start the CameraServer for the default USBCamera */
+//    System.out.print("Starting CameraServer... ");
+//    UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+//    camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
+//    MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
+//    cameraServer.setSource(camera);
+//    System.out.println("DONE");
 
     /* Construct all Subsystems */
     System.out.print("Constructing Subsystems... ");

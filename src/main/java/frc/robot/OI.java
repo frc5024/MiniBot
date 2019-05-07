@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.common.control.DDRController;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -43,4 +44,5 @@ public class OI {
   // button.whenReleased(new ExampleCommand());
 
   public XboxController driverController = new XboxController(0);
+  public DDRController danceController = new DDRController(1);
 }

@@ -6,6 +6,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import frc.robot.commands.DanceDrive;
 import frc.robot.commands.TriggerDrive;
 import frc.robot.common.GearBox;
 import frc.robot.Constants;
@@ -46,7 +47,7 @@ public class DriveTrain extends Subsystem {
      * Called by WPIlib's Scheduler during initalization
      */
     public void initDefaultCommand() {
-        setDefaultCommand(new TriggerDrive());
+        //setDefaultCommand(new DanceDrive());
     }
 
     /**
@@ -160,5 +161,8 @@ public class DriveTrain extends Subsystem {
     public void outputTelemetry(){
         SmartDashboard.putNumber("DriveTrin Left Gearbox Ticks", getLeftGearboxTicks());
         SmartDashboard.putNumber("DriveTrin Right Gearbox Ticks", getRightGearboxTicks());
+        SmartDashboard.putNumber("Drivetrain Left Gearbox Speed", mLeftGearbox.front.get());
+        SmartDashboard.putNumber("Drivetrain Right Gearbox Speed", mRightGearbox.front.get());
+
     }
 }

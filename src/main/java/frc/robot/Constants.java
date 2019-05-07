@@ -25,6 +25,10 @@ public class Constants {
   /* CameraServer */
   public static final int cameraserverPort = 1181;
 
+  /* Speed Increment for Dance Controller */
+  public static final double speedInc = 0.1;
+
+
   /* PCM */
   public static final int pcmCanId = 11;
 }
