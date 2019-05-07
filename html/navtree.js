@@ -23,7 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Constants_8java.html"
+"Camera_8java.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

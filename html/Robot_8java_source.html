@@ -116,129 +116,129 @@ $(document).ready(function(){initNavTree('Robot_8java_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">import</span> edu.wpi.first.cameraserver.CameraServer;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">import</span> edu.wpi.cscore.MjpegServer;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">import</span> edu.wpi.cscore.UsbCamera;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">import</span> edu.wpi.cscore.VideoMode;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">import</span> <a class="code" href="classfrc_1_1robot_1_1commands_1_1TriggerDrive.html">frc.robot.commands.TriggerDrive</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">import</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">frc.robot.subsystems.DriveTrain</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html">   19</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classfrc_1_1robot_1_1Robot.html">Robot</a> <span class="keyword">extends</span> TimedRobot {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">   20</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">last_timestamp</a> = Timer.getFPGATimestamp();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">/* Telemetry */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  ShuffleboardTab driver_view = Shuffleboard.getTab(<span class="stringliteral">&quot;Driver View&quot;</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">/* Sybsystems */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">   26</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">DriveTrain</a> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">mDriveTrain</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">   27</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classfrc_1_1robot_1_1OI.html">OI</a> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">mOI</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  @Override</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">   30</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">robotInit</a>() {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/* Start the CameraServer for the default USBCamera */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    System.out.print(<span class="stringliteral">&quot;Starting CameraServer... &quot;</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    MjpegServer cameraServer = <span class="keyword">new</span> MjpegServer(<span class="stringliteral">&quot;Main camera&quot;</span>, <a class="code" href="classfrc_1_1robot_1_1Constants.html">Constants</a>.<a class="code" href="classfrc_1_1robot_1_1Constants.html#ab207edb103e7c68e86a2ec7bac68ecb8">cameraserverPort</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    cameraServer.setSource(camera);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Shuffleboard.getTab(&quot;Driver View&quot;).add(&quot;Camera Feed&quot;, camera);</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* Construct all Subsystems */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    System.out.print(<span class="stringliteral">&quot;Constructing Subsystems... &quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">mOI</a> = <span class="keyword">new</span> <a class="code" href="classfrc_1_1robot_1_1OI.html">OI</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">mDriveTrain</a> = <span class="keyword">new</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">DriveTrain</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/* Initalize Subsystems if required */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    System.out.print(<span class="stringliteral">&quot;Initializing Subsystems... &quot;</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    mDriveTrain.setBrakes(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  @Override</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">   54</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">robotPeriodic</a>() {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">import</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1Camera.html">frc.robot.common.Camera</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">import</span> <a class="code" href="classfrc_1_1robot_1_1commands_1_1TriggerDrive.html">frc.robot.commands.TriggerDrive</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">import</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">frc.robot.subsystems.DriveTrain</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html">   17</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classfrc_1_1robot_1_1Robot.html">Robot</a> <span class="keyword">extends</span> TimedRobot {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">   18</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">last_timestamp</a> = Timer.getFPGATimestamp();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">/* Telemetry */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  ShuffleboardTab driver_view = Shuffleboard.getTab(<span class="stringliteral">&quot;Driver View&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classfrc_1_1robot_1_1common_1_1Camera.html">Camera</a> main_camera;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">/* Sybsystems */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">   25</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">DriveTrain</a> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">mDriveTrain</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">   26</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classfrc_1_1robot_1_1OI.html">OI</a> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">mOI</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  @Override</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">   29</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">robotInit</a>() {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/* Start the CameraServer for the default USBCamera */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    System.out.print(<span class="stringliteral">&quot;Starting CameraServer... &quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// MjpegServer cameraServer = new MjpegServer(&quot;Main camera&quot;, Constants.cameraserverPort);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// cameraServer.setSource(camera);</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Shuffleboard.getTab(&quot;Driver View&quot;).add(&quot;Camera Feed&quot;, camera);</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    this.main_camera = <span class="keyword">new</span> <a class="code" href="classfrc_1_1robot_1_1common_1_1Camera.html">Camera</a>(<span class="stringliteral">&quot;Main Camera&quot;</span>, 1181);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/* Construct all Subsystems */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    System.out.print(<span class="stringliteral">&quot;Constructing Subsystems... &quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">mOI</a> = <span class="keyword">new</span> <a class="code" href="classfrc_1_1robot_1_1OI.html">OI</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">mDriveTrain</a> = <span class="keyword">new</span> <a class="code" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">DriveTrain</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* Initalize Subsystems if required */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    System.out.print(<span class="stringliteral">&quot;Initializing Subsystems... &quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mDriveTrain.setBrakes(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    System.out.println(<span class="stringliteral">&quot;DONE&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  @Override</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">   55</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">robotPeriodic</a>() {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  @Override</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">   59</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">disabledInit</a>() {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;DISABLED&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  @Override</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">   64</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">disabledPeriodic</a>() {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Scheduler.getInstance().run();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  @Override</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">   73</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">autonomousInit</a>() {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;AUTO&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  @Override</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">   78</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">autonomousPeriodic</a>() {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Scheduler.getInstance().run();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  @Override</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">   87</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">teleopInit</a>() {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;TELEOP&quot;</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  @Override</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">   93</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">teleopPeriodic</a>() {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    Scheduler.getInstance().run();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  @Override</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">  102</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">testPeriodic</a>() {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">  108</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>() {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    mDriveTrain.outputTelemetry();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">  115</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>() {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    this.last_timestamp = Timer.getFPGATimestamp();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ae807171661cbc29081bc10f06d6831e7"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">frc.robot.Robot.teleopPeriodic</a></div><div class="ttdeci">void teleopPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00093">Robot.java:93</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a7e63e32ebe8ad3d33bbc3b09092a9f1f"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">frc.robot.Robot.robotPeriodic</a></div><div class="ttdeci">void robotPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00054">Robot.java:54</a></div></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  @Override</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">   60</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">disabledInit</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;DISABLED&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  @Override</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">   65</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">disabledPeriodic</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Scheduler.getInstance().run();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  @Override</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">   74</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">autonomousInit</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;AUTO&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  @Override</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">   79</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">autonomousPeriodic</a>() {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Scheduler.getInstance().run();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  @Override</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">   88</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">teleopInit</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    SmartDashboard.putString(<span class="stringliteral">&quot;Robot Mode&quot;</span>, <span class="stringliteral">&quot;TELEOP&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  @Override</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">   94</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">teleopPeriodic</a>() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    Scheduler.getInstance().run();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">/* Run all updaters */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  @Override</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">  103</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">testPeriodic</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">  109</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">updateSmartdashboard</a>() {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    mDriveTrain.outputTelemetry();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">  116</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a>() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    this.last_timestamp = Timer.getFPGATimestamp();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ae807171661cbc29081bc10f06d6831e7"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7">frc.robot.Robot.teleopPeriodic</a></div><div class="ttdeci">void teleopPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00094">Robot.java:94</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a7e63e32ebe8ad3d33bbc3b09092a9f1f"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f">frc.robot.Robot.robotPeriodic</a></div><div class="ttdeci">void robotPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00055">Robot.java:55</a></div></div>
 <div class="ttc" id="classfrc_1_1robot_1_1OI_html"><div class="ttname"><a href="classfrc_1_1robot_1_1OI.html">frc.robot.OI</a></div><div class="ttdoc">This class is the glue that binds the controls on the physical operator interface to the commands and...</div><div class="ttdef"><b>Definition:</b> <a href="OI_8java_source.html#l00016">OI.java:16</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Constants_html"><div class="ttname"><a href="classfrc_1_1robot_1_1Constants.html">frc.robot.Constants</a></div><div class="ttdoc">The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name...</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8java_source.html#l00009">Constants.java:9</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ac19810fbf26efd4cd47cbd7568b4ad2a"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">frc.robot.Robot.disabledInit</a></div><div class="ttdeci">void disabledInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00059">Robot.java:59</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ab4c44ba13fdb8f579017fb5e6ff16e07"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">frc.robot.Robot.mDriveTrain</a></div><div class="ttdeci">static DriveTrain mDriveTrain</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00026">Robot.java:26</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Constants_html_ab207edb103e7c68e86a2ec7bac68ecb8"><div class="ttname"><a href="classfrc_1_1robot_1_1Constants.html#ab207edb103e7c68e86a2ec7bac68ecb8">frc.robot.Constants.cameraserverPort</a></div><div class="ttdeci">static final int cameraserverPort</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8java_source.html#l00026">Constants.java:26</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a5b1c022cd3e2b9f6e5dde62571839173"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">frc.robot.Robot.autonomousInit</a></div><div class="ttdeci">void autonomousInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00073">Robot.java:73</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a1d28582cf3dc31568c3581f631c92f13"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">frc.robot.Robot.robotInit</a></div><div class="ttdeci">void robotInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00030">Robot.java:30</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ad5f0a723bc87c2c17b53ada9e240d1ef"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">frc.robot.Robot.mOI</a></div><div class="ttdeci">static OI mOI</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00027">Robot.java:27</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_abd152f34b9f33d5cdf835aa61331f33e"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">frc.robot.Robot.testPeriodic</a></div><div class="ttdeci">void testPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00102">Robot.java:102</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a7dcfe7d0d65d1051eb095b8eb1aebd72"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">frc.robot.Robot.autonomousPeriodic</a></div><div class="ttdeci">void autonomousPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00078">Robot.java:78</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a2bc1b0ce100e4783ba3d549e6ac07ae3"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">frc.robot.Robot.disabledPeriodic</a></div><div class="ttdeci">void disabledPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00064">Robot.java:64</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ac19810fbf26efd4cd47cbd7568b4ad2a"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a">frc.robot.Robot.disabledInit</a></div><div class="ttdeci">void disabledInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00060">Robot.java:60</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ab4c44ba13fdb8f579017fb5e6ff16e07"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">frc.robot.Robot.mDriveTrain</a></div><div class="ttdeci">static DriveTrain mDriveTrain</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00025">Robot.java:25</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a5b1c022cd3e2b9f6e5dde62571839173"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">frc.robot.Robot.autonomousInit</a></div><div class="ttdeci">void autonomousInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00074">Robot.java:74</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a1d28582cf3dc31568c3581f631c92f13"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13">frc.robot.Robot.robotInit</a></div><div class="ttdeci">void robotInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00029">Robot.java:29</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_ad5f0a723bc87c2c17b53ada9e240d1ef"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">frc.robot.Robot.mOI</a></div><div class="ttdeci">static OI mOI</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00026">Robot.java:26</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_abd152f34b9f33d5cdf835aa61331f33e"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e">frc.robot.Robot.testPeriodic</a></div><div class="ttdeci">void testPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00103">Robot.java:103</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a7dcfe7d0d65d1051eb095b8eb1aebd72"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72">frc.robot.Robot.autonomousPeriodic</a></div><div class="ttdeci">void autonomousPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00079">Robot.java:79</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a2bc1b0ce100e4783ba3d549e6ac07ae3"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3">frc.robot.Robot.disabledPeriodic</a></div><div class="ttdeci">void disabledPeriodic()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00065">Robot.java:65</a></div></div>
 <div class="ttc" id="classfrc_1_1robot_1_1commands_1_1TriggerDrive_html"><div class="ttname"><a href="classfrc_1_1robot_1_1commands_1_1TriggerDrive.html">frc.robot.commands.TriggerDrive</a></div><div class="ttdef"><b>Definition:</b> <a href="TriggerDrive_8java_source.html#l00013">TriggerDrive.java:13</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a5cab9477a757743255ceaeacb7d1bbaf"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">frc.robot.Robot.last_timestamp</a></div><div class="ttdeci">double last_timestamp</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00020">Robot.java:20</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a2a0179fa174013a88a6d7d4ef7fef1f8"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">frc.robot.Robot.updateSmartdashboard</a></div><div class="ttdeci">void updateSmartdashboard()</div><div class="ttdoc">Asks all Subsystems to push their telemetry data to SmartDashboard. </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00108">Robot.java:108</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a5cab9477a757743255ceaeacb7d1bbaf"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf">frc.robot.Robot.last_timestamp</a></div><div class="ttdeci">double last_timestamp</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00018">Robot.java:18</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a2a0179fa174013a88a6d7d4ef7fef1f8"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8">frc.robot.Robot.updateSmartdashboard</a></div><div class="ttdeci">void updateSmartdashboard()</div><div class="ttdoc">Asks all Subsystems to push their telemetry data to SmartDashboard. </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00109">Robot.java:109</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1common_1_1Camera_html"><div class="ttname"><a href="classfrc_1_1robot_1_1common_1_1Camera.html">frc.robot.common.Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8java_source.html#l00008">Camera.java:8</a></div></div>
 <div class="ttc" id="classfrc_1_1robot_1_1subsystems_1_1DriveTrain_html"><div class="ttname"><a href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html">frc.robot.subsystems.DriveTrain</a></div><div class="ttdoc">The Subsystem in control of the robot&#39;s drivebase. </div><div class="ttdef"><b>Definition:</b> <a href="DriveTrain_8java_source.html#l00018">DriveTrain.java:18</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a209dbf07bfec75d73fa53126a8e31b88"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">frc.robot.Robot.teleopInit</a></div><div class="ttdeci">void teleopInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00087">Robot.java:87</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a75310dea9fd35a14b67c6aae59416b8a"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">frc.robot.Robot.updateTimestamp</a></div><div class="ttdeci">void updateTimestamp()</div><div class="ttdoc">Asks the FPGA how long it has been powered on, then stores the value in last_timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00115">Robot.java:115</a></div></div>
-<div class="ttc" id="classfrc_1_1robot_1_1Robot_html"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html">frc.robot.Robot</a></div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00019">Robot.java:19</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a209dbf07bfec75d73fa53126a8e31b88"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88">frc.robot.Robot.teleopInit</a></div><div class="ttdeci">void teleopInit()</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00088">Robot.java:88</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html_a75310dea9fd35a14b67c6aae59416b8a"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">frc.robot.Robot.updateTimestamp</a></div><div class="ttdeci">void updateTimestamp()</div><div class="ttdoc">Asks the FPGA how long it has been powered on, then stores the value in last_timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00116">Robot.java:116</a></div></div>
+<div class="ttc" id="classfrc_1_1robot_1_1Robot_html"><div class="ttname"><a href="classfrc_1_1robot_1_1Robot.html">frc.robot.Robot</a></div><div class="ttdef"><b>Definition:</b> <a href="Robot_8java_source.html#l00017">Robot.java:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

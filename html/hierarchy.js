@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "frc.robot.common.Camera", "classfrc_1_1robot_1_1common_1_1Camera.html", null ],
     [ "frc.robot.Constants", "classfrc_1_1robot_1_1Constants.html", null ],
     [ "frc.robot.common.EncoderWrapper", "classfrc_1_1robot_1_1common_1_1EncoderWrapper.html", null ],
     [ "frc.robot.common.GearBox", "classfrc_1_1robot_1_1common_1_1GearBox.html", null ],
