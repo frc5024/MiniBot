@@ -33,6 +33,7 @@ public class Robot extends TimedRobot {
     System.out.print("Starting CameraServer... ");
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
     this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
+    this.main_camera.keepCameraAwake(true);
     System.out.println("DONE");
 
     /* Construct all Subsystems */

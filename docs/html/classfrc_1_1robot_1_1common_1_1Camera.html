@@ -87,21 +87,32 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1Camera.
 <div class="title">frc.robot.common.Camera Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Stream a USB camera feed over http to a driverstation.  
+ <a href="classfrc_1_1robot_1_1common_1_1Camera.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adababb0376d5d2f7bdb8fe817596427a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1Camera.html#adababb0376d5d2f7bdb8fe817596427a">Camera</a> (String name, int http_port)</td></tr>
+<tr class="memdesc:adababb0376d5d2f7bdb8fe817596427a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize with basic params.  <a href="#adababb0376d5d2f7bdb8fe817596427a">More...</a><br /></td></tr>
 <tr class="separator:adababb0376d5d2f7bdb8fe817596427a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6bb5a81fae3588cc25e5d59d52c7f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1Camera.html#abd6bb5a81fae3588cc25e5d59d52c7f3">Camera</a> (String name, int http_port, int usb_port)</td></tr>
+<tr class="memdesc:abd6bb5a81fae3588cc25e5d59d52c7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize with basic params.  <a href="#abd6bb5a81fae3588cc25e5d59d52c7f3">More...</a><br /></td></tr>
 <tr class="separator:abd6bb5a81fae3588cc25e5d59d52c7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf40bcc4a858bd813719fe1162249bf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1Camera.html#acf40bcc4a858bd813719fe1162249bf9">setResolution</a> (int height, int width, int fps)</td></tr>
+<tr class="memdesc:acf40bcc4a858bd813719fe1162249bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera resolution and framerate.  <a href="#acf40bcc4a858bd813719fe1162249bf9">More...</a><br /></td></tr>
 <tr class="separator:acf40bcc4a858bd813719fe1162249bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa70f4f48e213d1d93e3520e53d37d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1Camera.html#afa70f4f48e213d1d93e3520e53d37d44">loadJsonConfig</a> (String filepath)</td></tr>
+<tr class="memdesc:afa70f4f48e213d1d93e3520e53d37d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a json file as a config.  <a href="#afa70f4f48e213d1d93e3520e53d37d44">More...</a><br /></td></tr>
 <tr class="separator:afa70f4f48e213d1d93e3520e53d37d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5831c0fab170101dfb0cbf0fd82095"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1Camera.html#a0f5831c0fab170101dfb0cbf0fd82095">keepCameraAwake</a> (boolean enabled)</td></tr>
+<tr class="memdesc:a0f5831c0fab170101dfb0cbf0fd82095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera connection mode.  <a href="#a0f5831c0fab170101dfb0cbf0fd82095">More...</a><br /></td></tr>
+<tr class="separator:a0f5831c0fab170101dfb0cbf0fd82095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00010">10</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+<div class="textblock"><p>Stream a USB camera feed over http to a driverstation. </p>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00014">14</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adababb0376d5d2f7bdb8fe817596427a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adababb0376d5d2f7bdb8fe817596427a">&#9670;&nbsp;</a></span>Camera() <span class="overload">[1/2]</span></h2>
@@ -129,7 +140,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00014">14</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+<p>Initalize with basic params. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Friendly name of camera </td></tr>
+    <tr><td class="paramname">http_port</td><td>TCP port for camera stream. MUST be from 1181 to 1191 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00024">24</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
 
 </div>
 </div>
@@ -165,11 +185,49 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00021">21</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+<p>Initalize with basic params. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Friendly name of camera </td></tr>
+    <tr><td class="paramname">http_port</td><td>TCP port for camera stream. MUST be from 1181 to 1191 </td></tr>
+    <tr><td class="paramname">usb_port</td><td>USB port (starting from 0) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00038">38</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0f5831c0fab170101dfb0cbf0fd82095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5831c0fab170101dfb0cbf0fd82095">&#9670;&nbsp;</a></span>keepCameraAwake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frc.robot.common.Camera.keepCameraAwake </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the camera connection mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>Should the camera always be streaming video? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00075">75</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+
+</div>
+</div>
 <a id="afa70f4f48e213d1d93e3520e53d37d44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa70f4f48e213d1d93e3520e53d37d44">&#9670;&nbsp;</a></span>loadJsonConfig()</h2>
 
@@ -186,7 +244,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00032">32</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+<p>Load a json file as a config. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Path to json file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00061">61</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
 
 </div>
 </div>
@@ -222,7 +288,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00028">28</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
+<p>Set the camera resolution and framerate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>Height in pixels </td></tr>
+    <tr><td class="paramname">width</td><td>Width in pixels </td></tr>
+    <tr><td class="paramname">fps</td><td>Frames per second </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Camera_8java_source.html#l00052">52</a> of file <a class="el" href="Camera_8java_source.html">Camera.java</a>.</p>
 
 </div>
 </div>
