@@ -10,7 +10,7 @@ var classfrc_1_1robot_1_1subsystems_1_1DriveTrain =
     [ "getRightGearboxTicks", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a6a89f40b891bcf806ded0301ac1f6d95", null ],
     [ "initDefaultCommand", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ab46972a3cf6e4cf5267fbfaf81497266", null ],
     [ "outputTelemetry", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac669314d7769c6372210e13cd6a956f4", null ],
-    [ "raiderDrive", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a745168fe510b90364e2d53e33106386f", null ],
+    [ "raiderDrive", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a2ead446f2c199e583eebecfbb1b94593", null ],
     [ "setBrakes", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78", null ],
     [ "mInstance", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a4052b6daf88928cb66fe631aef614ec1", null ]
 ];

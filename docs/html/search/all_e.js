@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['tanktrajectory',['TankTrajectory',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html',1,'frc.robot.common.TankTrajectory'],['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a407121e298d25c292db1bb00e80eecfa',1,'frc.robot.common.TankTrajectory.TankTrajectory()']]],
-  ['tanktrajectory_2ejava',['TankTrajectory.java',['../TankTrajectory_8java.html',1,'']]],
-  ['teleopinit',['teleopInit',['../classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88',1,'frc::robot::Robot']]],
-  ['teleopperiodic',['teleopPeriodic',['../classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7',1,'frc::robot::Robot']]],
-  ['testperiodic',['testPeriodic',['../classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e',1,'frc::robot::Robot']]],
-  ['triggerdrive',['TriggerDrive',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html',1,'frc.robot.commands.TriggerDrive'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#ab72791a4f0f76ac9208a89a235438321',1,'frc.robot.commands.TriggerDrive.TriggerDrive()']]],
-  ['triggerdrive_2ejava',['TriggerDrive.java',['../TriggerDrive_8java.html',1,'']]]
+  ['raiderdrive',['raiderDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a2ead446f2c199e583eebecfbb1b94593',1,'frc::robot::subsystems::DriveTrain']]],
+  ['readfile',['readFile',['../classfrc_1_1robot_1_1common_1_1FileUtils.html#a0821e04410c69a11095e72de90efeb95',1,'frc::robot::common::FileUtils']]],
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['reset',['reset',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html#a311069e3061d825836170d705414b6a6',1,'frc.robot.common.EncoderWrapper.reset()'],['../classfrc_1_1robot_1_1common_1_1SlewLimiter.html#a6dd16dcf7ffc2e7ead78e179d306b47a',1,'frc.robot.common.SlewLimiter.reset()']]],
+  ['rightfrontmotor',['rightFrontMotor',['../classfrc_1_1robot_1_1Constants.html#aba2c2059789b727fac4206cc9fcbcde2',1,'frc::robot::Constants']]],
+  ['rightrearmotor',['rightRearMotor',['../classfrc_1_1robot_1_1Constants.html#a4a665c9b17c0e78ecac815f64a829338',1,'frc::robot::Constants']]],
+  ['robot',['Robot',['../classfrc_1_1robot_1_1Robot.html',1,'frc::robot']]],
+  ['robot_2ejava',['Robot.java',['../Robot_8java.html',1,'']]],
+  ['robotinit',['robotInit',['../classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13',1,'frc::robot::Robot']]],
+  ['robotperiodic',['robotPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f',1,'frc::robot::Robot']]]
 ];

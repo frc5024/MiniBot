@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import frc.robot.common.Camera;
+import frc.robot.common.FileUtils;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
@@ -30,14 +31,8 @@ public class Robot extends TimedRobot {
 
     /* Start the CameraServer for the default USBCamera */
     System.out.print("Starting CameraServer... ");
-    // UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-    // camera.setVideoMode(VideoMode.PixelFormat.kMJPEG, 320, 240, 15);
-    // MjpegServer cameraServer = new MjpegServer("Main camera", Constants.cameraserverPort);
-    // cameraServer.setSource(camera);
-    // Shuffleboard.getTab("Driver View").add("Camera Feed", camera);
-
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
-    this.main_camera.loadJsonConfig(Constants.deploy_path + "maincamera.json");
+    this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
     System.out.println("DONE");
 
     /* Construct all Subsystems */

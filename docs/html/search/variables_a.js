@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rightfrontmotor',['rightFrontMotor',['../classfrc_1_1robot_1_1Constants.html#aba2c2059789b727fac4206cc9fcbcde2',1,'frc::robot::Constants']]],
-  ['rightrearmotor',['rightRearMotor',['../classfrc_1_1robot_1_1Constants.html#a4a665c9b17c0e78ecac815f64a829338',1,'frc::robot::Constants']]]
+  ['pcmcanid',['pcmCanId',['../classfrc_1_1robot_1_1Constants.html#a7d1ac7e78dd705c1a3d3fbd2345c6c74',1,'frc::robot::Constants']]],
+  ['previous_5ferror',['previous_error',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a69ed5cc0e79729eebf82756a78aad55b',1,'frc::robot::common::control::PID']]]
 ];

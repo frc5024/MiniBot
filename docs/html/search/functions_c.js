@@ -5,6 +5,7 @@ var searchData=
   ['setinversemotion',['setInverseMotion',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a9986789910371a2fea0a22d7bef99a7c',1,'frc::robot::common::GearBox']]],
   ['setphase',['setPhase',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html#ae83ce5d09a14f014ecbe0826554536ec',1,'frc::robot::common::EncoderWrapper']]],
   ['setpida',['setPIDA',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a2058b631d2d38bce20b8cddb96253d1c',1,'frc::robot::common::TankTrajectory']]],
+  ['setresolution',['setResolution',['../classfrc_1_1robot_1_1common_1_1Camera.html#acf40bcc4a858bd813719fe1162249bf9',1,'frc::robot::common::Camera']]],
   ['setsetpoint',['setSetpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a73d2b1dd4b446c3285488db6ab8c98fe',1,'frc::robot::common::control::PID']]],
   ['shift',['shift',['../classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7',1,'frc::robot::common::VirtualGearShifter']]],
   ['shouldcoast',['shouldCoast',['../classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6',1,'frc::robot::common::VirtualGearShifter']]],
