@@ -112,18 +112,62 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1common_1_1FileUti
 <div class="title">frc.robot.common.FileUtils Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Tools for working with the filesystem.  
+ <a href="classfrc_1_1robot_1_1common_1_1FileUtils.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0821e04410c69a11095e72de90efeb95"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1FileUtils.html#a0821e04410c69a11095e72de90efeb95">readFile</a> (String path)  throws IOException </td></tr>
+<tr class="memdesc:a0821e04410c69a11095e72de90efeb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a file, and returns it's contents as a UTF8 string.  <a href="#a0821e04410c69a11095e72de90efeb95">More...</a><br/></td></tr>
 <tr class="separator:a0821e04410c69a11095e72de90efeb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c4f46e0827cbd99c7e93df92aad153"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1FileUtils.html#a72c4f46e0827cbd99c7e93df92aad153">getDeployPath</a> ()</td></tr>
+<tr class="memdesc:a72c4f46e0827cbd99c7e93df92aad153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query WPIlib's filesystem for deploy path.  <a href="#a72c4f46e0827cbd99c7e93df92aad153">More...</a><br/></td></tr>
 <tr class="separator:a72c4f46e0827cbd99c7e93df92aad153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e9ec7c7df1dd5f997222d1f55c924f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1common_1_1FileUtils.html#a20e9ec7c7df1dd5f997222d1f55c924f">constructDeployPath</a> (String filename)</td></tr>
+<tr class="memdesc:a20e9ec7c7df1dd5f997222d1f55c924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a filename to the deploy path.  <a href="#a20e9ec7c7df1dd5f997222d1f55c924f">More...</a><br/></td></tr>
+<tr class="separator:a20e9ec7c7df1dd5f997222d1f55c924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00008">8</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
+<div class="textblock"><p>Tools for working with the filesystem. </p>
+
+<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00011">11</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a20e9ec7c7df1dd5f997222d1f55c924f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String frc.robot.common.FileUtils.constructDeployPath </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append a filename to the deploy path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>File name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Deploy path + filename </dd></dl>
+
+<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00038">38</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a72c4f46e0827cbd99c7e93df92aad153"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +189,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00014">14</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
+<p>Query WPIlib's filesystem for deploy path. </p>
+<dl class="section return"><dt>Returns</dt><dd>File path of deploy folder </dd></dl>
+
+<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00028">28</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
 
 </div>
 </div>
@@ -171,7 +218,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00009">9</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
+<p>Reads a file, and returns it's contents as a UTF8 string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>File path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>File contents </dd></dl>
+
+<p>Definition at line <a class="el" href="FileUtils_8java_source.html#l00018">18</a> of file <a class="el" href="FileUtils_8java_source.html">FileUtils.java</a>.</p>
 
 </div>
 </div>

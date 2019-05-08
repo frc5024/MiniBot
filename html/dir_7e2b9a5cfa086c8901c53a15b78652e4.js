@@ -4,7 +4,8 @@ var dir_7e2b9a5cfa086c8901c53a15b78652e4 =
     [ "common", "dir_47a5cafcce72611ae429f9e71dabb307.html", "dir_47a5cafcce72611ae429f9e71dabb307" ],
     [ "subsystems", "dir_1e846923eb9b939b2f3750b045ce1a3d.html", "dir_1e846923eb9b939b2f3750b045ce1a3d" ],
     [ "Constants.java", "Constants_8java.html", [
-      [ "Constants", "classfrc_1_1robot_1_1Constants.html", "classfrc_1_1robot_1_1Constants" ]
+      [ "Constants", "classfrc_1_1robot_1_1Constants.html", "classfrc_1_1robot_1_1Constants" ],
+      [ "MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", "classfrc_1_1robot_1_1Constants_1_1MainCamera" ]
     ] ],
     [ "Main.java", "Main_8java.html", [
       [ "Main", "classfrc_1_1robot_1_1Main.html", "classfrc_1_1robot_1_1Main" ]
