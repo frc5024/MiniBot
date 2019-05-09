@@ -22,6 +22,21 @@ public class Constants {
     public static final int currentTimeout = 30;
   }
 
+  public class EncoderInfo {
+    public static final int ticks_per_rev = 360;
+    public static final double wheel_circ = 18.84956; // Inches
+    public static final double wheel_diameter = 6.0; // Inches
+  }
+
+  public class MotionProfile {
+    public static final double kP = 1.0;
+    public static final double kI = 0.0;
+    public static final double kD = 0.0;
+    public static final double kA = 0.0;
+  }
+  public class Robot {
+    public static final double max_velocity = 4.060;
+  }
   /* TriggerDrive */
   public static final double accelerationStep = 0.15;
   public static final double gearshiftZone = 0.75;

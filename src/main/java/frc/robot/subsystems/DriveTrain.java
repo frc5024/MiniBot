@@ -5,12 +5,16 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.SPI.Port;
+import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.common.GearBox;
 import frc.robot.Constants;
 import frc.robot.common.SlewLimiter;
 import frc.robot.common.VirtualGearShifter;
+import frc.robot.common.PathingHelper;
+import frc.robot.common.TankTrajectory;
 
 /**
  * The Subsystem in control of the robot's drivebase.
@@ -26,6 +30,7 @@ public class DriveTrain extends Subsystem {
     SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
     VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone, Constants.accelerationStep);
 
+    AHRS gyro;
 
     public DriveTrain(){
         /* Create both gearbox objects */
@@ -39,6 +44,10 @@ public class DriveTrain extends Subsystem {
         /* Create a DifferentialDrive out of each gearbox */
         mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);
         mDrivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
+
+        /* Set up the gyro */
+        this.gyro = new AHRS(Port.kMXP);
+        this.gyro.reset();
     }
 
     @Override
@@ -159,8 +168,13 @@ public class DriveTrain extends Subsystem {
     /**
      * Sends Subsystem telemetry data to SmartDashboard
      */
-    public void outputTelemetry(){
+    public void outputTelemetry() {
         SmartDashboard.putNumber("DriveTrin Left Gearbox Ticks", getLeftGearboxTicks());
         SmartDashboard.putNumber("DriveTrin Right Gearbox Ticks", getRightGearboxTicks());
+    }
+    
+    public TankTrajectory getProfile(String filename, boolean swap_paths, boolean invert_gyro, boolean invert_path) {
+        return PathingHelper.loadTankProfile(filename, this.mLeftGearbox, this.mRightGearbox, this.gyro, swap_paths,
+                invert_gyro, invert_path);
     }
 }

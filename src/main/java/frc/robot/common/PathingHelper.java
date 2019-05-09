@@ -2,7 +2,7 @@ package frc.robot.common;
 
 import jaci.pathfinder.PathfinderFRC;
 import jaci.pathfinder.Trajectory;
-import jaci.pathfinder.followers.EncoderFollower;
+import jaci.pathfinder.followers.EncoderFollower; 
 import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.common.TankTrajectory;
@@ -25,7 +25,7 @@ public class PathingHelper {
      * 
      * @return A pre-configured TankTrajectory
      */
-    public TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro, boolean invert_path){
+    public static TankTrajectory loadTankProfile(String filename, GearBox left_gearbox, GearBox right_gearbox, AHRS gyro, boolean swap_paths, boolean invert_gyro, boolean invert_path){
         /* Load file into a left and right path */
         Trajectory left_trajectory;
         Trajectory right_trajectory;
