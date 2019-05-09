@@ -7,6 +7,7 @@ var classfrc_1_1robot_1_1subsystems_1_1DriveTrain =
     [ "gearShift", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac0a2ad5221a21bbb1b4677f65df405c4", null ],
     [ "getInstance", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a24422b857174253772b374d5e8616fad", null ],
     [ "getLeftGearboxTicks", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a863f1282b4e126e04c33d89f20d38635", null ],
+    [ "getProfile", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ada62ce6c6d5712b0ae7bebaa92c49fb1", null ],
     [ "getRightGearboxTicks", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a6a89f40b891bcf806ded0301ac1f6d95", null ],
     [ "initDefaultCommand", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ab46972a3cf6e4cf5267fbfaf81497266", null ],
     [ "outputTelemetry", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac669314d7769c6372210e13cd6a956f4", null ],

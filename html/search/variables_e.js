@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['ticks_5fper_5frev',['ticks_per_rev',['../classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#a062e6717b639751f180f081f9a08f573',1,'frc::robot::Constants::EncoderInfo']]]
+];

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['feed',['feed',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#afe558662f10298da5a0f978d20096005',1,'frc.robot.common.control.PID.feed()'],['../classfrc_1_1robot_1_1common_1_1SlewLimiter.html#a71e7c4d247e70e41aad9b867a30625a8',1,'frc.robot.common.SlewLimiter.feed()'],['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a361a7e138a65f23dc18bdf4f627e3a27',1,'frc.robot.common.TankTrajectory.feed()'],['../classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#af35a1df05308624b0f0fae24cb7e4980',1,'frc.robot.common.VirtualGearShifter.feed()']]]
+  ['encoderwrapper',['EncoderWrapper',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html#a5960361b62db3f0f44fc5a30597dfa63',1,'frc::robot::common::EncoderWrapper']]],
+  ['end',['end',['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#ad35e0fc244d852f3bd2b28d74385d010',1,'frc.robot.commands.BasicPath.end()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#add591026e8389d9ed24627625f9388b8',1,'frc.robot.commands.TriggerDrive.end()']]],
+  ['examplepath',['ExamplePath',['../classfrc_1_1robot_1_1commands_1_1ExamplePath.html#a8d25dbcb84a7ea59c29f618265413bb2',1,'frc::robot::commands::ExamplePath']]],
+  ['execute',['execute',['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#ac746a1dae7cc687fec3a115b13709030',1,'frc.robot.commands.BasicPath.execute()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#afef3ed0ba14ce1e0b41168ac5c1e9eb9',1,'frc.robot.commands.TriggerDrive.execute()']]]
 ];
