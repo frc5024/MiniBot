@@ -9,5 +9,6 @@ var searchData=
   ['configure',['configure',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#aea673e6910e5e9cb25fe886d9ed2382b',1,'frc::robot::common::TankTrajectory']]],
   ['constants',['Constants',['../classfrc_1_1robot_1_1Constants.html',1,'frc::robot']]],
   ['constants_2ejava',['Constants.java',['../Constants_8java.html',1,'']]],
-  ['constructdeploypath',['constructDeployPath',['../classfrc_1_1robot_1_1common_1_1FileUtils.html#a20e9ec7c7df1dd5f997222d1f55c924f',1,'frc::robot::common::FileUtils']]]
+  ['constructdeploypath',['constructDeployPath',['../classfrc_1_1robot_1_1common_1_1FileUtils.html#a20e9ec7c7df1dd5f997222d1f55c924f',1,'frc::robot::common::FileUtils']]],
+  ['currenttimeout',['currentTimeout',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#aab1c9de9556f5348ea7bde7d8a62e691',1,'frc::robot::Constants::DriveTrain']]]
 ];

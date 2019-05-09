@@ -5,6 +5,7 @@ var dir_c5e5d01a2e4976c9a347fc1b67923444 =
     [ "subsystems", "dir_3852d9b97f2be5d5c17c81d9daec9984.html", "dir_3852d9b97f2be5d5c17c81d9daec9984" ],
     [ "Constants.java", "Constants_8java.html", [
       [ "Constants", "classfrc_1_1robot_1_1Constants.html", "classfrc_1_1robot_1_1Constants" ],
+      [ "DriveTrain", "classfrc_1_1robot_1_1Constants_1_1DriveTrain.html", "classfrc_1_1robot_1_1Constants_1_1DriveTrain" ],
       [ "MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", "classfrc_1_1robot_1_1Constants_1_1MainCamera" ]
     ] ],
     [ "Main.java", "Main_8java.html", [

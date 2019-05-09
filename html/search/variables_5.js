@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['integral',['integral',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#ac088e9c3d66a032151d0e24b65e4d644',1,'frc::robot::common::control::PID']]],
-  ['is_5finverse_5fmotion',['is_inverse_motion',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a7c19c56ee9254079e25ffcb910b8e44e',1,'frc::robot::common::GearBox']]]
+  ['holdcurrent',['holdCurrent',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#ab63f72686d72bec96317e2b61949c40e',1,'frc::robot::Constants::DriveTrain']]],
+  ['http_5fport',['http_port',['../classfrc_1_1robot_1_1Constants_1_1MainCamera.html#acfa3d59b1ba44cfc37178ffa837d3d58',1,'frc::robot::Constants::MainCamera']]]
 ];
