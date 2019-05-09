@@ -29,12 +29,12 @@ public class DriveTrain extends Subsystem {
 
     public DriveTrain(){
         /* Create both gearbox objects */
-        mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.leftFrontMotor), new WPI_TalonSRX(Constants.leftRearMotor));
-        mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.rightFrontMotor), new WPI_TalonSRX(Constants.rightRearMotor));
+        mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
+        mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.rightFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.rightRearMotor));
 
         /* Enable current limiting on each gearbox */
-        mLeftGearbox.limitCurrent(Constants.drivetrainPeakCurrent, Constants.drivetrainHoldCurrent, Constants.drivetrainCurrentTimeout);
-        mRightGearbox.limitCurrent(Constants.drivetrainPeakCurrent, Constants.drivetrainHoldCurrent, Constants.drivetrainCurrentTimeout);
+        mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
+        mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
 
         /* Create a DifferentialDrive out of each gearbox */
         mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);

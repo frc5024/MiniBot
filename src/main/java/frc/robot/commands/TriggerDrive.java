@@ -7,13 +7,9 @@ import java.lang.Math;
 
 import frc.robot.Robot;
 import frc.robot.Constants;
-import frc.robot.common.SlewLimiter;
-import frc.robot.common.VirtualGearShifter;
 
 public class TriggerDrive extends Command {
   XboxController driverController = Robot.mOI.driverController;
-  // SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
-  // VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone, Constants.accelerationStep);
 
   public TriggerDrive() {
     requires(Robot.mDriveTrain);
@@ -47,18 +43,10 @@ public class TriggerDrive extends Command {
 
     /* Handle gearshifting on Y button hold */
     if(this.driverController.getYButtonPressed()){
-      // this.accelerator.reset();
-      // this.gearShifter.shift(true);
       Robot.mDriveTrain.gearShift(true);
     } else if (this.driverController.getYButtonReleased()){
-      // this.accelerator.reset();
-      // this.gearShifter.shift(false);
       Robot.mDriveTrain.gearShift(false);
     }
-    
-    /* Feed the accelerator and gearshifter */
-    // speed = this.gearShifter.feed(speed);
-    // speed = this.accelerator.feed(speed);
 
     // Robot.mDriveTrain.arcadeDrive(speed, rotation);
     Robot.mDriveTrain.raiderDrive(speed, rotation, false);

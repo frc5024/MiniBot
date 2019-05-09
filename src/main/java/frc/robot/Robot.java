@@ -26,6 +26,9 @@ public class Robot extends TimedRobot {
   public static DriveTrain mDriveTrain;
   public static OI mOI;
 
+  /* Commands */
+  public static TriggerDrive mTriggerDrive;
+
   @Override
   public void robotInit() {
 
@@ -46,6 +49,8 @@ public class Robot extends TimedRobot {
     System.out.print("Initializing Subsystems... ");
     mDriveTrain.setBrakes(true);
     System.out.println("DONE");
+
+    this.mTriggerDrive = new TriggerDrive();
   }
 
   @Override
@@ -84,6 +89,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
     SmartDashboard.putString("Robot Mode", "TELEOP");
+    this.mTriggerDrive.start();
     
   }
 
