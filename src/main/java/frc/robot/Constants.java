@@ -1,6 +1,7 @@
 package frc.robot;
 
-import frc.robot.common.FileUtils;
+import frc.common.utils.FileUtils;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -36,6 +37,11 @@ public class Constants {
   }
   public class Robot {
     public static final double max_velocity = 4.060;
+  }
+
+  public class PeriodicTiming {
+    public static final double robot_period = 0.02;
+    public static final double field_period = 0.04;
   }
   /* TriggerDrive */
   public static final double accelerationStep = 0.15;

@@ -9,12 +9,12 @@ import edu.wpi.first.wpilibj.SPI.Port;
 import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.commands.TriggerDrive;
-import frc.robot.common.GearBox;
+import frc.common.wrappers.GearBox;
 import frc.robot.Constants;
-import frc.robot.common.SlewLimiter;
-import frc.robot.common.VirtualGearShifter;
-import frc.robot.common.PathingHelper;
-import frc.robot.common.TankTrajectory;
+import frc.common.control.SlewLimiter;
+import frc.common.control.VirtualGearShifter;
+import frc.common.wrappers.PathingHelper;
+import frc.common.wrappers.TankTrajectory;
 
 /**
  * The Subsystem in control of the robot's drivebase.

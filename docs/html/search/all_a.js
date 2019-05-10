@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['minibot_20_5b_21_5bbuild_20status_5d_28https_3a_2f_2ftravis_2dci_2eorg_2ffrc5024_2fminibot_2esvg_3fbranch_3dmaster_29_5d_28https_3a_2f_2ftravis_2dci_2eorg_2ffrc5024_2fminibot_29',['MiniBot [![Build Status](https://travis-ci.org/frc5024/MiniBot.svg?branch=master)](https://travis-ci.org/frc5024/MiniBot)',['../index.html',1,'']]],
-  ['main',['Main',['../classfrc_1_1robot_1_1Main.html',1,'frc.robot.Main'],['../classfrc_1_1robot_1_1Main.html#ae60066a646cefc16d3e7d57b8fa22097',1,'frc.robot.Main.main(String... args)'],['../classfrc_1_1robot_1_1Main.html#aaaa025997d101f996ad17575cbb72f5e',1,'frc.robot.Main.Main()']]],
-  ['main_2ejava',['Main.java',['../Main_8java.html',1,'']]],
-  ['maincamera',['MainCamera',['../classfrc_1_1robot_1_1Constants_1_1MainCamera.html',1,'frc::robot::Constants']]],
-  ['mdrivetrain',['mDriveTrain',['../classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07',1,'frc::robot::Robot']]],
-  ['minstance',['mInstance',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a4052b6daf88928cb66fe631aef614ec1',1,'frc::robot::subsystems::DriveTrain']]],
-  ['moi',['mOI',['../classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef',1,'frc::robot::Robot']]]
+  ['last_5ftimestamp',['last_timestamp',['../classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf',1,'frc::robot::Robot']]],
+  ['leftfrontmotor',['leftFrontMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#afb7a4fdf1444ef59ecf826f9a1958ef9',1,'frc::robot::Constants::DriveTrain']]],
+  ['leftrearmotor',['leftRearMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#ad270012735800bbcf198b4685657a2d1',1,'frc::robot::Constants::DriveTrain']]],
+  ['limitcurrent',['limitCurrent',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a5400940a151797f022134f2ad83b0974',1,'frc::common::wrappers::GearBox']]],
+  ['limittrigger',['limitTrigger',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aa8c2f178614a92e3af524cdbf04bc862',1,'frc::robot::commands::TriggerDrive']]],
+  ['loadjsonconfig',['loadJsonConfig',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#af33f2be1dfb43213c365f5bdf749dff3',1,'frc::common::wrappers::Camera']]],
+  ['loadtankprofile',['loadTankProfile',['../classfrc_1_1common_1_1wrappers_1_1PathingHelper.html#a6c36a35f4064998f46b9401c8c42de00',1,'frc::common::wrappers::PathingHelper']]],
+  ['log',['log',['../classfrc_1_1robot_1_1common_1_1Logger.html#a6a5fefdcd1b578781834cd48e4a3d206',1,'frc::robot::common::Logger']]],
+  ['logger',['Logger',['../classfrc_1_1robot_1_1common_1_1Logger.html',1,'frc.robot.common.Logger'],['../classfrc_1_1robot_1_1common_1_1Logger.html#aa51cc752fb8a76ec6c60fb7fc4fe1247',1,'frc.robot.common.Logger.Logger()']]],
+  ['logger_2ejava',['Logger.java',['../Logger_8java.html',1,'']]],
+  ['logutils',['LogUtils',['../classfrc_1_1common_1_1utils_1_1LogUtils.html',1,'frc::common::utils']]],
+  ['logutils_2ejava',['LogUtils.java',['../LogUtils_8java.html',1,'']]]
 ];

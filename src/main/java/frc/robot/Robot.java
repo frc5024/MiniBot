@@ -9,8 +9,9 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-import frc.robot.common.Camera;
-import frc.robot.common.FileUtils;
+import frc.common.wrappers.Camera;
+import frc.common.utils.FileUtils;
+import frc.common.field.FieldStatusThread;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
@@ -20,6 +21,7 @@ public class Robot extends TimedRobot {
 
   /* Telemetry */
   ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
+  FieldStatusThread field_status;
   Camera main_camera;
 
   /* Sybsystems */
@@ -27,7 +29,7 @@ public class Robot extends TimedRobot {
   public static OI mOI;
 
   /* Commands */
-  public static TriggerDrive mTriggerDrive;
+  public TriggerDrive mTriggerDrive;
 
   @Override
   public void robotInit() {
@@ -50,7 +52,17 @@ public class Robot extends TimedRobot {
     mDriveTrain.setBrakes(true);
     System.out.println("DONE");
 
+    /* Construct Commands */
+    System.out.print("Constructing Commands... ");
     this.mTriggerDrive = new TriggerDrive();
+    System.out.println("DONE");
+
+    /* Set up notifiers */
+    System.out.print("Setting up Notifiers... ");
+    this.m_period = Constants.PeriodicTiming.robot_period;
+    this.field_status = new FieldStatusThread();
+    this.field_status.start(Constants.PeriodicTiming.field_period);
+    System.out.println("DONE");
   }
 
   @Override

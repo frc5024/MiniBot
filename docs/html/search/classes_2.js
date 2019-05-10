@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['encoderwrapper',['EncoderWrapper',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html',1,'frc::robot::common']]]
+  ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html',1,'frc.robot.Constants.DriveTrain'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html',1,'frc.robot.subsystems.DriveTrain']]]
 ];

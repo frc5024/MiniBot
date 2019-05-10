@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['encoderwrapper',['EncoderWrapper',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html',1,'frc.robot.common.EncoderWrapper'],['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html#a5960361b62db3f0f44fc5a30597dfa63',1,'frc.robot.common.EncoderWrapper.EncoderWrapper()']]],
-  ['encoderwrapper_2ejava',['EncoderWrapper.java',['../EncoderWrapper_8java.html',1,'']]],
-  ['end',['end',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#add591026e8389d9ed24627625f9388b8',1,'frc::robot::commands::TriggerDrive']]],
-  ['execute',['execute',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#afef3ed0ba14ce1e0b41168ac5c1e9eb9',1,'frc::robot::commands::TriggerDrive']]]
+  ['defaultpid',['defaultPID',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a860e17cd8b8f2dbe7826fffa49031772',1,'frc::common::wrappers::TankTrajectory']]],
+  ['deploy_5fpath',['deploy_path',['../classfrc_1_1robot_1_1Constants.html#a9d2f08ed908edc1996ab8f30b78fd79d',1,'frc::robot::Constants']]],
+  ['disabledinit',['disabledInit',['../classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a',1,'frc::robot::Robot']]],
+  ['disabledperiodic',['disabledPeriodic',['../classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3',1,'frc::robot::Robot']]],
+  ['display',['display',['../classfrc_1_1robot_1_1common_1_1Logger.html#afa4f97260d70b38b2c15a0e495cb2203',1,'frc::robot::common::Logger']]],
+  ['drivercontroller',['driverController',['../classfrc_1_1robot_1_1OI.html#af59e575b40a8d43f4bb5eecbe3b5641f',1,'frc::robot::OI']]],
+  ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html',1,'frc.robot.Constants.DriveTrain'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html',1,'frc.robot.subsystems.DriveTrain'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a39f30717e8df92af73d57c01ac0525df',1,'frc.robot.subsystems.DriveTrain.DriveTrain()']]],
+  ['drivetrain_2ejava',['DriveTrain.java',['../DriveTrain_8java.html',1,'']]]
 ];

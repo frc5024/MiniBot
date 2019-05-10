@@ -1,18 +1,14 @@
 var searchData=
 [
-  ['setbrakes',['setBrakes',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78',1,'frc::robot::subsystems::DriveTrain']]],
-  ['setgains',['setGains',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a2322feb8a9641874386f386acbf44f1b',1,'frc::robot::common::control::PID']]],
-  ['setinversemotion',['setInverseMotion',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a9986789910371a2fea0a22d7bef99a7c',1,'frc::robot::common::GearBox']]],
-  ['setphase',['setPhase',['../classfrc_1_1robot_1_1common_1_1EncoderWrapper.html#ae83ce5d09a14f014ecbe0826554536ec',1,'frc::robot::common::EncoderWrapper']]],
-  ['setpida',['setPIDA',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a2058b631d2d38bce20b8cddb96253d1c',1,'frc::robot::common::TankTrajectory']]],
-  ['setpoint',['setpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#ab3f1649eec68c313b6c1f90b749ff0c1',1,'frc::robot::common::control::PID']]],
-  ['setresolution',['setResolution',['../classfrc_1_1robot_1_1common_1_1Camera.html#acf40bcc4a858bd813719fe1162249bf9',1,'frc::robot::common::Camera']]],
-  ['setsetpoint',['setSetpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a73d2b1dd4b446c3285488db6ab8c98fe',1,'frc::robot::common::control::PID']]],
-  ['shift',['shift',['../classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#ad980a530fa84f3e04da658c60ccf77b7',1,'frc::robot::common::VirtualGearShifter']]],
-  ['shouldcoast',['shouldCoast',['../classfrc_1_1robot_1_1common_1_1VirtualGearShifter.html#a8c2a291ed907f389d05bba9dba43eab6',1,'frc::robot::common::VirtualGearShifter']]],
-  ['slewlimiter',['SlewLimiter',['../classfrc_1_1robot_1_1common_1_1SlewLimiter.html',1,'frc.robot.common.SlewLimiter'],['../classfrc_1_1robot_1_1common_1_1SlewLimiter.html#a08c607534d33979c8c80430a401812b0',1,'frc.robot.common.SlewLimiter.SlewLimiter()']]],
-  ['slewlimiter_2ejava',['SlewLimiter.java',['../SlewLimiter_8java.html',1,'']]],
-  ['speedcontroller',['speedcontroller',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a0bb8404796c3a8c466bd2684e6b20966',1,'frc::robot::common::GearBox']]],
-  ['start',['start',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a3d4270698935470823660f6abf9fe6f0',1,'frc::robot::common::TankTrajectory']]],
-  ['stop',['stop',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#ac88bb7607d8bf889fa96f2e3fa964d20',1,'frc::robot::common::TankTrajectory']]]
+  ['raiderdrive',['raiderDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a2ead446f2c199e583eebecfbb1b94593',1,'frc::robot::subsystems::DriveTrain']]],
+  ['readfile',['readFile',['../classfrc_1_1common_1_1utils_1_1FileUtils.html#ac5fe1d05e6f73fc54b134341fcda3833',1,'frc::common::utils::FileUtils']]],
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['reset',['reset',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a767edcdefb1c96499f2963c4aa371429',1,'frc.common.control.SlewLimiter.reset()'],['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a2aa8f6f4c9082ba4ba0b27818acf4c65',1,'frc.common.wrappers.EncoderWrapper.reset()']]],
+  ['rightfrontmotor',['rightFrontMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a5096352e4d0452eaa59e63c4c2df723d',1,'frc::robot::Constants::DriveTrain']]],
+  ['rightrearmotor',['rightRearMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a2f0bfe6426217528e3a375265312ac3e',1,'frc::robot::Constants::DriveTrain']]],
+  ['robot',['Robot',['../classfrc_1_1robot_1_1Constants_1_1Robot.html',1,'frc.robot.Constants.Robot'],['../classfrc_1_1robot_1_1Robot.html',1,'frc.robot.Robot']]],
+  ['robot_2ejava',['Robot.java',['../Robot_8java.html',1,'']]],
+  ['robot_5fperiod',['robot_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#ab6b1870f3db8ec160f6cf256ef2f273c',1,'frc::robot::Constants::PeriodicTiming']]],
+  ['robotinit',['robotInit',['../classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13',1,'frc::robot::Robot']]],
+  ['robotperiodic',['robotPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f',1,'frc::robot::Robot']]]
 ];

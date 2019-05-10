@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['virtualgearshifter_2ejava',['VirtualGearShifter.java',['../VirtualGearShifter_8java.html',1,'']]]
+  ['tanktrajectory_2ejava',['TankTrajectory.java',['../TankTrajectory_8java.html',1,'']]],
+  ['triggerdrive_2ejava',['TriggerDrive.java',['../TriggerDrive_8java.html',1,'']]]
 ];

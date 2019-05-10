@@ -9,7 +9,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.TimedCommand;
 import frc.robot.Robot;
-import frc.robot.common.TankTrajectory;
+import frc.common.wrappers.TankTrajectory;
 import frc.robot.Constants;
 
 /**

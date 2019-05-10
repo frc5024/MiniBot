@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['setpoint',['setpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#ab3f1649eec68c313b6c1f90b749ff0c1',1,'frc::robot::common::control::PID']]],
-  ['speedcontroller',['speedcontroller',['../classfrc_1_1robot_1_1common_1_1GearBox.html#a0bb8404796c3a8c466bd2684e6b20966',1,'frc::robot::common::GearBox']]]
+  ['rightfrontmotor',['rightFrontMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a5096352e4d0452eaa59e63c4c2df723d',1,'frc::robot::Constants::DriveTrain']]],
+  ['rightrearmotor',['rightRearMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a2f0bfe6426217528e3a375265312ac3e',1,'frc::robot::Constants::DriveTrain']]],
+  ['robot_5fperiod',['robot_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#ab6b1870f3db8ec160f6cf256ef2f273c',1,'frc::robot::Constants::PeriodicTiming']]]
 ];

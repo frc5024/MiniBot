@@ -1,10 +1,18 @@
 var searchData=
 [
-  ['tanktrajectory',['TankTrajectory',['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html',1,'frc.robot.common.TankTrajectory'],['../classfrc_1_1robot_1_1common_1_1TankTrajectory.html#a407121e298d25c292db1bb00e80eecfa',1,'frc.robot.common.TankTrajectory.TankTrajectory()']]],
-  ['tanktrajectory_2ejava',['TankTrajectory.java',['../TankTrajectory_8java.html',1,'']]],
-  ['teleopinit',['teleopInit',['../classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88',1,'frc::robot::Robot']]],
-  ['teleopperiodic',['teleopPeriodic',['../classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7',1,'frc::robot::Robot']]],
-  ['testperiodic',['testPeriodic',['../classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e',1,'frc::robot::Robot']]],
-  ['triggerdrive',['TriggerDrive',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html',1,'frc.robot.commands.TriggerDrive'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#ab72791a4f0f76ac9208a89a235438321',1,'frc.robot.commands.TriggerDrive.TriggerDrive()']]],
-  ['triggerdrive_2ejava',['TriggerDrive.java',['../TriggerDrive_8java.html',1,'']]]
+  ['setbrakes',['setBrakes',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78',1,'frc::robot::subsystems::DriveTrain']]],
+  ['setgains',['setGains',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a2322feb8a9641874386f386acbf44f1b',1,'frc::robot::common::control::PID']]],
+  ['setinversemotion',['setInverseMotion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#ac6c9439ef5dfebb643889cefa491e82f',1,'frc::common::wrappers::GearBox']]],
+  ['setphase',['setPhase',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a13a54ca1cbb169852e49ea19b9e1a31e',1,'frc::common::wrappers::EncoderWrapper']]],
+  ['setpida',['setPIDA',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a411139d14ea270d2de2cdbd62625a3f1',1,'frc::common::wrappers::TankTrajectory']]],
+  ['setpoint',['setpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#ab3f1649eec68c313b6c1f90b749ff0c1',1,'frc::robot::common::control::PID']]],
+  ['setresolution',['setResolution',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a9618c5bd84e14137f0a81a55460f61f3',1,'frc::common::wrappers::Camera']]],
+  ['setsetpoint',['setSetpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a73d2b1dd4b446c3285488db6ab8c98fe',1,'frc::robot::common::control::PID']]],
+  ['shift',['shift',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a5a631f8b1b74a896f5a7630110ffd996',1,'frc::common::control::VirtualGearShifter']]],
+  ['shouldcoast',['shouldCoast',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a2fa8b074f59338b0f84189e7fd74ed03',1,'frc::common::control::VirtualGearShifter']]],
+  ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html',1,'frc.common.control.SlewLimiter'],['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a397e72b6ddd20631c55ed7b724366837',1,'frc.common.control.SlewLimiter.SlewLimiter()']]],
+  ['slewlimiter_2ejava',['SlewLimiter.java',['../SlewLimiter_8java.html',1,'']]],
+  ['speedcontroller',['speedcontroller',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#aff4f04cc5b4c20b1dcc4076f588b9a8d',1,'frc::common::wrappers::GearBox']]],
+  ['start',['start',['../classfrc_1_1common_1_1field_1_1FieldStatusThread.html#acc05c967b25e7c3e81481b1705c65235',1,'frc.common.field.FieldStatusThread.start()'],['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a92fb5cd8782acc06c9b80f98baef09ff',1,'frc.common.wrappers.TankTrajectory.start()']]],
+  ['stop',['stop',['../classfrc_1_1common_1_1field_1_1FieldStatusThread.html#ad2f73611d4ea72496edbc60aeeb372ca',1,'frc.common.field.FieldStatusThread.stop()'],['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#aef6222212545fed6544973f98cea06e9',1,'frc.common.wrappers.TankTrajectory.stop()']]]
 ];
