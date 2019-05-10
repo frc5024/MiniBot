@@ -23,7 +23,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BasicPath_8java.html"
+"BasicPath_8java.html",
+"namespacefrc_1_1common_1_1utils.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -10,6 +10,7 @@ var searchData=
   ['setsetpoint',['setSetpoint',['../classfrc_1_1robot_1_1common_1_1control_1_1PID.html#a73d2b1dd4b446c3285488db6ab8c98fe',1,'frc::robot::common::control::PID']]],
   ['shift',['shift',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a5a631f8b1b74a896f5a7630110ffd996',1,'frc::common::control::VirtualGearShifter']]],
   ['shouldcoast',['shouldCoast',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a2fa8b074f59338b0f84189e7fd74ed03',1,'frc::common::control::VirtualGearShifter']]],
+  ['shouldreset',['shouldReset',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a251aa4f20d6711b4d7ec53b454b1aefc',1,'frc::common::control::VirtualGearShifter']]],
   ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html',1,'frc::common::control']]],
   ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a397e72b6ddd20631c55ed7b724366837',1,'frc::common::control::SlewLimiter']]],
   ['slewlimiter_2ejava',['SlewLimiter.java',['../SlewLimiter_8java.html',1,'']]],

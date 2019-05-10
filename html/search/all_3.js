@@ -6,8 +6,11 @@ var searchData=
   ['disabledperiodic',['disabledPeriodic',['../classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3',1,'frc::robot::Robot']]],
   ['display',['display',['../classfrc_1_1robot_1_1common_1_1Logger.html#afa4f97260d70b38b2c15a0e495cb2203',1,'frc::robot::common::Logger']]],
   ['drivercontroller',['driverController',['../classfrc_1_1robot_1_1OI.html#af59e575b40a8d43f4bb5eecbe3b5641f',1,'frc::robot::OI']]],
-  ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html',1,'frc::robot::Constants']]],
+  ['drivesignal',['DriveSignal',['../classfrc_1_1common_1_1DriveSignal.html#ab731e4ebf140b74c186dec063bd93999',1,'frc.common.DriveSignal.DriveSignal(double left, double right)'],['../classfrc_1_1common_1_1DriveSignal.html#af7f7926fbd3f0c627fe3fb57e952d906',1,'frc.common.DriveSignal.DriveSignal(double left, double right, boolean isHigh, boolean isBrakes)']]],
+  ['drivesignal',['DriveSignal',['../classfrc_1_1common_1_1DriveSignal.html',1,'frc::common']]],
+  ['drivesignal_2ejava',['DriveSignal.java',['../DriveSignal_8java.html',1,'']]],
   ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a39f30717e8df92af73d57c01ac0525df',1,'frc::robot::subsystems::DriveTrain']]],
   ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html',1,'frc::robot::subsystems']]],
+  ['drivetrain',['DriveTrain',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html',1,'frc::robot::Constants']]],
   ['drivetrain_2ejava',['DriveTrain.java',['../DriveTrain_8java.html',1,'']]]
 ];

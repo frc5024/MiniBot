@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "frc.common.wrappers.Camera", "classfrc_1_1common_1_1wrappers_1_1Camera.html", null ],
     [ "frc.robot.Constants", "classfrc_1_1robot_1_1Constants.html", null ],
+    [ "frc.common.DriveSignal", "classfrc_1_1common_1_1DriveSignal.html", null ],
     [ "frc.robot.Constants.DriveTrain", "classfrc_1_1robot_1_1Constants_1_1DriveTrain.html", null ],
     [ "frc.robot.Constants.EncoderInfo", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html", null ],
     [ "frc.common.wrappers.EncoderWrapper", "classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html", null ],
@@ -9,6 +10,7 @@ var hierarchy =
     [ "frc.common.utils.FileUtils", "classfrc_1_1common_1_1utils_1_1FileUtils.html", null ],
     [ "frc.common.wrappers.GearBox", "classfrc_1_1common_1_1wrappers_1_1GearBox.html", null ],
     [ "frc.robot.common.IntentManager", "classfrc_1_1robot_1_1common_1_1IntentManager.html", null ],
+    [ "frc.common.utils.LatchedBoolean", "classfrc_1_1common_1_1utils_1_1LatchedBoolean.html", null ],
     [ "frc.robot.common.Logger", "classfrc_1_1robot_1_1common_1_1Logger.html", null ],
     [ "frc.common.utils.LogUtils", "classfrc_1_1common_1_1utils_1_1LogUtils.html", null ],
     [ "frc.robot.Main", "classfrc_1_1robot_1_1Main.html", null ],
