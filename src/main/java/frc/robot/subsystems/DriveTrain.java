@@ -15,6 +15,7 @@ import frc.common.control.SlewLimiter;
 import frc.common.control.VirtualGearShifter;
 import frc.common.wrappers.PathingHelper;
 import frc.common.wrappers.TankTrajectory;
+import frc.common.DriveSignal;
 
 /**
  * The Subsystem in control of the robot's drivebase.
@@ -29,6 +30,8 @@ public class DriveTrain extends Subsystem {
 
     SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
     VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone, Constants.accelerationStep);
+
+    DriveSignal current_signal;
 
     AHRS gyro;
 
@@ -48,6 +51,9 @@ public class DriveTrain extends Subsystem {
         /* Set up the gyro */
         this.gyro = new AHRS(Port.kMXP);
         this.gyro.reset();
+
+        /* Set a 0,0 signal */
+        this.current_signal = new DriveSignal(0, 0);
     }
 
     @Override
@@ -63,8 +69,12 @@ public class DriveTrain extends Subsystem {
      * 
      * @return DriveTrain instance
      */
-    public static DriveTrain getInstance(){
+    public static DriveTrain getInstance() {
         return mInstance;
+    }
+    
+    public void requestSignal(DriveSignal signal) {
+        this.current_signal = signal;
     }
 
     /**
@@ -87,10 +97,14 @@ public class DriveTrain extends Subsystem {
         /* Feed the accelerator and gearshifter */
         speed = this.gearShifter.feed(speed);
         speed = this.accelerator.feed(speed);
+        rotation = this.gearShifter.feed(rotation);
 
         /* Deal with coasting during a shift */
         if (!override_brakes) {
             setBrakes(!this.gearShifter.shouldCoast());
+            if(this.gearShifter.shouldReset()){
+                this.accelerator.reset();
+            }
         }
 
         /* Send motor data to the mDrivebase */
