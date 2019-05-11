@@ -41,15 +41,8 @@ public class TriggerDrive extends Command {
     rotation += driverController.getX(GenericHID.Hand.kLeft);
     rotation = (Math.abs(rotation) < 0.1) ? 0.0 : rotation;
 
-    /* Handle gearshifting on Y button hold */
-    if(this.driverController.getYButtonPressed()){
-      Robot.mDriveTrain.gearShift(true);
-    } else if (this.driverController.getYButtonReleased()){
-      Robot.mDriveTrain.gearShift(false);
-    }
-
     // Robot.mDriveTrain.arcadeDrive(speed, rotation);
-    Robot.mDriveTrain.raiderDrive(speed, rotation, false);
+    Robot.mDriveTrain.arcadeDrive(speed, rotation, false);
   }
 
   // Make this return true when this Command no longer needs to run execute()
