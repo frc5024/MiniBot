@@ -1,5 +1,7 @@
 package frc.robot.subsystems;
 
+import java.util.logging.Logger;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -21,6 +23,8 @@ import frc.common.DriveSignal;
  * The Subsystem in control of the robot's drivebase.
  */
 public class DriveTrain extends Subsystem {
+    private final Logger logger = Logger.getLogger(this.getClass().getName());
+
     GearBox mLeftGearbox;
     GearBox mRightGearbox;
 
@@ -37,20 +41,26 @@ public class DriveTrain extends Subsystem {
 
     public DriveTrain(){
         /* Create both gearbox objects */
+        logger.info("Constructing GearBoxes out of motor pairs");
         mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
         mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.rightFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.rightRearMotor));
 
         /* Enable current limiting on each gearbox */
-        mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
+        logger.info("Limiting current on both gearboxes. Peak: " + Constants.DriveTrain.peakCurrent + "A, Hold: "
+                + Constants.DriveTrain.holdCurrent + "A, Timeout: " + Constants.DriveTrain.holdCurrent + "ms");
+        mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.holdCurrent);
         mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
 
         /* Create a DifferentialDrive out of each gearbox */
         mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);
         mDrivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
+        logger.info("Drivebase has been set to: Unsafe");
 
         /* Set up the gyro */
+        logger.info("Loading gyro for drivetrain");
         this.gyro = new AHRS(Port.kMXP);
         this.gyro.reset();
+        logger.info("Gyro has been reset to: " + this.gyro.getAngle());
 
         /* Set a 0,0 signal */
         this.current_signal = new DriveSignal(0, 0);
@@ -144,6 +154,9 @@ public class DriveTrain extends Subsystem {
      */
     public void setBrakes(boolean on){
         NeutralMode mode = on ? NeutralMode.Brake : NeutralMode.Coast;
+        String mode_string = on ? "Brake" : "Coast";
+
+        logger.info("DriveTrain NeutralMode has been set to: " + mode_string);
 
         this.mLeftGearbox.front.setNeutralMode(mode);
         this.mLeftGearbox.rear.setNeutralMode(mode);
@@ -188,6 +201,7 @@ public class DriveTrain extends Subsystem {
     }
     
     public TankTrajectory getProfile(String filename, boolean swap_paths, boolean invert_gyro, boolean invert_path) {
+        logger.info("Loading DriveTrain motion profile: " + filename);
         return PathingHelper.loadTankProfile(filename, this.mLeftGearbox, this.mRightGearbox, this.gyro, swap_paths,
                 invert_gyro, invert_path);
     }

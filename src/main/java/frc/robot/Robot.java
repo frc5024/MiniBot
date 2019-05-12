@@ -1,5 +1,7 @@
 package frc.robot;
 
+import java.util.logging.Logger;
+
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -17,6 +19,8 @@ import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  
   public double last_timestamp = Timer.getFPGATimestamp();
 
   /* Telemetry */
@@ -33,36 +37,33 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotInit() {
+    logger.info("Robot starting\nWelcome 5024!");
+    logTimestamp();
 
     /* Start the CameraServer for the default USBCamera */
-    System.out.print("Starting CameraServer... ");
+    logger.info("Starting CameraServer");
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
     this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
     this.main_camera.keepCameraAwake(true);
-    System.out.println("DONE");
 
     /* Construct all Subsystems */
-    System.out.print("Constructing Subsystems... ");
+    logger.info("Constructing Subsystems");
     mOI = new OI();
     mDriveTrain = new DriveTrain();
-    System.out.println("DONE");
 
     /* Initalize Subsystems if required */
-    System.out.print("Initializing Subsystems... ");
+    logger.info("Initializing Subsystems");
     mDriveTrain.setBrakes(true);
-    System.out.println("DONE");
 
     /* Construct Commands */
-    System.out.print("Constructing Commands... ");
+    logger.info("Constructing Commands");
     this.mTriggerDrive = new TriggerDrive();
-    System.out.println("DONE");
 
     /* Set up notifiers */
-    System.out.print("Setting up Notifiers... ");
+    logger.info("Setting up Notifiers");
     this.m_period = Constants.PeriodicTiming.robot_period;
     this.field_status = new FieldStatusThread();
     this.field_status.start(Constants.PeriodicTiming.field_period);
-    System.out.println("DONE");
   }
 
   @Override
@@ -73,6 +74,8 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledInit() {
     SmartDashboard.putString("Robot Mode", "DISABLED");
+    logger.info("Robot Disabled");
+    logTimestamp();
   }
 
   @Override
@@ -87,6 +90,8 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     SmartDashboard.putString("Robot Mode", "AUTO");
+    logger.info("Autonomous Started with GSM: " + this.field_status.getCurrentMatch().getGSM());
+    logTimestamp();
   }
 
   @Override
@@ -101,6 +106,10 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
     SmartDashboard.putString("Robot Mode", "TELEOP");
+    logger.info("Teleop started");
+    logTimestamp();
+
+    /* Start commands */
     this.mTriggerDrive.start();
     
   }
@@ -130,6 +139,13 @@ public class Robot extends TimedRobot {
    */
   private void updateTimestamp() {
     this.last_timestamp = Timer.getFPGATimestamp();
+  }
+
+  /**
+   * Prints the current timestamp to the log
+   */
+  private void logTimestamp() {
+    logger.info("Current time: " + this.last_timestamp);
   }
 
 }
