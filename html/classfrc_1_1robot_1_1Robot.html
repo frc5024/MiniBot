@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1Robot.html','');}
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classfrc_1_1robot_1_1Robot-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">frc.robot.Robot Class Reference</div>  </div>
@@ -167,10 +168,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a75310dea9fd35a14b67c6aae59416b8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a">updateTimestamp</a> ()</td></tr>
 <tr class="memdesc:a75310dea9fd35a14b67c6aae59416b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks the FPGA how long it has been powered on, then stores the value in last_timestamp.  <a href="#a75310dea9fd35a14b67c6aae59416b8a">More...</a><br/></td></tr>
 <tr class="separator:a75310dea9fd35a14b67c6aae59416b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739d2d45e910023fcaf0dea5b27152c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Robot.html#a739d2d45e910023fcaf0dea5b27152c1">logTimestamp</a> ()</td></tr>
+<tr class="memdesc:a739d2d45e910023fcaf0dea5b27152c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current timestamp to the log.  <a href="#a739d2d45e910023fcaf0dea5b27152c1">More...</a><br/></td></tr>
+<tr class="separator:a739d2d45e910023fcaf0dea5b27152c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa75c4de23cc8da5285ed210ec888c2ae"><td class="memItemLeft" align="right" valign="top">final Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Robot.html#aa75c4de23cc8da5285ed210ec888c2ae">logger</a> = Logger.getLogger(this.getClass().getName())</td></tr>
+<tr class="separator:aa75c4de23cc8da5285ed210ec888c2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00019">19</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00021">21</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5b1c022cd3e2b9f6e5dde62571839173"></a>
 <div class="memitem">
@@ -185,7 +194,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00088">88</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00091">91</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -202,7 +211,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00093">93</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00098">98</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -219,7 +228,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00074">74</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00075">75</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -236,7 +245,34 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00079">79</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00082">82</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a739d2d45e910023fcaf0dea5b27152c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frc.robot.Robot.logTimestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the current timestamp to the log. </p>
+
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00147">147</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -253,7 +289,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00035">35</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00039">39</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -270,7 +306,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00069">69</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00070">70</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -287,7 +323,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00102">102</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00107">107</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -304,7 +340,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00109">109</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00118">118</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -321,7 +357,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00118">118</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00127">127</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -348,7 +384,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Asks all Subsystems to push their telemetry data to SmartDashboard. </p>
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00124">124</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00133">133</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -375,7 +411,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Asks the FPGA how long it has been powered on, then stores the value in last_timestamp. </p>
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00131">131</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00140">140</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -390,7 +426,29 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00020">20</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00024">24</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa75c4de23cc8da5285ed210ec888c2ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger frc.robot.Robot.logger = Logger.getLogger(this.getClass().getName())</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00022">22</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -412,7 +470,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00028">28</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00032">32</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -434,7 +492,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00029">29</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00033">33</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>
@@ -448,7 +506,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Robot_8java_source.html#l00032">32</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
+<p>Definition at line <a class="el" href="Robot_8java_source.html#l00036">36</a> of file <a class="el" href="Robot_8java_source.html">Robot.java</a>.</p>
 
 </div>
 </div>

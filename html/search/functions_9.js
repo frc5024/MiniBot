@@ -5,5 +5,6 @@ var searchData=
   ['loadjsonconfig',['loadJsonConfig',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#af33f2be1dfb43213c365f5bdf749dff3',1,'frc::common::wrappers::Camera']]],
   ['loadtankprofile',['loadTankProfile',['../classfrc_1_1common_1_1wrappers_1_1PathingHelper.html#a6c36a35f4064998f46b9401c8c42de00',1,'frc::common::wrappers::PathingHelper']]],
   ['log',['log',['../classfrc_1_1robot_1_1common_1_1Logger.html#a6a5fefdcd1b578781834cd48e4a3d206',1,'frc::robot::common::Logger']]],
-  ['logger',['Logger',['../classfrc_1_1robot_1_1common_1_1Logger.html#aa51cc752fb8a76ec6c60fb7fc4fe1247',1,'frc::robot::common::Logger']]]
+  ['logger',['Logger',['../classfrc_1_1robot_1_1common_1_1Logger.html#aa51cc752fb8a76ec6c60fb7fc4fe1247',1,'frc::robot::common::Logger']]],
+  ['logtimestamp',['logTimestamp',['../classfrc_1_1robot_1_1Robot.html#a739d2d45e910023fcaf0dea5b27152c1',1,'frc::robot::Robot']]]
 ];

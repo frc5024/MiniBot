@@ -20,7 +20,7 @@ var hierarchy =
     [ "frc.robot.OI", "classfrc_1_1robot_1_1OI.html", null ],
     [ "frc.common.wrappers.PathingHelper", "classfrc_1_1common_1_1wrappers_1_1PathingHelper.html", null ],
     [ "frc.robot.Constants.PeriodicTiming", "classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html", null ],
-    [ "frc.robot.common.control.PID", "classfrc_1_1robot_1_1common_1_1control_1_1PID.html", null ],
+    [ "frc.common.control.PID", "classfrc_1_1common_1_1control_1_1PID.html", null ],
     [ "frc.robot.Constants.Robot", "classfrc_1_1robot_1_1Constants_1_1Robot.html", null ],
     [ "frc.common.control.SlewLimiter", "classfrc_1_1common_1_1control_1_1SlewLimiter.html", null ],
     [ "frc.common.wrappers.TankTrajectory", "classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html", null ],
