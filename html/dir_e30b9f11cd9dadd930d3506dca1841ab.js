@@ -9,9 +9,6 @@ var dir_e30b9f11cd9dadd930d3506dca1841ab =
     [ "GearBox.java", "GearBox_8java.html", [
       [ "GearBox", "classfrc_1_1common_1_1wrappers_1_1GearBox.html", "classfrc_1_1common_1_1wrappers_1_1GearBox" ]
     ] ],
-    [ "NetworkTables.java", "NetworkTables_8java.html", [
-      [ "NetworkTables", "classfrc_1_1common_1_1wrappers_1_1NetworkTables.html", "classfrc_1_1common_1_1wrappers_1_1NetworkTables" ]
-    ] ],
     [ "PathingHelper.java", "PathingHelper_8java.html", [
       [ "PathingHelper", "classfrc_1_1common_1_1wrappers_1_1PathingHelper.html", "classfrc_1_1common_1_1wrappers_1_1PathingHelper" ]
     ] ],
