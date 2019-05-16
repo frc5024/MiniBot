@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['robot_2ejava',['Robot.java',['../Robot_8java.html',1,'']]],
-  ['robotlogger_2ejava',['RobotLogger.java',['../RobotLogger_8java.html',1,'']]],
-  ['rrsubsystem_2ejava',['RRSubsystem.java',['../RRSubsystem_8java.html',1,'']]]
+  ['pathinghelper_2ejava',['PathingHelper.java',['../PathingHelper_8java.html',1,'']]],
+  ['periodiclogger_2ejava',['PeriodicLogger.java',['../PeriodicLogger_8java.html',1,'']]],
+  ['pid_2ejava',['PID.java',['../PID_8java.html',1,'']]]
 ];
