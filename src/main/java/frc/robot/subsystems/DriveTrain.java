@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
-import java.util.logging.Logger;
+import frc.common.utils.RobotLogger;
+import frc.common.utils.RobotLogger.Level;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
@@ -22,7 +23,7 @@ import frc.common.DriveSignal;
  * The Subsystem in control of the robot's drivebase.
  */
 public class DriveTrain extends Subsystem {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
+    private final RobotLogger logger = RobotLogger.getInstance();
 
     GearBox mLeftGearbox;
     GearBox mRightGearbox;
@@ -39,26 +40,26 @@ public class DriveTrain extends Subsystem {
 
     public DriveTrain(){
         /* Create both gearbox objects */
-        logger.info("Constructing GearBoxes out of motor pairs");
+        logger.log("[DriveTrain] Constructing GearBoxes out of motor pairs", Level.kRobot);
         mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
         mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.rightFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.rightRearMotor));
 
         /* Enable current limiting on each gearbox */
-        logger.info("Limiting current on both gearboxes. Peak: " + Constants.DriveTrain.peakCurrent + "A, Hold: "
-                + Constants.DriveTrain.holdCurrent + "A, Timeout: " + Constants.DriveTrain.holdCurrent + "ms");
+        logger.log("[DriveTrain] Limiting current on both gearboxes. Peak: " + Constants.DriveTrain.peakCurrent + "A, Hold: "
+                + Constants.DriveTrain.holdCurrent + "A, Timeout: " + Constants.DriveTrain.holdCurrent + "ms", Level.kRobot);
         mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.holdCurrent);
         mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
 
         /* Create a DifferentialDrive out of each gearbox */
         mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);
         mDrivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
-        logger.info("Drivebase has been set to: Unsafe");
+        logger.log("[DriveTrain] Drivebase has been set to: Unsafe", Level.kRobot);
 
         /* Set up the gyro */
-        logger.info("Loading gyro for drivetrain");
+        logger.log("[DriveTrain] Loading gyro for drivetrain", Level.kRobot);
         this.gyro = new AHRS(Port.kMXP);
         this.gyro.reset();
-        logger.info("Gyro has been reset to: " + this.gyro.getAngle());
+        logger.log("[DriveTrain] Gyro has been reset to: " + this.gyro.getAngle(), Level.kRobot);
 
         /* Set a 0,0 signal */
         this.current_signal = new DriveSignal(0, 0);
@@ -144,7 +145,7 @@ public class DriveTrain extends Subsystem {
         NeutralMode mode = on ? NeutralMode.Brake : NeutralMode.Coast;
         String mode_string = on ? "Brake" : "Coast";
 
-        logger.info("DriveTrain NeutralMode has been set to: " + mode_string);
+        logger.log("[DriveTrain] NeutralMode has been set to: " + mode_string);
 
         this.mLeftGearbox.front.setNeutralMode(mode);
         this.mLeftGearbox.rear.setNeutralMode(mode);
@@ -189,13 +190,15 @@ public class DriveTrain extends Subsystem {
      * @return The outpputted TankProfile
      */
     public TankTrajectory getProfile(String filename, boolean swap_paths, boolean invert_gyro, boolean invert_path) {
-        logger.info("Loading DriveTrain motion profile: " + filename);
+        logger.log("[DriveTrain] Loading motion profile: " + filename);
         return PathingHelper.loadTankProfile(filename, this.mLeftGearbox, this.mRightGearbox, this.gyro, swap_paths,
                 invert_gyro, invert_path);
     }
 
-    public void reset(){
+    public void reset() {
         // Reset encoders, gyro
         // Set all outputs to 0.0
+        this.mLeftGearbox.front.set(0.0);
+        this.mRightGearbox.front.set(0.0);
     }
 }

@@ -15,8 +15,8 @@ import frc.common.wrappers.Camera;
 import frc.common.utils.FileUtils;
 import frc.common.field.FieldStatusThread;
 import frc.common.utils.RobotLogger;
-// import frc.common.PeriodicLogger;
 import frc.common.utils.RobotLogger.Level;
+
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
@@ -69,6 +69,7 @@ public class Robot extends TimedRobot {
     this.m_period = Constants.PeriodicTiming.robot_period;
     this.field_status = new FieldStatusThread();
     this.field_status.start(Constants.PeriodicTiming.field_period);
+    this.logger.start(Constants.PeriodicTiming.logging_period);
   }
 
 

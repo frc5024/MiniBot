@@ -42,6 +42,7 @@ public class Constants {
   public class PeriodicTiming {
     public static final double robot_period = 0.02;
     public static final double field_period = 0.04;
+    public static final double logging_period = 0.02;
   }
   /* TriggerDrive */
   public static final double accelerationStep = 0.15;
