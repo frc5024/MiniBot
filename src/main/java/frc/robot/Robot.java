@@ -2,8 +2,6 @@ package frc.robot;
 
 import edu.wpi.first.networktables.NetworkTable;
 
-// import java.util.logging.Logger;
-
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -18,17 +16,14 @@ import frc.common.utils.FileUtils;
 import frc.common.field.FieldStatusThread;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
-import frc.common.wrappers.NetworkTables;
+import frc.common.networking.NetworkTables;
+import frc.common.networking.VisionInterface;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
-  // Logger logger = Logger.getLogger(this.getClass().getName());
-  // PeriodicLogger console = new PeriodicLogger(Constants.PeriodicTiming.robot_period);
-
   RobotLogger logger = RobotLogger.getInstance();
-  
   public double last_timestamp = Timer.getFPGATimestamp();
 
   /* Telemetry */
@@ -36,7 +31,10 @@ public class Robot extends TimedRobot {
 
   ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
   FieldStatusThread field_status;
+
+  /* Vision */
   Camera main_camera;
+  VisionInterface vision_interface;
 
   /* Sybsystems */
   public static DriveTrain mDriveTrain;
@@ -55,6 +53,7 @@ public class Robot extends TimedRobot {
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
     this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
     this.main_camera.keepCameraAwake(true);
+    nt_inst.getEntry("vision", "camera_fov").setNumber(Constants.MainCamera.fov);
 
     /* Construct all Subsystems */
     logger.log("Constructing Subsystems", Level.kRobot);
@@ -76,10 +75,9 @@ public class Robot extends TimedRobot {
     this.field_status.start(Constants.PeriodicTiming.field_period);
     this.logger.start(Constants.PeriodicTiming.logging_period);
 
-    /* Push prelim vision values to NetworkTables */
-    nt_inst.getEntry("vision", "target_distance").setNumber(0.0);
-    nt_inst.getEntry("vision", "target_angle").setNumber(0.0);
-    nt_inst.getEntry("vision", "camera_fov").setNumber(Constants.MainCamera.fov);
+    /* Enable vision data thread */
+    this.vision_interface = VisionInterface.getInstance();
+    this.vision_interface.start(Constants.PeriodicTiming.vision_thread);
   }
 
 
