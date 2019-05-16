@@ -11,7 +11,6 @@ var hierarchy =
     [ "frc.common.wrappers.GearBox", "classfrc_1_1common_1_1wrappers_1_1GearBox.html", null ],
     [ "frc.common.utils.LatchedBoolean", "classfrc_1_1common_1_1utils_1_1LatchedBoolean.html", null ],
     [ "frc.common.utils.RobotLogger.Level", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html", null ],
-    [ "frc.common.utils.LogUtils", "classfrc_1_1common_1_1utils_1_1LogUtils.html", null ],
     [ "frc.robot.Main", "classfrc_1_1robot_1_1Main.html", null ],
     [ "frc.robot.Constants.MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", null ],
     [ "frc.common.field.Match", "classfrc_1_1common_1_1field_1_1Match.html", null ],

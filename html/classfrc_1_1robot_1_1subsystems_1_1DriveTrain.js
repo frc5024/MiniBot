@@ -14,6 +14,6 @@ var classfrc_1_1robot_1_1subsystems_1_1DriveTrain =
     [ "requestSignal", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a9863c25741454376836b84f42f2d3487", null ],
     [ "reset", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ae0298c423a3210750048befd73b93541", null ],
     [ "setBrakes", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78", null ],
-    [ "logger", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a9d0fca58bb7e4284123ba5fa437c970f", null ],
+    [ "logger", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a7b57c4739bea4490a16aa4be2ba3eb33", null ],
     [ "mInstance", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a4052b6daf88928cb66fe631aef614ec1", null ]
 ];
