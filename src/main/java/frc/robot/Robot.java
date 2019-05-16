@@ -1,6 +1,6 @@
 package frc.robot;
 
-import java.util.logging.Logger;
+// import java.util.logging.Logger;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -14,12 +14,17 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.common.wrappers.Camera;
 import frc.common.utils.FileUtils;
 import frc.common.field.FieldStatusThread;
-
+import frc.common.utils.RobotLogger;
+// import frc.common.PeriodicLogger;
+import frc.common.utils.RobotLogger.Level;
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
-  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  // Logger logger = Logger.getLogger(this.getClass().getName());
+  // PeriodicLogger console = new PeriodicLogger(Constants.PeriodicTiming.robot_period);
+
+  RobotLogger logger = RobotLogger.getInstance();
   
   public double last_timestamp = Timer.getFPGATimestamp();
 
@@ -37,34 +42,35 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotInit() {
-    logger.info("Robot starting\nWelcome 5024!");
+    System.out.println("Robot starting...\nWelcome 5024!");
     logTimestamp();
 
     /* Start the CameraServer for the default USBCamera */
-    logger.info("Starting CameraServer");
+    logger.log("Starting CameraServer", Level.kRobot);
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
     this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
     this.main_camera.keepCameraAwake(true);
 
     /* Construct all Subsystems */
-    logger.info("Constructing Subsystems");
+    logger.log("Constructing Subsystems", Level.kRobot);
     mOI = new OI();
     mDriveTrain = new DriveTrain();
 
     /* Initalize Subsystems if required */
-    logger.info("Initializing Subsystems");
+    logger.log("Initializing Subsystems", Level.kRobot);
     mDriveTrain.setBrakes(true);
 
     /* Construct Commands */
-    logger.info("Constructing Commands");
+    logger.log("Constructing Commands", Level.kRobot);
     this.mTriggerDrive = new TriggerDrive();
 
     /* Set up notifiers */
-    logger.info("Setting up Notifiers");
+    logger.log("Setting up Notifiers", Level.kRobot);
     this.m_period = Constants.PeriodicTiming.robot_period;
     this.field_status = new FieldStatusThread();
     this.field_status.start(Constants.PeriodicTiming.field_period);
   }
+
 
   @Override
   public void robotPeriodic() {
@@ -74,7 +80,7 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledInit() {
     SmartDashboard.putString("Robot Mode", "DISABLED");
-    logger.info("Robot Disabled");
+    logger.log("Robot Disabled", Level.kRobot);
     logTimestamp();
   }
 
@@ -90,7 +96,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     SmartDashboard.putString("Robot Mode", "AUTO");
-    logger.info("Autonomous Started with GSM: " + this.field_status.getCurrentMatch().getGSM());
+    logger.log("Autonomous Started with GSM: " + this.field_status.getCurrentMatch().getGSM(), Level.kRobot);
     logTimestamp();
   }
 
@@ -106,7 +112,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
     SmartDashboard.putString("Robot Mode", "TELEOP");
-    logger.info("Teleop started");
+    logger.log("Teleop started", Level.kRobot);
     logTimestamp();
 
     /* Start commands */
@@ -145,7 +151,6 @@ public class Robot extends TimedRobot {
    * Prints the current timestamp to the log
    */
   private void logTimestamp() {
-    logger.info("Current time: " + this.last_timestamp);
+    System.out.println("Current time: " + this.last_timestamp);
   }
-
 }

@@ -14,7 +14,6 @@ import frc.robot.commands.TriggerDrive;
 import frc.common.wrappers.GearBox;
 import frc.robot.Constants;
 import frc.common.control.SlewLimiter;
-import frc.common.control.VirtualGearShifter;
 import frc.common.wrappers.PathingHelper;
 import frc.common.wrappers.TankTrajectory;
 import frc.common.DriveSignal;
@@ -33,7 +32,6 @@ public class DriveTrain extends Subsystem {
     private static DriveTrain mInstance = new DriveTrain();
 
     SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
-    VirtualGearShifter gearShifter = new VirtualGearShifter(Constants.gearshiftZone, Constants.accelerationStep);
 
     DriveSignal current_signal;
 
@@ -103,19 +101,9 @@ public class DriveTrain extends Subsystem {
      * @param speed Forward speed (from -1.0 to 1.0)
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
-    public void raiderDrive(double speed, double rotation, boolean override_brakes) {
-        /* Feed the accelerator and gearshifter */
-        speed = this.gearShifter.feed(speed);
+    public void raiderDrive(double speed, double rotation) {
+        /* Feed the accelerator */
         speed = this.accelerator.feed(speed);
-        rotation = this.gearShifter.feed(rotation);
-
-        /* Deal with coasting during a shift */
-        if (!override_brakes) {
-            setBrakes(!this.gearShifter.shouldCoast());
-            if(this.gearShifter.shouldReset()){
-                this.accelerator.reset();
-            }
-        }
 
         /* Send motor data to the mDrivebase */
         mDrivebase.arcadeDrive(speed, rotation, false);
@@ -181,16 +169,6 @@ public class DriveTrain extends Subsystem {
     public int getRightGearboxTicks() {
         return this.mRightGearbox.getTicks();
     }
-    
-    /**
-     * Shifts to high gear and emulates a clutch
-     * 
-     * @param high Should the gearing be set high?
-     */
-    public void gearShift(boolean high) {
-        this.accelerator.reset();
-        this.gearShifter.shift(high);
-    }
 
     /**
      * Sends Subsystem telemetry data to SmartDashboard
@@ -200,9 +178,24 @@ public class DriveTrain extends Subsystem {
         SmartDashboard.putNumber("DriveTrin Right Gearbox Ticks", getRightGearboxTicks());
     }
     
+    /**
+     * Use DriveTrain components to load a pre-generated motiont profile
+     * 
+     * @param filename Motion profile filename / path
+     * @param swap_paths Should left and right be swapped?
+     * @param invert_gyro Is the gyro backwards?
+     * @param invert_path Should this path be loaded in inverse mode?
+     * 
+     * @return The outpputted TankProfile
+     */
     public TankTrajectory getProfile(String filename, boolean swap_paths, boolean invert_gyro, boolean invert_path) {
         logger.info("Loading DriveTrain motion profile: " + filename);
         return PathingHelper.loadTankProfile(filename, this.mLeftGearbox, this.mRightGearbox, this.gyro, swap_paths,
                 invert_gyro, invert_path);
+    }
+
+    public void reset(){
+        // Reset encoders, gyro
+        // Set all outputs to 0.0
     }
 }

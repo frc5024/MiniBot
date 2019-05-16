@@ -42,7 +42,7 @@ public class TriggerDrive extends Command {
     rotation = (Math.abs(rotation) < 0.1) ? 0.0 : rotation;
 
     // Robot.mDriveTrain.arcadeDrive(speed, rotation);
-    Robot.mDriveTrain.arcadeDrive(speed, rotation, false);
+    Robot.mDriveTrain.raiderDrive(speed, rotation);
   }
 
   // Make this return true when this Command no longer needs to run execute()

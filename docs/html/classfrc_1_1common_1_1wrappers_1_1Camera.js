@@ -4,5 +4,6 @@ var classfrc_1_1common_1_1wrappers_1_1Camera =
     [ "Camera", "classfrc_1_1common_1_1wrappers_1_1Camera.html#a817fcc4219ed99bc6de2d058901db895", null ],
     [ "keepCameraAwake", "classfrc_1_1common_1_1wrappers_1_1Camera.html#a0eda89996a5c6bed130f4ec67884b929", null ],
     [ "loadJsonConfig", "classfrc_1_1common_1_1wrappers_1_1Camera.html#af33f2be1dfb43213c365f5bdf749dff3", null ],
-    [ "setResolution", "classfrc_1_1common_1_1wrappers_1_1Camera.html#a9618c5bd84e14137f0a81a55460f61f3", null ]
+    [ "setResolution", "classfrc_1_1common_1_1wrappers_1_1Camera.html#a9618c5bd84e14137f0a81a55460f61f3", null ],
+    [ "logger", "classfrc_1_1common_1_1wrappers_1_1Camera.html#a2ac10861a201de8bfb46ce7be65b3f02", null ]
 ];
