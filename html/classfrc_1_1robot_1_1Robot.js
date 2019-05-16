@@ -13,7 +13,6 @@ var classfrc_1_1robot_1_1Robot =
     [ "updateSmartdashboard", "classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8", null ],
     [ "updateTimestamp", "classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a", null ],
     [ "last_timestamp", "classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf", null ],
-    [ "logger", "classfrc_1_1robot_1_1Robot.html#aa75c4de23cc8da5285ed210ec888c2ae", null ],
     [ "mDriveTrain", "classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07", null ],
     [ "mOI", "classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef", null ],
     [ "mTriggerDrive", "classfrc_1_1robot_1_1Robot.html#a1eb88b1efa0a30e18bdf07426e70a018", null ]

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['robot',['Robot',['../classfrc_1_1robot_1_1Constants_1_1Robot.html',1,'frc::robot::Constants']]],
-  ['robot',['Robot',['../classfrc_1_1robot_1_1Robot.html',1,'frc::robot']]]
+  ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html',1,'frc::common::control']]]
 ];

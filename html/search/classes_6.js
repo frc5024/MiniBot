@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['intentmanager',['IntentManager',['../classfrc_1_1robot_1_1common_1_1IntentManager.html',1,'frc::robot::common']]]
+  ['latchedboolean',['LatchedBoolean',['../classfrc_1_1common_1_1utils_1_1LatchedBoolean.html',1,'frc::common::utils']]],
+  ['level',['Level',['../enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html',1,'frc::common::utils::RobotLogger']]],
+  ['logutils',['LogUtils',['../classfrc_1_1common_1_1utils_1_1LogUtils.html',1,'frc::common::utils']]]
 ];

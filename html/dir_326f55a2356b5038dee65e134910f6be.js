@@ -8,5 +8,9 @@ var dir_326f55a2356b5038dee65e134910f6be =
     ] ],
     [ "LogUtils.java", "LogUtils_8java.html", [
       [ "LogUtils", "classfrc_1_1common_1_1utils_1_1LogUtils.html", "classfrc_1_1common_1_1utils_1_1LogUtils" ]
+    ] ],
+    [ "RobotLogger.java", "RobotLogger_8java.html", [
+      [ "RobotLogger", "classfrc_1_1common_1_1utils_1_1RobotLogger.html", "classfrc_1_1common_1_1utils_1_1RobotLogger" ],
+      [ "Level", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level" ]
     ] ]
 ];
