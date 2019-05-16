@@ -15,6 +15,7 @@ var hierarchy =
     [ "frc.robot.Constants.MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", null ],
     [ "frc.common.field.Match", "classfrc_1_1common_1_1field_1_1Match.html", null ],
     [ "frc.robot.Constants.MotionProfile", "classfrc_1_1robot_1_1Constants_1_1MotionProfile.html", null ],
+    [ "frc.common.wrappers.NetworkTables", "classfrc_1_1common_1_1wrappers_1_1NetworkTables.html", null ],
     [ "frc.robot.OI", "classfrc_1_1robot_1_1OI.html", null ],
     [ "frc.common.wrappers.PathingHelper", "classfrc_1_1common_1_1wrappers_1_1PathingHelper.html", null ],
     [ "frc.common.PeriodicLogger", "classfrc_1_1common_1_1PeriodicLogger.html", null ],

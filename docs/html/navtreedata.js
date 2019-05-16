@@ -25,7 +25,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BasicPath_8java.html",
-"dir_7e2b9a5cfa086c8901c53a15b78652e4.html"
+"classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ae0298c423a3210750048befd73b93541"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

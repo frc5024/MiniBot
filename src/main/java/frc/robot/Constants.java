@@ -52,6 +52,7 @@ public class Constants {
   public class MainCamera {
     public static final String name = "Main Camera";
     public static final int http_port = 1182;
+    public static final double fov = 60; // degrees
   }
 
   /* PCM */

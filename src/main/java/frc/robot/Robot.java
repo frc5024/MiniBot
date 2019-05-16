@@ -1,5 +1,7 @@
 package frc.robot;
 
+import edu.wpi.first.networktables.NetworkTable;
+
 // import java.util.logging.Logger;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -16,6 +18,7 @@ import frc.common.utils.FileUtils;
 import frc.common.field.FieldStatusThread;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
+import frc.common.wrappers.NetworkTables;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
@@ -29,6 +32,8 @@ public class Robot extends TimedRobot {
   public double last_timestamp = Timer.getFPGATimestamp();
 
   /* Telemetry */
+  NetworkTables nt_inst = NetworkTables.getInstance();
+
   ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
   FieldStatusThread field_status;
   Camera main_camera;
@@ -70,6 +75,11 @@ public class Robot extends TimedRobot {
     this.field_status = new FieldStatusThread();
     this.field_status.start(Constants.PeriodicTiming.field_period);
     this.logger.start(Constants.PeriodicTiming.logging_period);
+
+    /* Push prelim vision values to NetworkTables */
+    nt_inst.getEntry("vision", "target_distance").setNumber(0.0);
+    nt_inst.getEntry("vision", "target_angle").setNumber(0.0);
+    nt_inst.getEntry("vision", "camera_fov").setNumber(Constants.MainCamera.fov);
   }
 
 
