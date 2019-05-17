@@ -45,6 +45,13 @@ public class Constants {
     public static final double logging_period = 0.02;
     public static final double vision_thread = 0.01;
   }
+
+  public class Deadbands {
+    public static final double rotation_deadband = 0.1;
+    public static final double roataion_percision = 0.2;
+    public static final double speed_percision = 0.1;
+  }
+
   /* TriggerDrive */
   public static final double accelerationStep = 0.15;
   public static final double gearshiftZone = 0.75;

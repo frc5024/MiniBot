@@ -2,6 +2,8 @@ var hierarchy =
 [
     [ "frc.common.wrappers.Camera", "classfrc_1_1common_1_1wrappers_1_1Camera.html", null ],
     [ "frc.robot.Constants", "classfrc_1_1robot_1_1Constants.html", null ],
+    [ "frc.common.control.CubicDeadband", "classfrc_1_1common_1_1control_1_1CubicDeadband.html", null ],
+    [ "frc.robot.Constants.Deadbands", "classfrc_1_1robot_1_1Constants_1_1Deadbands.html", null ],
     [ "frc.common.DriveSignal", "classfrc_1_1common_1_1DriveSignal.html", null ],
     [ "frc.robot.Constants.DriveTrain", "classfrc_1_1robot_1_1Constants_1_1DriveTrain.html", null ],
     [ "frc.robot.Constants.EncoderInfo", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html", null ],
@@ -11,6 +13,8 @@ var hierarchy =
     [ "frc.common.wrappers.GearBox", "classfrc_1_1common_1_1wrappers_1_1GearBox.html", null ],
     [ "frc.common.utils.LatchedBoolean", "classfrc_1_1common_1_1utils_1_1LatchedBoolean.html", null ],
     [ "frc.common.utils.RobotLogger.Level", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html", null ],
+    [ "frc.common.utils.Line", "classfrc_1_1common_1_1utils_1_1Line.html", null ],
+    [ "frc.common.control.LinearDeadband", "classfrc_1_1common_1_1control_1_1LinearDeadband.html", null ],
     [ "frc.robot.Main", "classfrc_1_1robot_1_1Main.html", null ],
     [ "frc.robot.Constants.MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", null ],
     [ "frc.common.field.Match", "classfrc_1_1common_1_1field_1_1Match.html", null ],

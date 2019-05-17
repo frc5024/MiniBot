@@ -1,5 +1,6 @@
 var classfrc_1_1robot_1_1Constants =
 [
+    [ "Deadbands", "classfrc_1_1robot_1_1Constants_1_1Deadbands.html", "classfrc_1_1robot_1_1Constants_1_1Deadbands" ],
     [ "DriveTrain", "classfrc_1_1robot_1_1Constants_1_1DriveTrain.html", "classfrc_1_1robot_1_1Constants_1_1DriveTrain" ],
     [ "EncoderInfo", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo" ],
     [ "MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", "classfrc_1_1robot_1_1Constants_1_1MainCamera" ],

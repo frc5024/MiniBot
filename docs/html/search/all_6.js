@@ -12,7 +12,7 @@ var searchData=
   ['getentry',['getEntry',['../classfrc_1_1common_1_1networking_1_1NetworkTables.html#ad511c4bcc3354b15e6ff698556400c4d',1,'frc::common::networking::NetworkTables']]],
   ['getgsm',['getGSM',['../classfrc_1_1common_1_1field_1_1Match.html#a74f02a856648cafb6b0448661eecf6aa',1,'frc::common::field::Match']]],
   ['gethighgear',['getHighGear',['../classfrc_1_1common_1_1DriveSignal.html#ac671c7d2f81ff855b88efa67f4e9416d',1,'frc::common::DriveSignal']]],
-  ['getinstance',['getInstance',['../classfrc_1_1common_1_1networking_1_1NetworkTables.html#a02bf8ede42038fd4040e6e9a16238704',1,'frc.common.networking.NetworkTables.getInstance()'],['../classfrc_1_1common_1_1networking_1_1VisionInterface.html#a3c9112116f1eecf9557654cdec6d2e1a',1,'frc.common.networking.VisionInterface.getInstance()'],['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#a91cb283aea5152987bdc80626c14f7e2',1,'frc.common.utils.RobotLogger.getInstance()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a24422b857174253772b374d5e8616fad',1,'frc.robot.subsystems.DriveTrain.getInstance()']]],
+  ['getinstance',['getInstance',['../classfrc_1_1common_1_1networking_1_1NetworkTables.html#a02bf8ede42038fd4040e6e9a16238704',1,'frc.common.networking.NetworkTables.getInstance()'],['../classfrc_1_1common_1_1networking_1_1VisionInterface.html#a3c9112116f1eecf9557654cdec6d2e1a',1,'frc.common.networking.VisionInterface.getInstance()'],['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#a91cb283aea5152987bdc80626c14f7e2',1,'frc.common.utils.RobotLogger.getInstance()'],['../classfrc_1_1robot_1_1OI.html#af736e9d49cfba1566d27147dd85cc2ff',1,'frc.robot.OI.getInstance()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a24422b857174253772b374d5e8616fad',1,'frc.robot.subsystems.DriveTrain.getInstance()']]],
   ['getinversemotion',['getInverseMotion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#acd64e28b2e48eaaa390b64483fd1c631',1,'frc::common::wrappers::GearBox']]],
   ['getleft',['getLeft',['../classfrc_1_1common_1_1DriveSignal.html#a9edaf8e292f61ebafe584e454c63bf72',1,'frc::common::DriveSignal']]],
   ['getleftgearboxticks',['getLeftGearboxTicks',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a863f1282b4e126e04c33d89f20d38635',1,'frc::robot::subsystems::DriveTrain']]],
@@ -24,5 +24,9 @@ var searchData=
   ['getrightgearboxticks',['getRightGearboxTicks',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a6a89f40b891bcf806ded0301ac1f6d95',1,'frc::robot::subsystems::DriveTrain']]],
   ['getsplitgsm',['getSplitGSM',['../classfrc_1_1common_1_1field_1_1Match.html#ac06ee15c93e93dc5da7a134731d1e600',1,'frc::common::field::Match']]],
   ['gettable',['getTable',['../classfrc_1_1common_1_1networking_1_1NetworkTables.html#acc6818d4cc16b9bf0f40a93d286fd43e',1,'frc::common::networking::NetworkTables']]],
-  ['getticks',['getTicks',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#ab014a13935091a27711fee383a345fbe',1,'frc.common.wrappers.EncoderWrapper.getTicks()'],['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a16eee7465ba98f65ad0c89a728be71ce',1,'frc.common.wrappers.GearBox.getTicks()']]]
+  ['getthrottle',['getThrottle',['../classfrc_1_1robot_1_1OI.html#ab06f45c05c6292902b84705db71afab7',1,'frc::robot::OI']]],
+  ['getticks',['getTicks',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#ab014a13935091a27711fee383a345fbe',1,'frc.common.wrappers.EncoderWrapper.getTicks()'],['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a16eee7465ba98f65ad0c89a728be71ce',1,'frc.common.wrappers.GearBox.getTicks()']]],
+  ['getturn',['getTurn',['../classfrc_1_1robot_1_1OI.html#a8d06c190c6d4d372ba74d0feb9832547',1,'frc::robot::OI']]],
+  ['getx',['getX',['../classfrc_1_1common_1_1utils_1_1Line.html#ae4c0f112706fc938ea6abc9d1e1d0df9',1,'frc::common::utils::Line']]],
+  ['gety',['getY',['../classfrc_1_1common_1_1utils_1_1Line.html#ac963306345449cca133acf9eb4b6447e',1,'frc::common::utils::Line']]]
 ];

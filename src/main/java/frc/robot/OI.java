@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.GenericHID;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -42,5 +43,56 @@ public class OI {
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
 
+  // Instance
+  private static OI instance = null;
+
+
+  // Constrollers
   public XboxController driverController = new XboxController(0);
+
+  /**
+   * Get the current OI instance
+   * 
+   * @return Current OI instance
+   */
+  public static OI getInstance() {
+    if (instance == null) {
+      instance = new OI();
+    }
+
+    return instance;
+  }
+
+  /**
+   * Limits a trigger to positive values only. This allows the use of a steam controller for driving
+   */
+  private double limitTrigger(double value){
+    if (value <= 0.0){
+      return 0.0;
+    }
+    return value;
+  }
+
+  /**
+   * Get the DriveTrain throttle value from driverstation
+   * 
+   * @return Throttle (from -1.0 to 1.0)
+   */
+  public double getThrottle() {
+    double speed = 0.0;
+
+    speed += limitTrigger(this.driverController.getTriggerAxis(GenericHID.Hand.kRight));
+    speed -= limitTrigger(this.driverController.getTriggerAxis(GenericHID.Hand.kLeft));
+
+    return speed;
+  }
+
+  /**
+   * Get the DriveTrain turn rate value from driverstation
+   * 
+   * @return Turn rate (from -1.0 to 1.0)
+   */
+  public double getTurn() {
+    return this.driverController.getX(GenericHID.Hand.kLeft);
+  }
 }

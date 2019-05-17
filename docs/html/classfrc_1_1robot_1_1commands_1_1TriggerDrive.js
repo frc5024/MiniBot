@@ -5,6 +5,5 @@ var classfrc_1_1robot_1_1commands_1_1TriggerDrive =
     [ "execute", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#afef3ed0ba14ce1e0b41168ac5c1e9eb9", null ],
     [ "initialize", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#ab814e08a7ef384ceaa91c2a6dbb0ae30", null ],
     [ "interrupted", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aec0cedb47f3ad559592f10498a5f19ea", null ],
-    [ "isFinished", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c", null ],
-    [ "limitTrigger", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aa8c2f178614a92e3af524cdbf04bc862", null ]
+    [ "isFinished", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c", null ]
 ];
