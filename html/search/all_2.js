@@ -10,5 +10,9 @@ var searchData=
   ['constants',['Constants',['../classfrc_1_1robot_1_1Constants.html',1,'frc::robot']]],
   ['constants_2ejava',['Constants.java',['../Constants_8java.html',1,'']]],
   ['constructdeploypath',['constructDeployPath',['../classfrc_1_1common_1_1utils_1_1FileUtils.html#a010b56fb843b527ad8352a59c7141671',1,'frc::common::utils::FileUtils']]],
+  ['cubic',['cubic',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#a481d457ce3db793c61def798deb69eb8',1,'frc::common::control::CubicDeadband']]],
+  ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html',1,'frc::common::control']]],
+  ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad',1,'frc::common::control::CubicDeadband']]],
+  ['cubicdeadband_2ejava',['CubicDeadband.java',['../CubicDeadband_8java.html',1,'']]],
   ['currenttimeout',['currentTimeout',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#aab1c9de9556f5348ea7bde7d8a62e691',1,'frc::robot::Constants::DriveTrain']]]
 ];

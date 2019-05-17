@@ -176,6 +176,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>constructDeployPath()
 : <a class="el" href="classfrc_1_1common_1_1utils_1_1FileUtils.html#a010b56fb843b527ad8352a59c7141671">frc.common.utils.FileUtils</a>
 </li>
+<li>cubic()
+: <a class="el" href="classfrc_1_1common_1_1control_1_1CubicDeadband.html#a481d457ce3db793c61def798deb69eb8">frc.common.control.CubicDeadband</a>
+</li>
+<li>CubicDeadband()
+: <a class="el" href="classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad">frc.common.control.CubicDeadband</a>
+</li>
 </ul>
 
 
@@ -221,7 +227,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>feed()
-: <a class="el" href="classfrc_1_1common_1_1control_1_1PID.html#a2f489714a730083fc7db7e23cc850d3f">frc.common.control.PID</a>
+: <a class="el" href="classfrc_1_1common_1_1control_1_1CubicDeadband.html#a7b410d0a96c1555e9f554efeb77d6ae6">frc.common.control.CubicDeadband</a>
+, <a class="el" href="classfrc_1_1common_1_1control_1_1LinearDeadband.html#aac40abb790a535f73d4c7e225ead7c5f">frc.common.control.LinearDeadband</a>
+, <a class="el" href="classfrc_1_1common_1_1control_1_1PID.html#a2f489714a730083fc7db7e23cc850d3f">frc.common.control.PID</a>
 , <a class="el" href="classfrc_1_1common_1_1control_1_1SlewLimiter.html#a214ff5d4c412869cf824404b9b9dfedb">frc.common.control.SlewLimiter</a>
 , <a class="el" href="classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a854dbf1736846b36351066f336930d3c">frc.common.control.VirtualGearShifter</a>
 , <a class="el" href="classfrc_1_1common_1_1utils_1_1LatchedBoolean.html#a172a43cb04e9748779384957618fdf0b">frc.common.utils.LatchedBoolean</a>
@@ -269,6 +277,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classfrc_1_1common_1_1networking_1_1NetworkTables.html#a02bf8ede42038fd4040e6e9a16238704">frc.common.networking.NetworkTables</a>
 , <a class="el" href="classfrc_1_1common_1_1networking_1_1VisionInterface.html#a3c9112116f1eecf9557654cdec6d2e1a">frc.common.networking.VisionInterface</a>
 , <a class="el" href="classfrc_1_1common_1_1utils_1_1RobotLogger.html#a91cb283aea5152987bdc80626c14f7e2">frc.common.utils.RobotLogger</a>
+, <a class="el" href="classfrc_1_1robot_1_1OI.html#af736e9d49cfba1566d27147dd85cc2ff">frc.robot.OI</a>
 , <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a24422b857174253772b374d5e8616fad">frc.robot.subsystems.DriveTrain</a>
 </li>
 <li>getInverseMotion()
@@ -304,9 +313,21 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getTable()
 : <a class="el" href="classfrc_1_1common_1_1networking_1_1NetworkTables.html#acc6818d4cc16b9bf0f40a93d286fd43e">frc.common.networking.NetworkTables</a>
 </li>
+<li>getThrottle()
+: <a class="el" href="classfrc_1_1robot_1_1OI.html#ab06f45c05c6292902b84705db71afab7">frc.robot.OI</a>
+</li>
 <li>getTicks()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#ab014a13935091a27711fee383a345fbe">frc.common.wrappers.EncoderWrapper</a>
 , <a class="el" href="classfrc_1_1common_1_1wrappers_1_1GearBox.html#a16eee7465ba98f65ad0c89a728be71ce">frc.common.wrappers.GearBox</a>
+</li>
+<li>getTurn()
+: <a class="el" href="classfrc_1_1robot_1_1OI.html#a8d06c190c6d4d372ba74d0feb9832547">frc.robot.OI</a>
+</li>
+<li>getX()
+: <a class="el" href="classfrc_1_1common_1_1utils_1_1Line.html#ae4c0f112706fc938ea6abc9d1e1d0df9">frc.common.utils.Line</a>
+</li>
+<li>getY()
+: <a class="el" href="classfrc_1_1common_1_1utils_1_1Line.html#ac963306345449cca133acf9eb4b6447e">frc.common.utils.Line</a>
 </li>
 </ul>
 
@@ -347,7 +368,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1GearBox.html#a5400940a151797f022134f2ad83b0974">frc.common.wrappers.GearBox</a>
 </li>
 <li>limitTrigger()
-: <a class="el" href="classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aa8c2f178614a92e3af524cdbf04bc862">frc.robot.commands.TriggerDrive</a>
+: <a class="el" href="classfrc_1_1robot_1_1OI.html#a989fab273990a73b7a32d3572152ba18">frc.robot.OI</a>
+</li>
+<li>Line()
+: <a class="el" href="classfrc_1_1common_1_1utils_1_1Line.html#a4e4e51f4596d12d2963bdc4e9f3b0fc6">frc.common.utils.Line</a>
+</li>
+<li>LinearDeadband()
+: <a class="el" href="classfrc_1_1common_1_1control_1_1LinearDeadband.html#aaa1d0e04c9083d44f3baffbd3f214fb8">frc.common.control.LinearDeadband</a>
 </li>
 <li>loadJsonConfig()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1Camera.html#af33f2be1dfb43213c365f5bdf749dff3">frc.common.wrappers.Camera</a>
@@ -366,11 +393,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>Main()
-: <a class="el" href="classfrc_1_1robot_1_1Main.html#aaaa025997d101f996ad17575cbb72f5e">frc.robot.Main</a>
-</li>
 <li>main()
 : <a class="el" href="classfrc_1_1robot_1_1Main.html#ac753ed1d293b021232170a823a1c39f4">frc.robot.Main</a>
+</li>
+<li>Main()
+: <a class="el" href="classfrc_1_1robot_1_1Main.html#aaaa025997d101f996ad17575cbb72f5e">frc.robot.Main</a>
 </li>
 <li>Match()
 : <a class="el" href="classfrc_1_1common_1_1field_1_1Match.html#ad761365e3380e8744b714bb729831a42">frc.common.field.Match</a>

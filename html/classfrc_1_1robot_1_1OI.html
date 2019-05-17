@@ -106,7 +106,11 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1OI.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classfrc_1_1robot_1_1OI-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">frc.robot.OI Class Reference</div>  </div>
@@ -116,16 +120,140 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1OI.html','');});
 <p>This class is the glue that binds the controls on the physical operator interface to the commands and command groups that allow control of the robot.  
  <a href="classfrc_1_1robot_1_1OI.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab06f45c05c6292902b84705db71afab7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#ab06f45c05c6292902b84705db71afab7">getThrottle</a> ()</td></tr>
+<tr class="memdesc:ab06f45c05c6292902b84705db71afab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DriveTrain throttle value from driverstation.  <a href="#ab06f45c05c6292902b84705db71afab7">More...</a><br/></td></tr>
+<tr class="separator:ab06f45c05c6292902b84705db71afab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d06c190c6d4d372ba74d0feb9832547"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#a8d06c190c6d4d372ba74d0feb9832547">getTurn</a> ()</td></tr>
+<tr class="memdesc:a8d06c190c6d4d372ba74d0feb9832547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DriveTrain turn rate value from driverstation.  <a href="#a8d06c190c6d4d372ba74d0feb9832547">More...</a><br/></td></tr>
+<tr class="separator:a8d06c190c6d4d372ba74d0feb9832547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af736e9d49cfba1566d27147dd85cc2ff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classfrc_1_1robot_1_1OI.html">OI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#af736e9d49cfba1566d27147dd85cc2ff">getInstance</a> ()</td></tr>
+<tr class="memdesc:af736e9d49cfba1566d27147dd85cc2ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current <a class="el" href="classfrc_1_1robot_1_1OI.html" title="This class is the glue that binds the controls on the physical operator interface to the commands and...">OI</a> instance.  <a href="#af736e9d49cfba1566d27147dd85cc2ff">More...</a><br/></td></tr>
+<tr class="separator:af736e9d49cfba1566d27147dd85cc2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af59e575b40a8d43f4bb5eecbe3b5641f"><td class="memItemLeft" align="right" valign="top">XboxController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#af59e575b40a8d43f4bb5eecbe3b5641f">driverController</a> = new XboxController(0)</td></tr>
 <tr class="separator:af59e575b40a8d43f4bb5eecbe3b5641f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a989fab273990a73b7a32d3572152ba18"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#a989fab273990a73b7a32d3572152ba18">limitTrigger</a> (double value)</td></tr>
+<tr class="memdesc:a989fab273990a73b7a32d3572152ba18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limits a trigger to positive values only.  <a href="#a989fab273990a73b7a32d3572152ba18">More...</a><br/></td></tr>
+<tr class="separator:a989fab273990a73b7a32d3572152ba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a4222dd83ef2a2b1c7a596a4f092a515f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classfrc_1_1robot_1_1OI.html">OI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1OI.html#a4222dd83ef2a2b1c7a596a4f092a515f">instance</a> = null</td></tr>
+<tr class="separator:a4222dd83ef2a2b1c7a596a4f092a515f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is the glue that binds the controls on the physical operator interface to the commands and command groups that allow control of the robot. </p>
 
-<p>Definition at line <a class="el" href="OI_8java_source.html#l00016">16</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00017">17</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af736e9d49cfba1566d27147dd85cc2ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classfrc_1_1robot_1_1OI.html">OI</a> frc.robot.OI.getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current <a class="el" href="classfrc_1_1robot_1_1OI.html" title="This class is the glue that binds the controls on the physical operator interface to the commands and...">OI</a> instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current <a class="el" href="classfrc_1_1robot_1_1OI.html" title="This class is the glue that binds the controls on the physical operator interface to the commands and...">OI</a> instance </dd></dl>
+
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00058">58</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab06f45c05c6292902b84705db71afab7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double frc.robot.OI.getThrottle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the DriveTrain throttle value from driverstation. </p>
+<dl class="section return"><dt>Returns</dt><dd>Throttle (from -1.0 to 1.0) </dd></dl>
+
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00081">81</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d06c190c6d4d372ba74d0feb9832547"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double frc.robot.OI.getTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the DriveTrain turn rate value from driverstation. </p>
+<dl class="section return"><dt>Returns</dt><dd>Turn rate (from -1.0 to 1.0) </dd></dl>
+
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00095">95</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a989fab273990a73b7a32d3572152ba18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double frc.robot.OI.limitTrigger </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Limits a trigger to positive values only. </p>
+<p>This allows the use of a steam controller for driving </p>
+
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00069">69</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="af59e575b40a8d43f4bb5eecbe3b5641f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -136,7 +264,29 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="OI_8java_source.html#l00045">45</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00051">51</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4222dd83ef2a2b1c7a596a4f092a515f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfrc_1_1robot_1_1OI.html">OI</a> frc.robot.OI.instance = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OI_8java_source.html#l00047">47</a> of file <a class="el" href="OI_8java_source.html">OI.java</a>.</p>
 
 </div>
 </div>
