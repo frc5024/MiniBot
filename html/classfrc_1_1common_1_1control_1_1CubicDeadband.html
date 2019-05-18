@@ -135,8 +135,8 @@ Private Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This Scaling method was inspired by this blog post: </p>
 <p><a href="http://www.mimirgames.com/articles/games/joystick-input-and-using-deadbands/">http://www.mimirgames.com/articles/games/joystick-input-and-using-deadbands/</a></p>
-<p>Formula: ((w * x * x * x + (1.0 - w) * x) - (abs(x) / x) * (w * d * d * d + (1.0 - w) * d)) / (1.0 - (w * d * d * d + (1.0 - w) * d))</p>
-<p>This can be visualized on desmos: <a href="https://www.desmos.com/calculator/atypxowbv8">https://www.desmos.com/calculator/atypxowbv8</a> </p>
+<p>Formula: y = ((w * (x ^ 3) + (1.0 - w) * x) - (abs(x) / x) * (w * (d ^ 3) + (1.0 - w) * d)) / (1.0 - (w * (d ^ 3) + (1.0 - w) * d))</p>
+<p>This can be visualized on desmos: <a href="https://www.desmos.com/calculator/awcputalxe">https://www.desmos.com/calculator/awcputalxe</a> </p>
 
 <p>Definition at line <a class="el" href="CubicDeadband_8java_source.html#l00015">15</a> of file <a class="el" href="CubicDeadband_8java_source.html">CubicDeadband.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
