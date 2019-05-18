@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "frc.common.wrappers.Camera", "classfrc_1_1common_1_1wrappers_1_1Camera.html", null ],
+    [ "frc.common.network.ConnectionMonitor", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html", null ],
     [ "frc.robot.Constants", "classfrc_1_1robot_1_1Constants.html", null ],
     [ "frc.common.control.CubicDeadband", "classfrc_1_1common_1_1control_1_1CubicDeadband.html", null ],
     [ "frc.robot.Constants.Deadbands", "classfrc_1_1robot_1_1Constants_1_1Deadbands.html", null ],
@@ -19,7 +20,7 @@ var hierarchy =
     [ "frc.robot.Constants.MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", null ],
     [ "frc.common.field.Match", "classfrc_1_1common_1_1field_1_1Match.html", null ],
     [ "frc.robot.Constants.MotionProfile", "classfrc_1_1robot_1_1Constants_1_1MotionProfile.html", null ],
-    [ "frc.common.networking.NetworkTables", "classfrc_1_1common_1_1networking_1_1NetworkTables.html", null ],
+    [ "frc.common.network.NetworkTables", "classfrc_1_1common_1_1network_1_1NetworkTables.html", null ],
     [ "frc.robot.OI", "classfrc_1_1robot_1_1OI.html", null ],
     [ "frc.common.wrappers.PathingHelper", "classfrc_1_1common_1_1wrappers_1_1PathingHelper.html", null ],
     [ "frc.common.PeriodicLogger", "classfrc_1_1common_1_1PeriodicLogger.html", null ],
@@ -30,7 +31,7 @@ var hierarchy =
     [ "frc.common.control.SlewLimiter", "classfrc_1_1common_1_1control_1_1SlewLimiter.html", null ],
     [ "frc.common.wrappers.TankTrajectory", "classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html", null ],
     [ "frc.common.control.VirtualGearShifter", "classfrc_1_1common_1_1control_1_1VirtualGearShifter.html", null ],
-    [ "frc.common.networking.VisionInterface", "classfrc_1_1common_1_1networking_1_1VisionInterface.html", null ],
+    [ "frc.common.network.VisionInterface", "classfrc_1_1common_1_1network_1_1VisionInterface.html", null ],
     [ "Command", null, [
       [ "frc.robot.commands.TriggerDrive", "classfrc_1_1robot_1_1commands_1_1TriggerDrive.html", null ]
     ] ],

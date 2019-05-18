@@ -16,25 +16,29 @@ import frc.common.utils.FileUtils;
 import frc.common.field.FieldStatusThread;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
-import frc.common.networking.NetworkTables;
-import frc.common.networking.VisionInterface;
+import frc.common.network.NetworkTables;
+import frc.common.network.VisionInterface;
+import frc.common.network.ConnectionMonitor;
 
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
-  RobotLogger logger = RobotLogger.getInstance();
   public double last_timestamp = Timer.getFPGATimestamp();
 
   /* Telemetry */
   NetworkTables nt_inst = NetworkTables.getInstance();
 
   ShuffleboardTab driver_view = Shuffleboard.getTab("Driver View");
-  FieldStatusThread field_status;
+  FieldStatusThread field_status = new FieldStatusThread();
 
   /* Vision */
   Camera main_camera;
   VisionInterface vision_interface;
+
+  /* Networking and Logging */
+  ConnectionMonitor net_monitor = ConnectionMonitor.getInstance();
+  RobotLogger logger = RobotLogger.getInstance();
 
   /* Sybsystems */
   public static DriveTrain mDriveTrain;
@@ -47,6 +51,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     System.out.println("Robot starting...\nWelcome 5024!");
     logTimestamp();
+    this.m_period = Constants.PeriodicTiming.robot_period;
 
     /* Start the CameraServer for the default USBCamera */
     logger.log("Starting CameraServer", Level.kRobot);
@@ -70,12 +75,12 @@ public class Robot extends TimedRobot {
 
     /* Set up notifiers */
     logger.log("Setting up Notifiers", Level.kRobot);
-    this.m_period = Constants.PeriodicTiming.robot_period;
-    this.field_status = new FieldStatusThread();
     this.field_status.start(Constants.PeriodicTiming.field_period);
     this.logger.start(Constants.PeriodicTiming.logging_period);
+    this.net_monitor.start(Constants.PeriodicTiming.net_monitor_period);
 
     /* Enable vision data thread */
+    logger.log("Starting vision thread", Level.kRobot);
     this.vision_interface = VisionInterface.getInstance();
     this.vision_interface.start(Constants.PeriodicTiming.vision_thread);
   }

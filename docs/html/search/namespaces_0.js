@@ -5,7 +5,7 @@ var searchData=
   ['control',['control',['../namespacefrc_1_1common_1_1control.html',1,'frc::common']]],
   ['field',['field',['../namespacefrc_1_1common_1_1field.html',1,'frc::common']]],
   ['frc',['frc',['../namespacefrc.html',1,'']]],
-  ['networking',['networking',['../namespacefrc_1_1common_1_1networking.html',1,'frc::common']]],
+  ['network',['network',['../namespacefrc_1_1common_1_1network.html',1,'frc::common']]],
   ['robot',['robot',['../namespacefrc_1_1robot.html',1,'frc']]],
   ['subsystems',['subsystems',['../namespacefrc_1_1robot_1_1subsystems.html',1,'frc::robot']]],
   ['utils',['utils',['../namespacefrc_1_1common_1_1utils.html',1,'frc::common']]],

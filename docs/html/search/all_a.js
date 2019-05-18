@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['last_5fconnection_5fstate',['last_connection_state',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aec6d38957d36a42576a9649b0f18756c',1,'frc::common::network::ConnectionMonitor']]],
   ['last_5ftimestamp',['last_timestamp',['../classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf',1,'frc::robot::Robot']]],
   ['latchedboolean',['LatchedBoolean',['../classfrc_1_1common_1_1utils_1_1LatchedBoolean.html',1,'frc::common::utils']]],
   ['latchedboolean_2ejava',['LatchedBoolean.java',['../LatchedBoolean_8java.html',1,'']]],

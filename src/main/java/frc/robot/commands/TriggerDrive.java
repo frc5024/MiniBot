@@ -3,7 +3,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import java.lang.Math;
 
-import frc.common.control.CubicDeadband;;
+import frc.common.control.CubicDeadband;
 
 import frc.robot.Constants;
 import frc.robot.Robot;
