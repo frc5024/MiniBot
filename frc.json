@@ -1,0 +1,10 @@
+{
+    "team":5024,
+    "ntmode":"server",
+    "cameras":[
+        {
+            "name":"main",
+            "path":"/dev/video0"
+        }
+    ]
+}

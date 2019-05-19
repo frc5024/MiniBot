@@ -56,9 +56,12 @@ public class Robot extends TimedRobot {
     /* Start the CameraServer for the default USBCamera */
     logger.log("Starting CameraServer", Level.kRobot);
     this.main_camera = new Camera(Constants.MainCamera.name, Constants.MainCamera.http_port);
-    this.main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
-    this.main_camera.keepCameraAwake(true);
+    main_camera.loadJsonConfig(FileUtils.constructDeployPath("maincamera.json"));
+    main_camera.keepCameraAwake(true);
+
+    // Push camera to shuffleboard
     nt_inst.getEntry("vision", "camera_fov").setNumber(Constants.MainCamera.fov);
+    driver_view.add(main_camera.getCameraSever()).withSize(4, 4);
 
     /* Construct all Subsystems */
     logger.log("Constructing Subsystems", Level.kRobot);
@@ -96,6 +99,9 @@ public class Robot extends TimedRobot {
     SmartDashboard.putString("Robot Mode", "DISABLED");
     logger.log("Robot Disabled", Level.kRobot);
     logTimestamp();
+
+    // Stop all recordings
+    Shuffleboard.stopRecording();
   }
 
   @Override
@@ -112,6 +118,9 @@ public class Robot extends TimedRobot {
     SmartDashboard.putString("Robot Mode", "AUTO");
     logger.log("Autonomous Started with GSM: " + this.field_status.getCurrentMatch().getGSM(), Level.kRobot);
     logTimestamp();
+    
+    // Start recording video on driverstation computer
+    Shuffleboard.startRecording();
   }
 
   @Override
@@ -128,6 +137,9 @@ public class Robot extends TimedRobot {
     SmartDashboard.putString("Robot Mode", "TELEOP");
     logger.log("Teleop started", Level.kRobot);
     logTimestamp();
+
+    // Start recording video on driverstation computer
+    Shuffleboard.startRecording();
 
     /* Start commands */
     this.mTriggerDrive.start();
