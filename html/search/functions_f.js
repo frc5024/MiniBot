@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['tanktrajectory',['TankTrajectory',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a37114a1ada320d85c6085aa9d0952420',1,'frc::common::wrappers::TankTrajectory']]],
-  ['teleopinit',['teleopInit',['../classfrc_1_1robot_1_1Robot.html#a209dbf07bfec75d73fa53126a8e31b88',1,'frc::robot::Robot']]],
-  ['teleopperiodic',['teleopPeriodic',['../classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7',1,'frc::robot::Robot']]],
-  ['testperiodic',['testPeriodic',['../classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e',1,'frc::robot::Robot']]],
-  ['tostring',['toString',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#aa0e8650ec9104fde98453b867307805d',1,'frc::common::utils::RobotLogger']]],
-  ['triggerdrive',['TriggerDrive',['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#ab72791a4f0f76ac9208a89a235438321',1,'frc::robot::commands::TriggerDrive']]]
+  ['raiderdrive',['raiderDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a745168fe510b90364e2d53e33106386f',1,'frc::robot::subsystems::DriveTrain']]],
+  ['read',['read',['../classvision_1_1WebcamVideoStream.html#a04ef7ed07efde83ba9f26468cba8ce0e',1,'vision::WebcamVideoStream']]],
+  ['readcameraconfig',['readCameraConfig',['../namespacevision.html#ac6e405485846f37fbc4892bd1b5cfe4f',1,'vision']]],
+  ['readconfig',['readConfig',['../namespacevision.html#a6451eefa23f5d3d1502e17c71b24a219',1,'vision']]],
+  ['readfile',['readFile',['../classfrc_1_1common_1_1utils_1_1FileUtils.html#ac5fe1d05e6f73fc54b134341fcda3833',1,'frc::common::utils::FileUtils']]],
+  ['requestsignal',['requestSignal',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a9863c25741454376836b84f42f2d3487',1,'frc::robot::subsystems::DriveTrain']]],
+  ['reset',['reset',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a767edcdefb1c96499f2963c4aa371429',1,'frc.common.control.SlewLimiter.reset()'],['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a2aa8f6f4c9082ba4ba0b27818acf4c65',1,'frc.common.wrappers.EncoderWrapper.reset()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ae0298c423a3210750048befd73b93541',1,'frc.robot.subsystems.DriveTrain.reset()']]],
+  ['riologbackuptask',['RiologBackupTask',['../classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#aabbd98102b2f44389045bcec0fbb09b5',1,'frc::common::tasks::RiologBackupTask']]],
+  ['robotinit',['robotInit',['../classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13',1,'frc::robot::Robot']]],
+  ['robotlogger',['RobotLogger',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#a8c91b8327070eab5c8242ea799fb6e53',1,'frc::common::utils::RobotLogger']]],
+  ['robotperiodic',['robotPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f',1,'frc::robot::Robot']]]
 ];

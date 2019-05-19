@@ -3,7 +3,12 @@ var NAVTREE =
   [ "MiniBot", "index.html", [
     [ "Inverse Motion Profiling", "md_docs_inversemotion.html", null ],
     [ "Packages", null, [
-      [ "Packages", "namespaces.html", "namespaces" ]
+      [ "Packages", "namespaces.html", "namespaces" ],
+      [ "Package Functions", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
     ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
@@ -24,7 +29,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BasicPath_8java.html",
-"classfrc_1_1robot_1_1OI.html#ab06f45c05c6292902b84705db71afab7"
+"classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a51f420fbf83cc80e0bb90debf044c3e1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

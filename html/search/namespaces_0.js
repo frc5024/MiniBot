@@ -8,6 +8,7 @@ var searchData=
   ['network',['network',['../namespacefrc_1_1common_1_1network.html',1,'frc::common']]],
   ['robot',['robot',['../namespacefrc_1_1robot.html',1,'frc']]],
   ['subsystems',['subsystems',['../namespacefrc_1_1robot_1_1subsystems.html',1,'frc::robot']]],
+  ['tasks',['tasks',['../namespacefrc_1_1common_1_1tasks.html',1,'frc::common']]],
   ['utils',['utils',['../namespacefrc_1_1common_1_1utils.html',1,'frc::common']]],
   ['wpilib',['wpilib',['../namespacefrc_1_1common_1_1wpilib.html',1,'frc::common']]],
   ['wrappers',['wrappers',['../namespacefrc_1_1common_1_1wrappers.html',1,'frc::common']]]
