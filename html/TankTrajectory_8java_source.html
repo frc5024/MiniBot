@@ -186,8 +186,8 @@ $(document).ready(function(){initNavTree('TankTrajectory_8java_source.html','');
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#aef6222212545fed6544973f98cea06e9">  116</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#aef6222212545fed6544973f98cea06e9">stop</a>(){</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        this.follower_notifier.stop();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        this.left_gearbox.front.set(0.0);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        this.right_gearbox.front.set(0.0);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        this.left_gearbox.set(0.0);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        this.right_gearbox.set(0.0);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        this.is_finished = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">/* Reset inverse motion mode on gearboxes if needed */</span></div>
@@ -221,11 +221,11 @@ $(document).ready(function(){initNavTree('TankTrajectory_8java_source.html','');
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">double</span> turn = 0.8 * (-1.0 / 80.0) * heading_difference;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">if</span> (this.path_inverted) {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                this.left_gearbox.front.set((right_speed - turn)*-1);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                this.right_gearbox.front.set((left_speed + turn)*-1);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                this.left_gearbox.set((right_speed - turn)*-1);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                this.right_gearbox.set((left_speed + turn)*-1);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                this.left_gearbox.front.set(left_speed + turn);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                this.right_gearbox.front.set(right_speed - turn);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                this.left_gearbox.set(left_speed + turn);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                this.right_gearbox.set(right_speed - turn);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>

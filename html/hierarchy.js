@@ -33,6 +33,7 @@ var hierarchy =
     [ "frc.common.utils.RobotLogger", "classfrc_1_1common_1_1utils_1_1RobotLogger.html", null ],
     [ "frc.common.control.SlewLimiter", "classfrc_1_1common_1_1control_1_1SlewLimiter.html", null ],
     [ "frc.common.wrappers.TankTrajectory", "classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html", null ],
+    [ "io.github.frc5024.MiniBot.TestTest", "classio_1_1github_1_1frc5024_1_1MiniBot_1_1TestTest.html", null ],
     [ "vision.VideoShow", "classvision_1_1VideoShow.html", null ],
     [ "frc.common.control.VirtualGearShifter", "classfrc_1_1common_1_1control_1_1VirtualGearShifter.html", null ],
     [ "frc.common.network.VisionInterface", "classfrc_1_1common_1_1network_1_1VisionInterface.html", null ],

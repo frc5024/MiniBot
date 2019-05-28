@@ -17,6 +17,7 @@ var searchData=
   ['getinversemotion',['getInverseMotion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#acd64e28b2e48eaaa390b64483fd1c631',1,'frc::common::wrappers::GearBox']]],
   ['getleft',['getLeft',['../classfrc_1_1common_1_1DriveSignal.html#a9edaf8e292f61ebafe584e454c63bf72',1,'frc::common::DriveSignal']]],
   ['getleftgearboxticks',['getLeftGearboxTicks',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a863f1282b4e126e04c33d89f20d38635',1,'frc::robot::subsystems::DriveTrain']]],
+  ['getmaster',['getMaster',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#ab4a31a4f1f371cde3c128642e329d0fd',1,'frc::common::wrappers::GearBox']]],
   ['getnumber',['getNumber',['../classfrc_1_1common_1_1field_1_1Match.html#a83d37361c4c6449f3998c6bb52a51001',1,'frc::common::field::Match']]],
   ['getpitch',['getPitch',['../classfrc_1_1common_1_1network_1_1VisionInterface.html#aa0fcf1bd6d3ec3808ce163bcc635dd63',1,'frc::common::network::VisionInterface']]],
   ['getprofile',['getProfile',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ada62ce6c6d5712b0ae7bebaa92c49fb1',1,'frc::robot::subsystems::DriveTrain']]],

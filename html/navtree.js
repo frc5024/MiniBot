@@ -29,7 +29,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BasicPath_8java.html",
-"classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a51f420fbf83cc80e0bb90debf044c3e1"
+"classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a0cf8af01074a721432d2983cd6ab1b00",
+"vision_8py.html#ac6e405485846f37fbc4892bd1b5cfe4f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

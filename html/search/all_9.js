@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['frc5024',['frc5024',['../namespaceio_1_1github_1_1frc5024.html',1,'io::github']]],
+  ['github',['github',['../namespaceio_1_1github.html',1,'io']]],
   ['image_5fheight',['image_height',['../namespacevision.html#aacf00728bd17c3c9cdb13d86138b6c01',1,'vision']]],
   ['image_5fwidth',['image_width',['../namespacevision.html#acd2eced70797b09275172b0fcad0de9b',1,'vision']]],
   ['img',['img',['../classvision_1_1WebcamVideoStream.html#a12f21c978e7fa12ab052c60c9838f98a',1,'vision.WebcamVideoStream.img()'],['../namespacevision.html#a4d75f26096249b7b9664bdb6b1f0e791',1,'vision.img()']]],
@@ -11,9 +13,11 @@ var searchData=
   ['integral',['integral',['../classfrc_1_1common_1_1control_1_1PID.html#a5d24cca31a43674d886014ac72fded85',1,'frc::common::control::PID']]],
   ['interrupted',['interrupted',['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#ab714bd14f568338ea53dafd051d6ae56',1,'frc.robot.commands.BasicPath.interrupted()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aec0cedb47f3ad559592f10498a5f19ea',1,'frc.robot.commands.TriggerDrive.interrupted()']]],
   ['inversemotion_2emd',['inversemotion.md',['../inversemotion_8md.html',1,'']]],
+  ['io',['io',['../namespaceio.html',1,'']]],
   ['is_5fconnected',['is_connected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aea76caaade05ce897f9488fa37944064',1,'frc::common::network::ConnectionMonitor']]],
   ['is_5finverse_5fmotion',['is_inverse_motion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a0eb3980af458b017b9d3e8ed239119b7',1,'frc::common::wrappers::GearBox']]],
   ['isconnected',['isConnected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a8642fbc4db52eaa987ebfa1b3041a613',1,'frc::common::network::ConnectionMonitor']]],
   ['isfinished',['isFinished',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a68705ebaf7ad1c23233a9da6a57e8ff5',1,'frc.common.wrappers.TankTrajectory.isFinished()'],['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#a6591e661ef74181219bdc1ffcace735a',1,'frc.robot.commands.BasicPath.isFinished()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c',1,'frc.robot.commands.TriggerDrive.isFinished()']]],
-  ['inverse_20motion_20profiling',['Inverse Motion Profiling',['../md_docs_inversemotion.html',1,'']]]
+  ['inverse_20motion_20profiling',['Inverse Motion Profiling',['../md_docs_inversemotion.html',1,'']]],
+  ['minibot',['MiniBot',['../namespaceio_1_1github_1_1frc5024_1_1MiniBot.html',1,'io::github::frc5024']]]
 ];

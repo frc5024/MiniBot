@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['set',['set',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#ae50c769ce5845a40c385acd1ab86b0d9',1,'frc::common::wrappers::GearBox']]],
   ['setbrakes',['setBrakes',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78',1,'frc::robot::subsystems::DriveTrain']]],
   ['setgains',['setGains',['../classfrc_1_1common_1_1control_1_1PID.html#ae2a7281b6788f763478f477ed483cdd8',1,'frc::common::control::PID']]],
   ['setinversemotion',['setInverseMotion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#ac6c9439ef5dfebb643889cefa491e82f',1,'frc::common::wrappers::GearBox']]],
+  ['setperiod',['setPeriod',['../classfrc_1_1common_1_1network_1_1NetworkTables.html#ab9bda54667fa6aa6ab108d679df6948f',1,'frc::common::network::NetworkTables']]],
   ['setphase',['setPhase',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a13a54ca1cbb169852e49ea19b9e1a31e',1,'frc::common::wrappers::EncoderWrapper']]],
   ['setpida',['setPIDA',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a411139d14ea270d2de2cdbd62625a3f1',1,'frc::common::wrappers::TankTrajectory']]],
   ['setresolution',['setResolution',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a9618c5bd84e14137f0a81a55460f61f3',1,'frc::common::wrappers::Camera']]],
