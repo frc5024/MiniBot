@@ -23,6 +23,10 @@ import frc.common.network.ConnectionMonitor;
 import frc.robot.commands.TriggerDrive;
 import frc.robot.subsystems.DriveTrain;
 
+// Robot design ideas:
+// Any internal movement and actions must be fully autonomous.
+// The drivers should only be able to control setpoints
+
 public class Robot extends TimedRobot {
   public double last_timestamp = Timer.getFPGATimestamp();
 
@@ -86,6 +90,10 @@ public class Robot extends TimedRobot {
     logger.log("Starting vision thread", Level.kRobot);
     this.vision_interface = VisionInterface.getInstance();
     this.vision_interface.start(Constants.PeriodicTiming.vision_thread);
+
+    /* Set NT period */
+    logger.log("Setting NetworkTables period time to: " + Constants.PeriodicTiming.nt_period, Level.kRobot);
+    this.nt_inst.setPeriod(Constants.PeriodicTiming.nt_period);
   }
 
 
@@ -102,6 +110,11 @@ public class Robot extends TimedRobot {
 
     // Stop all recordings
     Shuffleboard.stopRecording();
+
+    // Set robot to coast
+    // This allows for "clutch saves" at the end of games
+    // along with allowing us to easily push our bots around
+    mDriveTrain.setBrakes(false);
   }
 
   @Override

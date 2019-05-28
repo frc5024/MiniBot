@@ -45,6 +45,7 @@ public class Constants {
     public static final double logging_period = 0.02;
     public static final double vision_thread = 0.01;
     public static final double net_monitor_period = 0.01;
+    public static final double nt_period = 0.01;
   }
 
   public class Deadbands {
