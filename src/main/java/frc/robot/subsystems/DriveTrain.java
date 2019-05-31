@@ -3,7 +3,6 @@ package frc.robot.subsystems;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -12,8 +11,10 @@ import edu.wpi.first.wpilibj.SPI.Port;
 import com.kauailabs.navx.frc.AHRS;
 
 import frc.robot.commands.TriggerDrive;
-import frc.common.wrappers.GearBox;
 import frc.robot.Constants;
+
+import frc.common.wrappers.GearBox;
+import frc.common.statebase.Output;
 import frc.common.control.SlewLimiter;
 import frc.common.wrappers.PathingHelper;
 import frc.common.wrappers.TankTrajectory;
@@ -21,7 +22,7 @@ import frc.common.wrappers.TankTrajectory;
 /**
  * The Subsystem in control of the robot's drivebase.
  */
-public class DriveTrain extends Subsystem {
+public class DriveTrain extends Output {
     private static DriveTrain instance = null;
 
     private final RobotLogger logger = RobotLogger.getInstance();

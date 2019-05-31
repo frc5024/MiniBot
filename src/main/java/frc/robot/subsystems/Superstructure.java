@@ -102,6 +102,15 @@ public class Superstructure {
         return (mDriveTrain.is_moving || mDriveTrain.is_turning);
     }
 
+    /**
+     * Check if the superstructure is not currently assigned to a state
+     * 
+     * @return Is the superstructure ready for a new state?
+     */
+    public boolean isStateless() {
+        return mSystemState == SystemState.kIdle;
+    }
+
     /* State-independant control */
 
     /**

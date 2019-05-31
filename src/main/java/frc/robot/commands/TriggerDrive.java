@@ -1,16 +1,16 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
 import java.lang.Math;
 
 import frc.common.control.CubicDeadband;
+import frc.common.statebase.Input;
 
 import frc.robot.Constants;
 import frc.robot.Robot;
 import frc.robot.subsystems.Superstructure;
 import frc.robot.OI;
 
-public class TriggerDrive extends Command {
+public class TriggerDrive extends Input {
   Superstructure superstructure;
   OI oi;
 
