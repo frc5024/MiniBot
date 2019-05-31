@@ -176,11 +176,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Any information about the robot's current status should be accessed through the superstructure. </p>
-<p>This class can be thought of as an interface for getting high-level data about the robot as well as high-level methods for controlling components of the robot that interact with eachother. (ex. An elevator and arm could be both controlled with a setIntakeKinematicPosition(x,y); )</p>
+<p>This class can be thought of as an interface for getting high-level data about the robot as well as high-level methods for controlling components of the robot that interact with eachother.</p>
+<p>ex. An elevator and arm could be both controlled with a setIntakeKinematicPosition(x,y); this function would then follow the correct set of states to get the job done. To move the elevator, it might call a setSetpoint(), then a feed() untill the error is within the threshold. This could be checked with a isAtThreshold()</p>
 <p>This file is in the subsystem packge so that it can access protected information from each subsystem.</p>
 <p>This is a state machine </p>
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00013">13</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00018">18</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa477e7b6cf2ece8e1de210883cfbe2c9"></a>
 <div class="memitem">
@@ -214,7 +215,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Control the robot's drivetrain. </p>
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00110">110</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00115">115</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -239,7 +240,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00047">47</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00052">52</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -267,7 +268,7 @@ Static Private Attributes</h2></td></tr>
 <p>If the user has requested a new state for the robot, set the next <a class="el" href="enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1SystemState.html">SystemState</a> required to get the job done.</p>
 <p>The default state is nothing</p>
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00075">75</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00080">80</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -287,7 +288,7 @@ Static Private Attributes</h2></td></tr>
 <p>Check if the robot is currently driving. </p>
 <dl class="section return"><dt>Returns</dt><dd>Is the robot driving </dd></dl>
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00101">101</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00106">106</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -308,7 +309,7 @@ Static Private Attributes</h2></td></tr>
 <p>This is run periodically while the robot is running. </p>
 <p>This is not to be confused with the conventional subsystem interface. For simple tasks, the usual interface must be used. But for any task that can be controlled by more than one command, or requires multiple subsystems to work together, that code should be spun off here. </p>
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00063">63</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00068">68</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -331,7 +332,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00032">32</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00037">37</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -345,7 +346,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00039">39</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00044">44</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -367,7 +368,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00045">45</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00050">50</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -389,7 +390,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00042">42</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00047">47</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -403,7 +404,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00036">36</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00041">41</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>
@@ -417,7 +418,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00035">35</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
+<p>Definition at line <a class="el" href="Superstructure_8java_source.html#l00040">40</a> of file <a class="el" href="Superstructure_8java_source.html">Superstructure.java</a>.</p>
 
 </div>
 </div>

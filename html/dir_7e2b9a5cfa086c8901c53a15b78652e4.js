@@ -11,7 +11,8 @@ var dir_7e2b9a5cfa086c8901c53a15b78652e4 =
       [ "Robot", "classfrc_1_1robot_1_1Constants_1_1Robot.html", "classfrc_1_1robot_1_1Constants_1_1Robot" ],
       [ "PeriodicTiming", "classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html", "classfrc_1_1robot_1_1Constants_1_1PeriodicTiming" ],
       [ "Deadbands", "classfrc_1_1robot_1_1Constants_1_1Deadbands.html", "classfrc_1_1robot_1_1Constants_1_1Deadbands" ],
-      [ "MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", "classfrc_1_1robot_1_1Constants_1_1MainCamera" ]
+      [ "MainCamera", "classfrc_1_1robot_1_1Constants_1_1MainCamera.html", "classfrc_1_1robot_1_1Constants_1_1MainCamera" ],
+      [ "PCM", "classfrc_1_1robot_1_1Constants_1_1PCM.html", "classfrc_1_1robot_1_1Constants_1_1PCM" ]
     ] ],
     [ "Main.java", "Main_8java.html", [
       [ "Main", "classfrc_1_1robot_1_1Main.html", "classfrc_1_1robot_1_1Main" ]
