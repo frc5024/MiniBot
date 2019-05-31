@@ -35,7 +35,7 @@ public class DriveTrain extends Subsystem {
 
     AHRS gyro;
 
-    boolean is_moving, is_turning = false;
+    protected boolean is_moving, is_turning = false;
 
     public DriveTrain(){
         /* Create both gearbox objects */

@@ -109,7 +109,8 @@ public class Robot extends TimedRobot {
   @Override
   public void robotPeriodic() {
     // Run the superstructure's periodic function
-    mSuperstructure.periodic();
+    updateTimestamp();
+    mSuperstructure.periodic(this.last_timestamp);
   
   }
 

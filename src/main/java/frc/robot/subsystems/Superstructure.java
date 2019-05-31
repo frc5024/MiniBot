@@ -5,17 +5,31 @@ package frc.robot.subsystems;
  * This class can be thought of as an interface for getting high-level data about the robot 
  * as well as high-level methods for controlling components of the robot that interact with 
  * eachother. (ex. An elevator and arm could be both controlled with a setIntakeKinematicPosition(x,y); )
+ * 
+ * This file is in the subsystem packge so that it can access protected information from each subsystem.
+ * 
+ * This is a state machine
  */
 public class Superstructure {
-    public class WantedState {
-        boolean vision_enabled = false;
+    // State that the user wants
+    public enum WantedState {
+        kIdle
+    }
+    
+    // Internal state of robot
+    public enum SystemState {
+        kIdle
     }
 
     // Static var for holding the current instance
     private static Superstructure instance = null;
 
     // Wanted state
-    public WantedState mWantedState = new WantedState();
+    public WantedState mWantedState;
+    public SystemState mSystemState;
+
+    // Data about state
+    private boolean mStateChanged = true;
 
     // All subsystems involved in, or accessed by the superstructure
     private DriveTrain mDriveTrain = DriveTrain.getInstance();
@@ -36,9 +50,38 @@ public class Superstructure {
      * can be controlled by more than one command, or requires multiple subsystems 
      * to work together, that code should be spun off here.
      */
-    public void periodic() {
-        
+    public void periodic(double timestamp) {
+        synchronized (this) {
+            SystemState newState = mSystemState;
+
+            switch (newState) {
+            case kIdle:
+                newState = handleIdle(mStateChanged);
+            }
+        }
     }
+    
+    /* States */
+    private SystemState handleIdle(boolean stateChanged) {
+        // Do required work for this state
+        if (stateChanged) {
+            // Set ledring to OFF
+        }
+        
+        /** 
+         * If the user has requested a new state for the robot, 
+         * set the next SystemState required to get the job done.
+         * 
+         * The default state is nothing
+         */
+        switch (mWantedState) {
+        default:
+            return SystemState.kIdle;
+        }
+    
+    }
+    
+    /* Getters */
 
     /**
      * Check if the robot is currently driving
