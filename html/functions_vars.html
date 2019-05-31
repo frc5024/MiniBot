@@ -89,7 +89,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
-      <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
@@ -193,14 +192,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </ul>
 
 
-<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>gearshiftZone
-: <a class="el" href="classfrc_1_1robot_1_1Constants.html#a6eaf11cef4a01410bb26dbbe5a7963db">frc.robot.Constants</a>
-</li>
-</ul>
-
-
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>half_pivot_range_deg
+: <a class="el" href="classfrc_1_1robot_1_1Constants_1_1PivotControl.html#a5ab7abdcc3f657d421cad45a6e5c9c9d">frc.robot.Constants.PivotControl</a>
+</li>
 <li>holdCurrent
 : <a class="el" href="classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#ab63f72686d72bec96317e2b61949c40e">frc.robot.Constants.DriveTrain</a>
 </li>
@@ -221,6 +216,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#a52d80de6f469aa7794d91c631350f421">frc.common.tasks.RiologBackupTask</a>
 , <a class="el" href="classfrc_1_1common_1_1utils_1_1RobotLogger.html#a941a3269ecc2bc02e298126a6b85b0f9">frc.common.utils.RobotLogger</a>
 , <a class="el" href="classfrc_1_1robot_1_1OI.html#a4222dd83ef2a2b1c7a596a4f092a515f">frc.robot.OI</a>
+, <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#acf1100b448ac4054836a0dc63e46288c">frc.robot.subsystems.DriveTrain</a>
+, <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#a0489318ac70cb40040953191d1387371">frc.robot.subsystems.Superstructure</a>
 </li>
 <li>integral
 : <a class="el" href="classfrc_1_1common_1_1control_1_1PID.html#a5d24cca31a43674d886014ac72fded85">frc.common.control.PID</a>
@@ -240,9 +237,11 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>kD
 : <a class="el" href="classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a287be13611a528875ebe025e7d1a6640">frc.robot.Constants.MotionProfile</a>
+, <a class="el" href="classfrc_1_1robot_1_1Constants_1_1PivotControl.html#a1906182db7b54bb2cafe860bc6ad57c8">frc.robot.Constants.PivotControl</a>
 </li>
 <li>kI
 : <a class="el" href="classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a0cf8af01074a721432d2983cd6ab1b00">frc.robot.Constants.MotionProfile</a>
+, <a class="el" href="classfrc_1_1robot_1_1Constants_1_1PivotControl.html#a661f1638c059d426710f7a9245e3d395">frc.robot.Constants.PivotControl</a>
 </li>
 <li>kInfo
 : <a class="el" href="enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#a326b7baf6b0faff52c724ea61092306c">frc.common.utils.RobotLogger.Level</a>
@@ -253,6 +252,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>kP
 : <a class="el" href="classfrc_1_1common_1_1control_1_1PID.html#a4f0911ec890a2125e8e76030ec69a209">frc.common.control.PID</a>
 , <a class="el" href="classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a65a20e9636410fb6a0690400c08f530c">frc.robot.Constants.MotionProfile</a>
+, <a class="el" href="classfrc_1_1robot_1_1Constants_1_1PivotControl.html#a3e02d04a92302ce219b9699bb7b55336">frc.robot.Constants.PivotControl</a>
 </li>
 <li>kRobot
 : <a class="el" href="enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#a15e3004fd254955387fc77be35989586">frc.common.utils.RobotLogger.Level</a>
@@ -293,20 +293,27 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_reported
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a377cd98ad1ea42b1e6f255aaba589fc3">frc.common.drive.DifferentialDrive</a>
+</li>
 <li>max_velocity
 : <a class="el" href="classfrc_1_1robot_1_1Constants_1_1Robot.html#ad76c27af068d7f819d380eca8e6bc2bd">frc.robot.Constants.Robot</a>
 </li>
 <li>mDriveTrain
 : <a class="el" href="classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07">frc.robot.Robot</a>
-</li>
-<li>mInstance
-: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a4052b6daf88928cb66fe631aef614ec1">frc.robot.subsystems.DriveTrain</a>
+, <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#a1619b0ebe3dec0cf5e30da6edfa5b489">frc.robot.subsystems.Superstructure</a>
 </li>
 <li>mOI
 : <a class="el" href="classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef">frc.robot.Robot</a>
 </li>
+<li>mSuperstructure
+: <a class="el" href="classfrc_1_1robot_1_1Robot.html#acc78b9c27fe52d0da08c23d99ec54c82">frc.robot.Robot</a>
+</li>
 <li>mTriggerDrive
 : <a class="el" href="classfrc_1_1robot_1_1Robot.html#a1eb88b1efa0a30e18bdf07426e70a018">frc.robot.Robot</a>
+</li>
+<li>mWantedState
+: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#ab2e4a9401d024245138e26aa89bfcf94">frc.robot.subsystems.Superstructure</a>
 </li>
 </ul>
 

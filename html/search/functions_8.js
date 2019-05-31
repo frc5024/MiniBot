@@ -6,5 +6,6 @@ var searchData=
   ['initnt',['initNT',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a061dcd7f65ddff2c44844551703ee766',1,'frc::common::wrappers::Camera']]],
   ['interrupted',['interrupted',['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#ab714bd14f568338ea53dafd051d6ae56',1,'frc.robot.commands.BasicPath.interrupted()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#aec0cedb47f3ad559592f10498a5f19ea',1,'frc.robot.commands.TriggerDrive.interrupted()']]],
   ['isconnected',['isConnected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a8642fbc4db52eaa987ebfa1b3041a613',1,'frc::common::network::ConnectionMonitor']]],
+  ['isdriving',['isDriving',['../classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#ace150b60a6b4fbf0870830daf820ed18',1,'frc::robot::subsystems::Superstructure']]],
   ['isfinished',['isFinished',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a68705ebaf7ad1c23233a9da6a57e8ff5',1,'frc.common.wrappers.TankTrajectory.isFinished()'],['../classfrc_1_1robot_1_1commands_1_1BasicPath.html#a6591e661ef74181219bdc1ffcace735a',1,'frc.robot.commands.BasicPath.isFinished()'],['../classfrc_1_1robot_1_1commands_1_1TriggerDrive.html#a7f406d6d561cd1ca23bca9cd40bac04c',1,'frc.robot.commands.TriggerDrive.isFinished()']]]
 ];

@@ -13,5 +13,6 @@ var searchData=
   ['connectionmonitor',['ConnectionMonitor',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a1c58aa368fb6217bd70b1cea368e45dc',1,'frc::common::network::ConnectionMonitor']]],
   ['constructdeploypath',['constructDeployPath',['../classfrc_1_1common_1_1utils_1_1FileUtils.html#a010b56fb843b527ad8352a59c7141671',1,'frc::common::utils::FileUtils']]],
   ['cubic',['cubic',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#a481d457ce3db793c61def798deb69eb8',1,'frc::common::control::CubicDeadband']]],
-  ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad',1,'frc::common::control::CubicDeadband']]]
+  ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad',1,'frc::common::control::CubicDeadband']]],
+  ['curvaturedrive',['curvatureDrive',['../classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a9c89fc56693eedbe2c035f96955b72e6',1,'frc::common::drive::DifferentialDrive']]]
 ];

@@ -3,8 +3,8 @@ var searchData=
   ['calculatedistance',['calculateDistance',['../namespacevision.html#a914b5b2a937ea3ca9438961c5548feff',1,'vision']]],
   ['calculatepitch',['calculatePitch',['../namespacevision.html#a9f6c2f5613d360e5b754e0fafd60ee20',1,'vision']]],
   ['calculateyaw',['calculateYaw',['../namespacevision.html#aa72b3813cd659059b81e5518de50fb19',1,'vision']]],
-  ['camera',['Camera',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a2a09a73f127eb4fb45df43b618c855c3',1,'frc.common.wrappers.Camera.Camera(String name, int http_port)'],['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a817fcc4219ed99bc6de2d058901db895',1,'frc.common.wrappers.Camera.Camera(String name, int http_port, int usb_port)']]],
   ['camera',['Camera',['../classfrc_1_1common_1_1wrappers_1_1Camera.html',1,'frc::common::wrappers']]],
+  ['camera',['Camera',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a2a09a73f127eb4fb45df43b618c855c3',1,'frc.common.wrappers.Camera.Camera(String name, int http_port)'],['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a817fcc4219ed99bc6de2d058901db895',1,'frc.common.wrappers.Camera.Camera(String name, int http_port, int usb_port)']]],
   ['camera_2ejava',['Camera.java',['../Camera_8java.html',1,'']]],
   ['cameraconfig',['CameraConfig',['../classvision_1_1CameraConfig.html',1,'vision']]],
   ['cameraconfigs',['cameraConfigs',['../namespacevision.html#a3a2065dfcad4f7e5dd8a29a05650a180',1,'vision']]],
@@ -28,5 +28,6 @@ var searchData=
   ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html',1,'frc::common::control']]],
   ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad',1,'frc::common::control::CubicDeadband']]],
   ['cubicdeadband_2ejava',['CubicDeadband.java',['../CubicDeadband_8java.html',1,'']]],
-  ['currenttimeout',['currentTimeout',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#aab1c9de9556f5348ea7bde7d8a62e691',1,'frc::robot::Constants::DriveTrain']]]
+  ['currenttimeout',['currentTimeout',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#aab1c9de9556f5348ea7bde7d8a62e691',1,'frc::robot::Constants::DriveTrain']]],
+  ['curvaturedrive',['curvatureDrive',['../classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a9c89fc56693eedbe2c035f96955b72e6',1,'frc::common::drive::DifferentialDrive']]]
 ];

@@ -150,7 +150,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>arcadeDrive()
-: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ade38c2388124c9f5dc4d08f106b8b203">frc.robot.subsystems.DriveTrain</a>
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a56eef9c290e6a13515f73e1de628fa5f">frc.common.drive.DifferentialDrive</a>
+, <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ade38c2388124c9f5dc4d08f106b8b203">frc.robot.subsystems.DriveTrain</a>
 </li>
 <li>autonomousInit()
 : <a class="el" href="classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173">frc.robot.Robot</a>
@@ -199,6 +200,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>CubicDeadband()
 : <a class="el" href="classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad">frc.common.control.CubicDeadband</a>
 </li>
+<li>curvatureDrive()
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a9c89fc56693eedbe2c035f96955b72e6">frc.common.drive.DifferentialDrive</a>
+</li>
 </ul>
 
 
@@ -216,7 +220,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classfrc_1_1common_1_1PeriodicLogger.html#a3a9fb64a290faedd9314106639d1f060">frc.common.PeriodicLogger</a>
 </li>
 <li>DriveSignal()
-: <a class="el" href="classfrc_1_1common_1_1DriveSignal.html#ab731e4ebf140b74c186dec063bd93999">frc.common.DriveSignal</a>
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DriveSignal.html#a149541eeb15013c3fd0740951d26d47a">frc.common.drive.DriveSignal</a>
 </li>
 <li>DriveTrain()
 : <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a39f30717e8df92af73d57c01ac0525df">frc.robot.subsystems.DriveTrain</a>
@@ -275,7 +279,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classfrc_1_1common_1_1network_1_1VisionInterface.html#ac4a31ef2d9d78cb00efdb3aa5ea97db0">frc.common.network.VisionInterface</a>
 </li>
 <li>getBrakes()
-: <a class="el" href="classfrc_1_1common_1_1DriveSignal.html#aeee300c1378ea99232b46f672e5b679d">frc.common.DriveSignal</a>
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DriveSignal.html#acfb140ae26d720f9370862d65e7ca0cc">frc.common.drive.DriveSignal</a>
 </li>
 <li>getCameraSever()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1Camera.html#a0fb64849ca38d26c442d0433137d5c2d">frc.common.wrappers.Camera</a>
@@ -299,9 +303,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getGSM()
 : <a class="el" href="classfrc_1_1common_1_1field_1_1Match.html#a74f02a856648cafb6b0448661eecf6aa">frc.common.field.Match</a>
 </li>
-<li>getHighGear()
-: <a class="el" href="classfrc_1_1common_1_1DriveSignal.html#ac671c7d2f81ff855b88efa67f4e9416d">frc.common.DriveSignal</a>
-</li>
 <li>getInstance()
 : <a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#acd49b283134e5fb686e39e66c4958ed7">frc.common.network.ConnectionMonitor</a>
 , <a class="el" href="classfrc_1_1common_1_1network_1_1NetworkTables.html#aa8f9cbf03b04630a66ded0ea864e6d3e">frc.common.network.NetworkTables</a>
@@ -310,12 +311,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classfrc_1_1common_1_1utils_1_1RobotLogger.html#a91cb283aea5152987bdc80626c14f7e2">frc.common.utils.RobotLogger</a>
 , <a class="el" href="classfrc_1_1robot_1_1OI.html#af736e9d49cfba1566d27147dd85cc2ff">frc.robot.OI</a>
 , <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a24422b857174253772b374d5e8616fad">frc.robot.subsystems.DriveTrain</a>
+, <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#a019d4debc7a70fe3942f7262e6ab2cc9">frc.robot.subsystems.Superstructure</a>
 </li>
 <li>getInverseMotion()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1GearBox.html#acd64e28b2e48eaaa390b64483fd1c631">frc.common.wrappers.GearBox</a>
 </li>
 <li>getLeft()
-: <a class="el" href="classfrc_1_1common_1_1DriveSignal.html#a9edaf8e292f61ebafe584e454c63bf72">frc.common.DriveSignal</a>
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DriveSignal.html#adb952b56e45dcb832ce862ab5887d21d">frc.common.drive.DriveSignal</a>
 </li>
 <li>getLeftGearboxTicks()
 : <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a863f1282b4e126e04c33d89f20d38635">frc.robot.subsystems.DriveTrain</a>
@@ -329,6 +331,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getPitch()
 : <a class="el" href="classfrc_1_1common_1_1network_1_1VisionInterface.html#aa0fcf1bd6d3ec3808ce163bcc635dd63">frc.common.network.VisionInterface</a>
 </li>
+<li>getPivot()
+: <a class="el" href="classfrc_1_1robot_1_1OI.html#a38c79d083f42f309aabc1ba057e465e7">frc.robot.OI</a>
+</li>
 <li>getProfile()
 : <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ada62ce6c6d5712b0ae7bebaa92c49fb1">frc.robot.subsystems.DriveTrain</a>
 </li>
@@ -336,7 +341,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a73e5f431013df199baaa087b2be52c54">frc.common.wrappers.EncoderWrapper</a>
 </li>
 <li>getRight()
-: <a class="el" href="classfrc_1_1common_1_1DriveSignal.html#a39fd7f1bfff610641f92966fcbdcb441">frc.common.DriveSignal</a>
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DriveSignal.html#a7acee367ab843548722d889865d1cc44">frc.common.drive.DriveSignal</a>
 </li>
 <li>getRightGearboxTicks()
 : <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a6a89f40b891bcf806ded0301ac1f6d95">frc.robot.subsystems.DriveTrain</a>
@@ -388,6 +393,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>isConnected()
 : <a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a8642fbc4db52eaa987ebfa1b3041a613">frc.common.network.ConnectionMonitor</a>
 </li>
+<li>isDriving()
+: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#ace150b60a6b4fbf0870830daf820ed18">frc.robot.subsystems.Superstructure</a>
+</li>
 <li>isFinished()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a68705ebaf7ad1c23233a9da6a57e8ff5">frc.common.wrappers.TankTrajectory</a>
 , <a class="el" href="classfrc_1_1robot_1_1commands_1_1BasicPath.html#a6591e661ef74181219bdc1ffcace735a">frc.robot.commands.BasicPath</a>
@@ -433,11 +441,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>Main()
-: <a class="el" href="classfrc_1_1robot_1_1Main.html#aaaa025997d101f996ad17575cbb72f5e">frc.robot.Main</a>
-</li>
 <li>main()
 : <a class="el" href="classfrc_1_1robot_1_1Main.html#ac753ed1d293b021232170a823a1c39f4">frc.robot.Main</a>
+</li>
+<li>Main()
+: <a class="el" href="classfrc_1_1robot_1_1Main.html#aaaa025997d101f996ad17575cbb72f5e">frc.robot.Main</a>
 </li>
 <li>Match()
 : <a class="el" href="classfrc_1_1common_1_1field_1_1Match.html#ad761365e3380e8744b714bb729831a42">frc.common.field.Match</a>
@@ -446,6 +454,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>normalize()
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DriveSignal.html#a49de108f8e56550795900d68e78d21b1">frc.common.drive.DriveSignal</a>
+</li>
 <li>notifyError()
 : <a class="el" href="classvision_1_1VideoShow.html#af561ecb6c7a40af9e8298890f812d44d">vision.VideoShow</a>
 </li>
@@ -461,6 +472,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>periodic()
+: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1Superstructure.html#ac041703f2405b59df51f6e9b678b648d">frc.robot.subsystems.Superstructure</a>
+</li>
 <li>PeriodicLogger()
 : <a class="el" href="classfrc_1_1common_1_1PeriodicLogger.html#a008132e3ea30e457916c80f6605a8caf">frc.common.PeriodicLogger</a>
 </li>
@@ -482,9 +496,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>readFile()
 : <a class="el" href="classfrc_1_1common_1_1utils_1_1FileUtils.html#ac5fe1d05e6f73fc54b134341fcda3833">frc.common.utils.FileUtils</a>
-</li>
-<li>requestSignal()
-: <a class="el" href="classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a9863c25741454376836b84f42f2d3487">frc.robot.subsystems.DriveTrain</a>
 </li>
 <li>reset()
 : <a class="el" href="classfrc_1_1common_1_1control_1_1SlewLimiter.html#a767edcdefb1c96499f2963c4aa371429">frc.common.control.SlewLimiter</a>
@@ -575,6 +586,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tankDrive()
+: <a class="el" href="classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a4985d76820d529afa6244a8ef8e377af">frc.common.drive.DifferentialDrive</a>
+</li>
 <li>TankTrajectory()
 : <a class="el" href="classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a37114a1ada320d85c6085aa9d0952420">frc.common.wrappers.TankTrajectory</a>
 </li>

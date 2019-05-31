@@ -5,6 +5,7 @@ var searchData=
   ['networktable',['networkTable',['../namespacevision.html#a7c365f0d915486c5e07d0f9749e699cc',1,'vision']]],
   ['networktables',['NetworkTables',['../classfrc_1_1common_1_1network_1_1NetworkTables.html',1,'frc::common::network']]],
   ['networktables_2ejava',['NetworkTables.java',['../NetworkTables_8java.html',1,'']]],
+  ['normalize',['normalize',['../classfrc_1_1common_1_1drive_1_1DriveSignal.html#a49de108f8e56550795900d68e78d21b1',1,'frc::common::drive::DriveSignal']]],
   ['notifier',['notifier',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#aa6950125bb0ec709aecbd6691b46dd3b',1,'frc::common::utils::RobotLogger']]],
   ['notifyerror',['notifyError',['../classvision_1_1VideoShow.html#af561ecb6c7a40af9e8298890f812d44d',1,'vision::VideoShow']]],
   ['nt_5fperiod',['nt_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a722daff57d30d94db89cc95edc1d3d58',1,'frc::robot::Constants::PeriodicTiming']]],
