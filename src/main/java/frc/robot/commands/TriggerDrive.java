@@ -7,18 +7,23 @@ import frc.common.control.CubicDeadband;
 
 import frc.robot.Constants;
 import frc.robot.Robot;
+import frc.robot.subsystems.Superstructure;
 import frc.robot.OI;
 
 public class TriggerDrive extends Command {
+  Superstructure superstructure;
   OI oi;
 
   CubicDeadband rotation_deadband;
   CubicDeadband speed_deadband;
 
   public TriggerDrive() {
+    // Not sure if this is needed when using the superstructure
     requires(Robot.mDriveTrain);
 
     this.oi = OI.getInstance();
+    this.superstructure = Superstructure.getInstance();
+
     this.rotation_deadband = new CubicDeadband(Constants.Deadbands.rotation_deadband, Constants.Deadbands.roataion_percision);
     this.speed_deadband = new CubicDeadband(0.0, Constants.Deadbands.speed_percision);
   }
@@ -26,6 +31,8 @@ public class TriggerDrive extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    // Set the wanted method for driving the robot
+    superstructure.mDriveMethod = Superstructure.WantedDriveMethod.kDefault;
   }  
 
   // Called repeatedly when this Command is scheduled to run
@@ -40,7 +47,7 @@ public class TriggerDrive extends Command {
     // Deadzone the turning
     rotation = rotation_deadband.feed(rotation);
 
-    Robot.mDriveTrain.raiderDrive(speed, rotation);
+    superstructure.drive(speed, rotation, false);
   }
 
   // Make this return true when this Command no longer needs to run execute()

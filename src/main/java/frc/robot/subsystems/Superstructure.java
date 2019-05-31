@@ -21,12 +21,22 @@ public class Superstructure {
         kIdle
     }
 
+    // Wanted method of controlling the drivetrain
+    public enum WantedDriveMethod {
+        kDefault,
+        kArcade,
+        kCurvature
+    }
+
     // Static var for holding the current instance
     private static Superstructure instance = null;
 
-    // Wanted state
+    // States
     public WantedState mWantedState;
     public SystemState mSystemState;
+
+    // Other wants
+    public WantedDriveMethod mDriveMethod;
 
     // Data about state
     private boolean mStateChanged = true;
@@ -92,6 +102,25 @@ public class Superstructure {
         return (mDriveTrain.is_moving || mDriveTrain.is_turning);
     }
 
+    /* State-independant control */
+
+    /**
+     * Control the robot's drivetrain
+     */
+    public void drive(double throttle, double rotation, boolean mode) {
+        // Call the appropriate function for wanted drive method
+        switch (mDriveMethod) {
+        case kArcade:
+            mDriveTrain.arcadeDrive(throttle, rotation, mode);
+            break;
+        case kCurvature:
+            mDriveTrain.cheesyDrive(throttle, rotation, mode);
+            break;
+        default:
+            mDriveTrain.raiderDrive(throttle, rotation);
+            break;
+        }
+    }
 
 
 
