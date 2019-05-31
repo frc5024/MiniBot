@@ -17,7 +17,6 @@ import frc.robot.Constants;
 import frc.common.control.SlewLimiter;
 import frc.common.wrappers.PathingHelper;
 import frc.common.wrappers.TankTrajectory;
-import frc.common.DriveSignal;
 
 /**
  * The Subsystem in control of the robot's drivebase.
@@ -88,7 +87,7 @@ public class DriveTrain extends Subsystem {
     public void arcadeDrive(double speed, double rotation) {
         this.is_moving = (speed != 0.0);
         this.is_turning = (rotation != 0.0);
-        
+
         mDrivebase.arcadeDrive(speed, rotation, false);
     }
 
