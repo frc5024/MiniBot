@@ -15,8 +15,8 @@ var searchData=
   ['shouldcoast',['shouldCoast',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a2fa8b074f59338b0f84189e7fd74ed03',1,'frc::common::control::VirtualGearShifter']]],
   ['shouldreset',['shouldReset',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a251aa4f20d6711b4d7ec53b454b1aefc',1,'frc::common::control::VirtualGearShifter']]],
   ['show',['show',['../classvision_1_1VideoShow.html#a9ecbe6fab1b4adada4d7580e3787ddfc',1,'vision::VideoShow']]],
-  ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html',1,'frc::common::control']]],
   ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a397e72b6ddd20631c55ed7b724366837',1,'frc::common::control::SlewLimiter']]],
+  ['slewlimiter',['SlewLimiter',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html',1,'frc::common::control']]],
   ['slewlimiter_2ejava',['SlewLimiter.java',['../SlewLimiter_8java.html',1,'']]],
   ['speed_5fpercision',['speed_percision',['../classfrc_1_1robot_1_1Constants_1_1Deadbands.html#a45cdbe42adfa5ae83cffe5611569ebeb',1,'frc::robot::Constants::Deadbands']]],
   ['speedcontroller',['speedcontroller',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#aff4f04cc5b4c20b1dcc4076f588b9a8d',1,'frc::common::wrappers::GearBox']]],
@@ -28,5 +28,6 @@ var searchData=
   ['streams',['streams',['../namespacevision.html#a4a8607fb398ea6e6305198de902356b0',1,'vision']]],
   ['streamviewer',['streamViewer',['../namespacevision.html#abbd92aea1b609fb62ccaa7852ac5625a',1,'vision']]],
   ['superstructure',['Superstructure',['../classfrc_1_1robot_1_1subsystems_1_1Superstructure.html',1,'frc::robot::subsystems']]],
-  ['superstructure_2ejava',['Superstructure.java',['../Superstructure_8java.html',1,'']]]
+  ['superstructure_2ejava',['Superstructure.java',['../Superstructure_8java.html',1,'']]],
+  ['systemstate',['SystemState',['../enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1SystemState.html',1,'frc::robot::subsystems::Superstructure']]]
 ];
