@@ -11,9 +11,9 @@ var classfrc_1_1robot_1_1subsystems_1_1DriveTrain =
     [ "initDefaultCommand", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ab46972a3cf6e4cf5267fbfaf81497266", null ],
     [ "outputTelemetry", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac669314d7769c6372210e13cd6a956f4", null ],
     [ "raiderDrive", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a745168fe510b90364e2d53e33106386f", null ],
-    [ "requestSignal", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a9863c25741454376836b84f42f2d3487", null ],
     [ "reset", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ae0298c423a3210750048befd73b93541", null ],
     [ "setBrakes", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ad884238e125e8d9afc86aad55b851a78", null ],
-    [ "logger", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a7b57c4739bea4490a16aa4be2ba3eb33", null ],
-    [ "mInstance", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a4052b6daf88928cb66fe631aef614ec1", null ]
+    [ "instance", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#acf1100b448ac4054836a0dc63e46288c", null ],
+    [ "is_moving", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac322c733b533a0d596620775e1e92fe6", null ],
+    [ "logger", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a7b57c4739bea4490a16aa4be2ba3eb33", null ]
 ];

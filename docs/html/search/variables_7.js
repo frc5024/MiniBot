@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['ka',['kA',['../classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a15c7f636c6c726291527efb114a2beea',1,'frc::robot::Constants::MotionProfile']]],
-  ['kd',['kD',['../classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a287be13611a528875ebe025e7d1a6640',1,'frc::robot::Constants::MotionProfile']]],
-  ['ki',['kI',['../classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a0cf8af01074a721432d2983cd6ab1b00',1,'frc::robot::Constants::MotionProfile']]],
-  ['kinfo',['kInfo',['../enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#a326b7baf6b0faff52c724ea61092306c',1,'frc::common::utils::RobotLogger::Level']]],
-  ['klibrary',['kLibrary',['../enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#aebe4201191a2d4b0c0ef831d15c5f859',1,'frc::common::utils::RobotLogger::Level']]],
-  ['kp',['kP',['../classfrc_1_1common_1_1control_1_1PID.html#a4f0911ec890a2125e8e76030ec69a209',1,'frc.common.control.PID.kP()'],['../classfrc_1_1robot_1_1Constants_1_1MotionProfile.html#a65a20e9636410fb6a0690400c08f530c',1,'frc.robot.Constants.MotionProfile.kP()']]],
-  ['krobot',['kRobot',['../enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#a15e3004fd254955387fc77be35989586',1,'frc::common::utils::RobotLogger::Level']]],
-  ['kwarning',['kWarning',['../enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html#a32b99c40c74694bc072351b164631ba2',1,'frc::common::utils::RobotLogger::Level']]]
+  ['h_5ffocal_5flength',['H_FOCAL_LENGTH',['../namespacevision.html#a343746d16d566424aa024b5bc980c198',1,'vision']]],
+  ['half_5fpivot_5frange_5fdeg',['half_pivot_range_deg',['../classfrc_1_1robot_1_1Constants_1_1PivotControl.html#a5ab7abdcc3f657d421cad45a6e5c9c9d',1,'frc::robot::Constants::PivotControl']]],
+  ['holdcurrent',['holdCurrent',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#ab63f72686d72bec96317e2b61949c40e',1,'frc::robot::Constants::DriveTrain']]],
+  ['horizontalaspect',['horizontalAspect',['../namespacevision.html#a07c2e936363cbd18b3f3b7682244171b',1,'vision']]],
+  ['horizontalview',['horizontalView',['../namespacevision.html#a328697e06181683697bd02a2f6e67f57',1,'vision']]],
+  ['http_5fport',['http_port',['../classfrc_1_1robot_1_1Constants_1_1MainCamera.html#acfa3d59b1ba44cfc37178ffa837d3d58',1,'frc::robot::Constants::MainCamera']]]
 ];

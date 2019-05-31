@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['accelerationstep',['accelerationStep',['../classfrc_1_1robot_1_1Constants.html#aaf8cdd640b082f0f304727ef4ff85ad4',1,'frc::robot::Constants']]],
-  ['arcadedrive',['arcadeDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ade38c2388124c9f5dc4d08f106b8b203',1,'frc.robot.subsystems.DriveTrain.arcadeDrive(double speed, double rotation)'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a12a5671cedf61c1ad3c10dc92a3126fc',1,'frc.robot.subsystems.DriveTrain.arcadeDrive(double speed, double rotation, boolean is_inputs_squared)']]],
-  ['autonomousinit',['autonomousInit',['../classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173',1,'frc::robot::Robot']]],
-  ['autonomousperiodic',['autonomousPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72',1,'frc::robot::Robot']]]
+  ['_5f_5finit_5f_5f',['__init__',['../classvision_1_1FPS.html#aed59d3820f5395c71ecb595d38acc5b3',1,'vision.FPS.__init__()'],['../classvision_1_1VideoShow.html#af0b1b65ce4fcad2350e7553bc80d5917',1,'vision.VideoShow.__init__()'],['../classvision_1_1WebcamVideoStream.html#ab2faef9e67965c8beb115da8d22215d7',1,'vision.WebcamVideoStream.__init__()']]],
+  ['_5fend',['_end',['../classvision_1_1FPS.html#a5bec248076f18c4a53c9a7537f9ebfe1',1,'vision::FPS']]],
+  ['_5fnumframes',['_numFrames',['../classvision_1_1FPS.html#aea91e7c6e4fc19463ebca19eb46ad0a7',1,'vision::FPS']]],
+  ['_5fstart',['_start',['../classvision_1_1FPS.html#a9afbbee59145336bda7daf8dc72683df',1,'vision::FPS']]]
 ];

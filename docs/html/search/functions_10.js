@@ -1,6 +1,13 @@
 var searchData=
 [
-  ['update',['update',['../classfrc_1_1common_1_1field_1_1FieldStatusThread.html#a5d6401a7f96723f2ed7b641c2a77a8ce',1,'frc.common.field.FieldStatusThread.update()'],['../classfrc_1_1common_1_1field_1_1Match.html#a6589429e34aa88fdb8ce77abeaf44407',1,'frc.common.field.Match.update()'],['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a77a0a6e0323236304b2e4a85809a126a',1,'frc.common.network.ConnectionMonitor.update()'],['../classfrc_1_1common_1_1network_1_1VisionInterface.html#a418b515a6ff5ac2fc46a7e5099edfe4c',1,'frc.common.network.VisionInterface.update()']]],
-  ['updatesmartdashboard',['updateSmartdashboard',['../classfrc_1_1robot_1_1Robot.html#a2a0179fa174013a88a6d7d4ef7fef1f8',1,'frc::robot::Robot']]],
-  ['updatetimestamp',['updateTimestamp',['../classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a',1,'frc::robot::Robot']]]
+  ['raiderdrive',['raiderDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a745168fe510b90364e2d53e33106386f',1,'frc::robot::subsystems::DriveTrain']]],
+  ['read',['read',['../classvision_1_1WebcamVideoStream.html#ac3afa4b5183ec2617bba03dfb90cc647',1,'vision::WebcamVideoStream']]],
+  ['readcameraconfig',['readCameraConfig',['../namespacevision.html#a777c9f6d2e881703ae423a1ff2f5f3bb',1,'vision']]],
+  ['readconfig',['readConfig',['../namespacevision.html#a7380df1511b665c9f0d5264026180884',1,'vision']]],
+  ['readfile',['readFile',['../classfrc_1_1common_1_1utils_1_1FileUtils.html#ac5fe1d05e6f73fc54b134341fcda3833',1,'frc::common::utils::FileUtils']]],
+  ['reset',['reset',['../classfrc_1_1common_1_1control_1_1SlewLimiter.html#a767edcdefb1c96499f2963c4aa371429',1,'frc.common.control.SlewLimiter.reset()'],['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a2aa8f6f4c9082ba4ba0b27818acf4c65',1,'frc.common.wrappers.EncoderWrapper.reset()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ae0298c423a3210750048befd73b93541',1,'frc.robot.subsystems.DriveTrain.reset()']]],
+  ['riologbackuptask',['RiologBackupTask',['../classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#aabbd98102b2f44389045bcec0fbb09b5',1,'frc::common::tasks::RiologBackupTask']]],
+  ['robotinit',['robotInit',['../classfrc_1_1robot_1_1Robot.html#a1d28582cf3dc31568c3581f631c92f13',1,'frc::robot::Robot']]],
+  ['robotlogger',['RobotLogger',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#a8c91b8327070eab5c8242ea799fb6e53',1,'frc::common::utils::RobotLogger']]],
+  ['robotperiodic',['robotPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7e63e32ebe8ad3d33bbc3b09092a9f1f',1,'frc::robot::Robot']]]
 ];

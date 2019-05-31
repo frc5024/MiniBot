@@ -5,6 +5,7 @@ var dir_7e2b9a5cfa086c8901c53a15b78652e4 =
     [ "Constants.java", "Constants_8java.html", [
       [ "Constants", "classfrc_1_1robot_1_1Constants.html", "classfrc_1_1robot_1_1Constants" ],
       [ "DriveTrain", "classfrc_1_1robot_1_1Constants_1_1DriveTrain.html", "classfrc_1_1robot_1_1Constants_1_1DriveTrain" ],
+      [ "PivotControl", "classfrc_1_1robot_1_1Constants_1_1PivotControl.html", "classfrc_1_1robot_1_1Constants_1_1PivotControl" ],
       [ "EncoderInfo", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html", "classfrc_1_1robot_1_1Constants_1_1EncoderInfo" ],
       [ "MotionProfile", "classfrc_1_1robot_1_1Constants_1_1MotionProfile.html", "classfrc_1_1robot_1_1Constants_1_1MotionProfile" ],
       [ "Robot", "classfrc_1_1robot_1_1Constants_1_1Robot.html", "classfrc_1_1robot_1_1Constants_1_1Robot" ],
