@@ -1,15 +1,16 @@
 var NAVTREEINDEX2 =
 {
-"namespaceio_1_1github_1_1frc5024.html":[2,0,1,0,0],
+"namespaceio_1_1github.html":[1,0,1,0],
 "namespaceio_1_1github_1_1frc5024.html":[1,0,1,0,0],
+"namespaceio_1_1github_1_1frc5024.html":[2,0,1,0,0],
 "namespaceio_1_1github_1_1frc5024_1_1MiniBot.html":[2,0,1,0,0,0],
 "namespaceio_1_1github_1_1frc5024_1_1MiniBot.html":[1,0,1,0,0,0],
 "namespacemembers.html":[1,1,0],
 "namespacemembers_func.html":[1,1,1],
 "namespacemembers_vars.html":[1,1,2],
 "namespaces.html":[1,0],
-"namespacevision.html":[1,0,2],
 "namespacevision.html":[2,0,2],
+"namespacevision.html":[1,0,2],
 "pages.html":[],
 "vision_8py.html":[3,0,0,0,1,0],
 "vision_8py.html#a07c2e936363cbd18b3f3b7682244171b":[3,0,0,0,1,0,34],
