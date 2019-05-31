@@ -95,4 +95,13 @@ public class OI {
   public double getTurn() {
     return this.driverController.getX(GenericHID.Hand.kLeft);
   }
+
+  /**
+   * Get the Gyro-based pivoting input value from driverstation
+   * 
+   * @return Pivot rate (from -1.0 to 1.0)
+   */
+  public double getPivot() {
+    return this.driverController.getX(GenericHID.Hand.kRight);
+  }
 }

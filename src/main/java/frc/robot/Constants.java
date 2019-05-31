@@ -23,6 +23,15 @@ public class Constants {
     public static final int currentTimeout = 30;
   }
 
+  public class PivotControl {
+    public static final int half_pivot_range_deg = 60;
+
+    /* PID gains */
+    public static final double kP = 1.0;
+    public static final double kI = 0.0;
+    public static final double kD = 0.0;
+  }
+
   public class EncoderInfo {
     public static final int ticks_per_rev = 360;
     public static final double wheel_circ = 18.84956; // Inches
@@ -55,8 +64,7 @@ public class Constants {
   }
 
   /* TriggerDrive */
-  public static final double accelerationStep = 0.15;
-  public static final double gearshiftZone = 0.75;
+  public static final double accelerationStep = 0.2;
 
   /* CameraServer */
   public class MainCamera {

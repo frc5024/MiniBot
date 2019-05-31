@@ -23,6 +23,8 @@ import frc.common.DriveSignal;
  * The Subsystem in control of the robot's drivebase.
  */
 public class DriveTrain extends Subsystem {
+    private static DriveTrain instance = null;
+
     private final RobotLogger logger = RobotLogger.getInstance();
 
     GearBox mLeftGearbox;
@@ -30,13 +32,11 @@ public class DriveTrain extends Subsystem {
 
     DifferentialDrive mDrivebase;
 
-    private static DriveTrain mInstance = new DriveTrain();
-
     SlewLimiter accelerator = new SlewLimiter(Constants.accelerationStep);
 
-    DriveSignal current_signal;
-
     AHRS gyro;
+
+    boolean is_moving, is_turning = false;
 
     public DriveTrain(){
         /* Create both gearbox objects */
@@ -51,8 +51,8 @@ public class DriveTrain extends Subsystem {
         mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
 
         /* Create a DifferentialDrive out of each gearbox */
-        mDrivebase = new DifferentialDrive(mLeftGearbox.front, mRightGearbox.front);
-        mDrivebase.setSafetyEnabled(false); // Make sure the robot dosn't lock up
+        mDrivebase = new DifferentialDrive(mLeftGearbox.getMaster(), mRightGearbox.getMaster());
+        mDrivebase.setSafetyEnabled(false); // Make sure the robot doesn't lock up
         logger.log("[DriveTrain] Drivebase has been set to: Unsafe", Level.kRobot);
 
         /* Set up the gyro */
@@ -61,8 +61,6 @@ public class DriveTrain extends Subsystem {
         this.gyro.reset();
         logger.log("[DriveTrain] Gyro has been reset to: " + this.gyro.getAngle(), Level.kRobot);
 
-        /* Set a 0,0 signal */
-        this.current_signal = new DriveSignal(0, 0);
     }
 
     @Override
@@ -73,17 +71,12 @@ public class DriveTrain extends Subsystem {
         // setDefaultCommand(new TriggerDrive());
     }
 
-    /**
-     * Access the current instance of the DriveTrain
-     * 
-     * @return DriveTrain instance
-     */
     public static DriveTrain getInstance() {
-        return mInstance;
-    }
-    
-    public void requestSignal(DriveSignal signal) {
-        this.current_signal = signal;
+        if (instance == null) {
+            instance = new DriveTrain();
+        }
+
+        return instance;
     }
 
     /**
@@ -93,6 +86,9 @@ public class DriveTrain extends Subsystem {
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
     public void arcadeDrive(double speed, double rotation) {
+        this.is_moving = (speed != 0.0);
+        this.is_turning = (rotation != 0.0);
+        
         mDrivebase.arcadeDrive(speed, rotation, false);
     }
 
@@ -103,6 +99,9 @@ public class DriveTrain extends Subsystem {
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
     public void raiderDrive(double speed, double rotation) {
+        this.is_moving = (speed != 0.0);
+        this.is_turning = (rotation != 0.0);
+
         /* Feed the accelerator */
         speed = this.accelerator.feed(speed);
 
@@ -117,7 +116,10 @@ public class DriveTrain extends Subsystem {
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      * @param is_inputs_squared Should WPIlib try to scale the inputs
      */
-    public void arcadeDrive(double speed, double rotation, boolean is_inputs_squared){
+    public void arcadeDrive(double speed, double rotation, boolean is_inputs_squared) {
+        this.is_moving = (speed != 0.0);
+        this.is_turning = (rotation != 0.0);
+
         mDrivebase.arcadeDrive(speed, rotation, is_inputs_squared);
     }
 
@@ -132,7 +134,9 @@ public class DriveTrain extends Subsystem {
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      * @param is_quick_turn Is quick turn functionality enabled?
      */
-    public void cheesyDrive(double speed, double rotation, boolean is_quick_turn){
+    public void cheesyDrive(double speed, double rotation, boolean is_quick_turn) {
+        this.is_moving = (speed != 0.0);
+        this.is_turning = (rotation != 0.0);
         mDrivebase.curvatureDrive(speed, rotation, is_quick_turn);
     }
 
@@ -198,7 +202,7 @@ public class DriveTrain extends Subsystem {
     public void reset() {
         // Reset encoders, gyro
         // Set all outputs to 0.0
-        this.mLeftGearbox.front.set(0.0);
-        this.mRightGearbox.front.set(0.0);
+        this.mLeftGearbox.getMaster().set(0.0);
+        this.mRightGearbox.getMaster().set(0.0);
     }
 }

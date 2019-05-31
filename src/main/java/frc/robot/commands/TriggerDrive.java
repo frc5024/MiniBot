@@ -40,7 +40,6 @@ public class TriggerDrive extends Command {
     // Deadzone the turning
     rotation = rotation_deadband.feed(rotation);
 
-    // Robot.mDriveTrain.arcadeDrive(speed, rotation);
     Robot.mDriveTrain.raiderDrive(speed, rotation);
   }
 

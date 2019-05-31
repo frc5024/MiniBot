@@ -21,7 +21,9 @@ import frc.common.network.VisionInterface;
 import frc.common.network.ConnectionMonitor;
 
 import frc.robot.commands.TriggerDrive;
+
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.Superstructure;
 
 // Robot design ideas:
 // Any internal movement and actions must be fully autonomous.
@@ -51,6 +53,9 @@ public class Robot extends TimedRobot {
   /* Commands */
   public TriggerDrive mTriggerDrive;
 
+  /* Superstructure */
+  private Superstructure mSuperstructure;
+
   @Override
   public void robotInit() {
     System.out.println("Robot starting...\nWelcome 5024!");
@@ -69,12 +74,16 @@ public class Robot extends TimedRobot {
 
     /* Construct all Subsystems */
     logger.log("Constructing Subsystems", Level.kRobot);
-    mOI = new OI();
-    mDriveTrain = new DriveTrain();
+    mOI = OI.getInstance();
+    mDriveTrain = DriveTrain.getInstance();
 
     /* Initalize Subsystems if required */
     logger.log("Initializing Subsystems", Level.kRobot);
     mDriveTrain.setBrakes(true);
+
+    /* Construct the Superstructure */
+    logger.log("Constructing Superstructure", Level.kRobot);
+    mSuperstructure = Superstructure.getInstance();
 
     /* Construct Commands */
     logger.log("Constructing Commands", Level.kRobot);
@@ -99,6 +108,9 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotPeriodic() {
+    // Run the superstructure's periodic function
+    mSuperstructure.periodic();
+  
   }
 
 
@@ -112,8 +124,9 @@ public class Robot extends TimedRobot {
     Shuffleboard.stopRecording();
 
     // Set robot to coast
-    // This allows for "clutch saves" at the end of games
-    // along with allowing us to easily push our bots around
+    // This allows for "clutch saves" in games
+    // along with allowing us to easily push our bots around.
+    // This will also force a CAN packet to all talons
     mDriveTrain.setBrakes(false);
   }
 
