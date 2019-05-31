@@ -4,7 +4,12 @@ package frc.robot.subsystems;
  * Any information about the robot's current status should be accessed through the superstructure.
  * This class can be thought of as an interface for getting high-level data about the robot 
  * as well as high-level methods for controlling components of the robot that interact with 
- * eachother. (ex. An elevator and arm could be both controlled with a setIntakeKinematicPosition(x,y); )
+ * eachother. 
+ * 
+ * ex. An elevator and arm could be both controlled with a setIntakeKinematicPosition(x,y);
+ * this function would then follow the correct set of states to get the job done. To move the elevator,
+ * it might call a setSetpoint(), then a feed() untill the error is within the threshold. This could be checked with a 
+ * isAtThreshold()
  * 
  * This file is in the subsystem packge so that it can access protected information from each subsystem.
  * 

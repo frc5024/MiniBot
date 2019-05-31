@@ -74,5 +74,9 @@ public class Constants {
   }
 
   /* PCM */
-  public static final int pcmCanId = 11;
+  public class PCM {
+    public static final int can_id = 11;
+    public static final int ledring = 1;
+  }
+  
 }
