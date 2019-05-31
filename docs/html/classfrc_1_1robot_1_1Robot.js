@@ -14,6 +14,7 @@ var classfrc_1_1robot_1_1Robot =
     [ "updateTimestamp", "classfrc_1_1robot_1_1Robot.html#a75310dea9fd35a14b67c6aae59416b8a", null ],
     [ "last_timestamp", "classfrc_1_1robot_1_1Robot.html#a5cab9477a757743255ceaeacb7d1bbaf", null ],
     [ "mDriveTrain", "classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07", null ],
+    [ "mLedring", "classfrc_1_1robot_1_1Robot.html#af0a0c26b0cc93a4517a6ba11afd96750", null ],
     [ "mOI", "classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef", null ],
     [ "mSuperstructure", "classfrc_1_1robot_1_1Robot.html#acc78b9c27fe52d0da08c23d99ec54c82", null ],
     [ "mTriggerDrive", "classfrc_1_1robot_1_1Robot.html#a1eb88b1efa0a30e18bdf07426e70a018", null ]

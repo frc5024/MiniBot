@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ledring',['Ledring',['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#a19a8e5022f1f95ac66d4b081cf6e7b56',1,'frc::robot::subsystems::Ledring']]],
   ['limitcurrent',['limitCurrent',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a5400940a151797f022134f2ad83b0974',1,'frc::common::wrappers::GearBox']]],
   ['limittrigger',['limitTrigger',['../classfrc_1_1robot_1_1OI.html#a989fab273990a73b7a32d3572152ba18',1,'frc::robot::OI']]],
   ['line',['Line',['../classfrc_1_1common_1_1utils_1_1Line.html#a4e4e51f4596d12d2963bdc4e9f3b0fc6',1,'frc::common::utils::Line']]],

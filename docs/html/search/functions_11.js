@@ -9,6 +9,7 @@ var searchData=
   ['setpida',['setPIDA',['../classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html#a411139d14ea270d2de2cdbd62625a3f1',1,'frc::common::wrappers::TankTrajectory']]],
   ['setresolution',['setResolution',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a9618c5bd84e14137f0a81a55460f61f3',1,'frc::common::wrappers::Camera']]],
   ['setsetpoint',['setSetpoint',['../classfrc_1_1common_1_1control_1_1PID.html#a3bbbc076a05cc9101658b7400624f241',1,'frc::common::control::PID']]],
+  ['setwantedstate',['setWantedState',['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#a24afb6823cc52dce6c5eaa2c1e097b97',1,'frc::robot::subsystems::Ledring']]],
   ['shift',['shift',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a5a631f8b1b74a896f5a7630110ffd996',1,'frc::common::control::VirtualGearShifter']]],
   ['shouldcoast',['shouldCoast',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a2fa8b074f59338b0f84189e7fd74ed03',1,'frc::common::control::VirtualGearShifter']]],
   ['shouldreset',['shouldReset',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#a251aa4f20d6711b4d7ec53b454b1aefc',1,'frc::common::control::VirtualGearShifter']]],

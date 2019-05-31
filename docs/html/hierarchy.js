@@ -26,6 +26,7 @@ var hierarchy =
     [ "frc.common.network.NetworkTables", "classfrc_1_1common_1_1network_1_1NetworkTables.html", null ],
     [ "frc.robot.OI", "classfrc_1_1robot_1_1OI.html", null ],
     [ "frc.common.wrappers.PathingHelper", "classfrc_1_1common_1_1wrappers_1_1PathingHelper.html", null ],
+    [ "frc.robot.Constants.PCM", "classfrc_1_1robot_1_1Constants_1_1PCM.html", null ],
     [ "frc.common.PeriodicLogger", "classfrc_1_1common_1_1PeriodicLogger.html", null ],
     [ "frc.robot.Constants.PeriodicTiming", "classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html", null ],
     [ "frc.common.control.PID", "classfrc_1_1common_1_1control_1_1PID.html", null ],
@@ -42,6 +43,7 @@ var hierarchy =
     [ "frc.common.control.VirtualGearShifter", "classfrc_1_1common_1_1control_1_1VirtualGearShifter.html", null ],
     [ "frc.common.network.VisionInterface", "classfrc_1_1common_1_1network_1_1VisionInterface.html", null ],
     [ "frc.robot.subsystems.Superstructure.WantedDriveMethod", "enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedDriveMethod.html", null ],
+    [ "frc.robot.subsystems.Ledring.WantedState", "enumfrc_1_1robot_1_1subsystems_1_1Ledring_1_1WantedState.html", null ],
     [ "frc.robot.subsystems.Superstructure.WantedState", "enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedState.html", null ],
     [ "vision.WebcamVideoStream", "classvision_1_1WebcamVideoStream.html", null ],
     [ "Command", null, [
@@ -52,7 +54,8 @@ var hierarchy =
     ] ],
     [ "Subsystem", null, [
       [ "frc.common.wpilib.RRSubsystem", "classfrc_1_1common_1_1wpilib_1_1RRSubsystem.html", null ],
-      [ "frc.robot.subsystems.DriveTrain", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html", null ]
+      [ "frc.robot.subsystems.DriveTrain", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html", null ],
+      [ "frc.robot.subsystems.Ledring", "classfrc_1_1robot_1_1subsystems_1_1Ledring.html", null ]
     ] ],
     [ "TimedCommand", null, [
       [ "frc.robot.commands.BasicPath", "classfrc_1_1robot_1_1commands_1_1BasicPath.html", null ]

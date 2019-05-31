@@ -1,5 +1,8 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Timer;
+import frc.common.utils.RobotLogger;
+
 /**
  * Any information about the robot's current status should be accessed through the superstructure.
  * This class can be thought of as an interface for getting high-level data about the robot 
@@ -35,6 +38,7 @@ public class Superstructure {
 
     // Static var for holding the current instance
     private static Superstructure instance = null;
+    private RobotLogger logger = RobotLogger.getInstance();
 
     // States
     public WantedState mWantedState;
@@ -69,9 +73,20 @@ public class Superstructure {
         synchronized (this) {
             SystemState newState = mSystemState;
 
+            // Run the correct handler for new state
             switch (newState) {
             case kIdle:
                 newState = handleIdle(mStateChanged);
+            }
+
+            // Deal with a state change
+            if (newState != mSystemState) {
+                logger.log("Superstructure state " + mSystemState + " to " + newState + " Timestamp: "
+                        + Timer.getFPGATimestamp());
+                mSystemState = newState;
+                mStateChanged = true;
+            } else {
+                mStateChanged = false;
             }
         }
     }
