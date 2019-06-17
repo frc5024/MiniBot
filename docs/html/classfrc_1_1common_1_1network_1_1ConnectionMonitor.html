@@ -106,6 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8642fbc4db52eaa987ebfa1b3041a613"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a8642fbc4db52eaa987ebfa1b3041a613">isConnected</a> ()</td></tr>
 <tr class="memdesc:a8642fbc4db52eaa987ebfa1b3041a613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current connection status.  <a href="#a8642fbc4db52eaa987ebfa1b3041a613">More...</a><br /></td></tr>
 <tr class="separator:a8642fbc4db52eaa987ebfa1b3041a613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4cb48b5f84867e945d8546b3b3caf6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#adc4cb48b5f84867e945d8546b3b3caf6">justConnected</a> ()</td></tr>
+<tr class="memdesc:adc4cb48b5f84867e945d8546b3b3caf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the robot connected since the last time this function was called? (sticky)  <a href="#adc4cb48b5f84867e945d8546b3b3caf6">More...</a><br /></td></tr>
+<tr class="separator:adc4cb48b5f84867e945d8546b3b3caf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6d24d352f1eddc359f8e5cc54a9f6f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aff6d24d352f1eddc359f8e5cc54a9f6f">justDisconnected</a> ()</td></tr>
+<tr class="memdesc:aff6d24d352f1eddc359f8e5cc54a9f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the robot disconnected since the last time this function was called? (sticky)  <a href="#aff6d24d352f1eddc359f8e5cc54a9f6f">More...</a><br /></td></tr>
+<tr class="separator:aff6d24d352f1eddc359f8e5cc54a9f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -127,7 +133,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af0318c1fa5e53e5aa060523e02bf5fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec7d18f02195d7048019e3d8eec3208e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aec7d18f02195d7048019e3d8eec3208e">timestamp</a> = 0.0</td></tr>
 <tr class="separator:aec7d18f02195d7048019e3d8eec3208e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea76caaade05ce897f9488fa37944064"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aea76caaade05ce897f9488fa37944064">is_connected</a> = false</td></tr>
+<tr class="memitem:aea76caaade05ce897f9488fa37944064"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aea76caaade05ce897f9488fa37944064">is_connected</a></td></tr>
 <tr class="separator:aea76caaade05ce897f9488fa37944064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec6d38957d36a42576a9649b0f18756c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aec6d38957d36a42576a9649b0f18756c">last_connection_state</a> = true</td></tr>
 <tr class="separator:aec6d38957d36a42576a9649b0f18756c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +225,49 @@ Static Private Attributes</h2></td></tr>
 <p>Get the current connection status. </p>
 <dl class="section return"><dt>Returns</dt><dd>Is the robot connected to a driverstation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ConnectionMonitor_8java_source.html#l00104">104</a> of file <a class="el" href="ConnectionMonitor_8java_source.html">ConnectionMonitor.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConnectionMonitor_8java_source.html#l00111">111</a> of file <a class="el" href="ConnectionMonitor_8java_source.html">ConnectionMonitor.java</a>.</p>
+
+</div>
+</div>
+<a id="adc4cb48b5f84867e945d8546b3b3caf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4cb48b5f84867e945d8546b3b3caf6">&#9670;&nbsp;</a></span>justConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean frc.common.network.ConnectionMonitor.justConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Has the robot connected since the last time this function was called? (sticky) </p>
+
+<p class="definition">Definition at line <a class="el" href="ConnectionMonitor_8java_source.html#l00119">119</a> of file <a class="el" href="ConnectionMonitor_8java_source.html">ConnectionMonitor.java</a>.</p>
+
+</div>
+</div>
+<a id="aff6d24d352f1eddc359f8e5cc54a9f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6d24d352f1eddc359f8e5cc54a9f6f">&#9670;&nbsp;</a></span>justDisconnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean frc.common.network.ConnectionMonitor.justDisconnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Has the robot disconnected since the last time this function was called? (sticky) </p>
+
+<p class="definition">Definition at line <a class="el" href="ConnectionMonitor_8java_source.html#l00129">129</a> of file <a class="el" href="ConnectionMonitor_8java_source.html">ConnectionMonitor.java</a>.</p>
 
 </div>
 </div>
@@ -336,7 +384,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean frc.common.network.ConnectionMonitor.is_connected = false</td>
+          <td class="memname">boolean frc.common.network.ConnectionMonitor.is_connected</td>
         </tr>
       </table>
   </td>

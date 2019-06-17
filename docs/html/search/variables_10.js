@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['server',['server',['../namespacevision.html#acfe595761b6f1378a22a63b3fef1a940',1,'vision']]],
-  ['setpoint',['setpoint',['../classfrc_1_1common_1_1control_1_1PID.html#a5a6d2e41a8fb18b69a05cea5c6ef4800',1,'frc::common::control::PID']]],
-  ['speed_5fpercision',['speed_percision',['../classfrc_1_1robot_1_1Constants_1_1Deadbands.html#a45cdbe42adfa5ae83cffe5611569ebeb',1,'frc::robot::Constants::Deadbands']]],
-  ['speedcontroller',['speedcontroller',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#aff4f04cc5b4c20b1dcc4076f588b9a8d',1,'frc::common::wrappers::GearBox']]],
-  ['stopped',['stopped',['../classvision_1_1VideoShow.html#ac56d819c5c208c26341b8b08c1bcb8d5',1,'vision.VideoShow.stopped()'],['../classvision_1_1WebcamVideoStream.html#ab26ad7fa601cb2ff3535854d7caf63cd',1,'vision.WebcamVideoStream.stopped()']]],
-  ['stream',['stream',['../classvision_1_1WebcamVideoStream.html#ad595acec97c37ea9284e650e69e2a0cd',1,'vision::WebcamVideoStream']]],
-  ['streams',['streams',['../namespacevision.html#a4a8607fb398ea6e6305198de902356b0',1,'vision']]],
-  ['streamviewer',['streamViewer',['../namespacevision.html#a3685d29db2eb54d04a23957167c12afc',1,'vision']]]
+  ['reverse',['reverse',['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Follow.html#a4f0041dbc171a987a81b2ae9fc17d5f9',1,'frc::robot::autonomous::actions::Follow']]],
+  ['right',['right',['../classfrc_1_1common_1_1wrappers_1_1EncoderPair.html#abd7e2f12ec772be54b0f1393e607201c',1,'frc::common::wrappers::EncoderPair']]],
+  ['rightfrontmotor',['rightFrontMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a5096352e4d0452eaa59e63c4c2df723d',1,'frc::robot::Constants::DriveTrain']]],
+  ['rightrearmotor',['rightRearMotor',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a2f0bfe6426217528e3a375265312ac3e',1,'frc::robot::Constants::DriveTrain']]],
+  ['roataion_5fpercision',['roataion_percision',['../classfrc_1_1robot_1_1Constants_1_1Deadbands.html#af9235b75cee4f125d3e5e9f7633c8842',1,'frc::robot::Constants::Deadbands']]],
+  ['robot_5fenabled_5fstate',['robot_enabled_state',['../classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#af426657f3dd6252cc67c7898a8063ad6',1,'frc::common::tasks::RiologBackupTask']]],
+  ['robot_5fperiod',['robot_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#ab6b1870f3db8ec160f6cf256ef2f273c',1,'frc::robot::Constants::PeriodicTiming']]],
+  ['rotation_5fdeadband',['rotation_deadband',['../classfrc_1_1robot_1_1Constants_1_1Deadbands.html#a1f5650e11d6a576c646eb82d2de9d632',1,'frc::robot::Constants::Deadbands']]]
 ];

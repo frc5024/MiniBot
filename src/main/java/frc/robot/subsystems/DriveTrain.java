@@ -3,7 +3,6 @@ package frc.robot.subsystems;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -11,17 +10,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.SPI.Port;
 import com.kauailabs.navx.frc.AHRS;
 
-import frc.robot.commands.TriggerDrive;
 import frc.common.wrappers.GearBox;
 import frc.robot.Constants;
 import frc.common.control.SlewLimiter;
+import frc.common.loopables.LoopableSubsystem;
 import frc.common.wrappers.PathingHelper;
 import frc.common.wrappers.TankTrajectory;
 
 /**
  * The Subsystem in control of the robot's drivebase.
+ * 
+ * Although this is a LoopableSubsystem, we are not using it's buffering features for now.
  */
-public class DriveTrain extends Subsystem {
+public class DriveTrain extends LoopableSubsystem {
     private static DriveTrain instance = null;
 
     private final RobotLogger logger = RobotLogger.getInstance();
@@ -60,14 +61,6 @@ public class DriveTrain extends Subsystem {
         this.gyro.reset();
         logger.log("[DriveTrain] Gyro has been reset to: " + this.gyro.getAngle(), Level.kRobot);
 
-    }
-
-    @Override
-    /**
-     * Called by WPIlib's Scheduler during initalization
-     */
-    public void initDefaultCommand() {
-        // setDefaultCommand(new TriggerDrive());
     }
 
     public static DriveTrain getInstance() {
@@ -139,6 +132,12 @@ public class DriveTrain extends Subsystem {
         mDrivebase.curvatureDrive(speed, rotation, is_quick_turn);
     }
 
+    public void tankDrive(double l, double r) {
+        this.is_moving = (l+r != 0.0);
+        this.is_turning = (l != r);
+        mDrivebase.tankDrive(l, r);
+    }
+
     /**
      * Enables or disables brake mode on all drivebase talons
      * 
@@ -198,10 +197,27 @@ public class DriveTrain extends Subsystem {
                 invert_gyro, invert_path);
     }
 
+    public AHRS getGyro() {
+        return this.gyro;
+    }
+
     public void reset() {
         // Reset encoders, gyro
+        this.gyro.reset();
+
         // Set all outputs to 0.0
         this.mLeftGearbox.getMaster().set(0.0);
         this.mRightGearbox.getMaster().set(0.0);
+    }
+
+    @Override
+    public void stop() {
+        this.mLeftGearbox.getMaster().set(0.0);
+        this.mRightGearbox.getMaster().set(0.0);
+    }
+
+    @Override
+    public boolean checkHealth() {
+        return false;
     }
 }

@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['name',['name',['../classfrc_1_1common_1_1wpilib_1_1RRSubsystem.html#a1ea6325adacb348e824bd123cbb1af0a',1,'frc.common.wpilib.RRSubsystem.name()'],['../classfrc_1_1robot_1_1Constants_1_1MainCamera.html#aa675ca49fe7a125fe9a89a11e3249fb4',1,'frc.robot.Constants.MainCamera.name()'],['../classvision_1_1WebcamVideoStream.html#adbe3db60c5420bf134353827a954173e',1,'vision.WebcamVideoStream.name()']]],
-  ['net_5fmonitor_5fperiod',['net_monitor_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a51f420fbf83cc80e0bb90debf044c3e1',1,'frc::robot::Constants::PeriodicTiming']]],
-  ['networktable',['networkTable',['../namespacevision.html#a5be02c860cfef4d8f4c040ef276d90f6',1,'vision']]],
-  ['notifier',['notifier',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#aa6950125bb0ec709aecbd6691b46dd3b',1,'frc::common::utils::RobotLogger']]],
-  ['nt_5fperiod',['nt_period',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a722daff57d30d94db89cc95edc1d3d58',1,'frc::robot::Constants::PeriodicTiming']]],
-  ['ntinst',['ntinst',['../namespacevision.html#a637fe4727d014ce5f3932c862b645f4b',1,'vision']]]
+  ['m_5freported',['m_reported',['../classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a377cd98ad1ea42b1e6f255aaba589fc3',1,'frc::common::drive::DifferentialDrive']]],
+  ['max_5facceleration',['max_acceleration',['../classfrc_1_1robot_1_1Constants_1_1Robot.html#aed58ece303c43c21155a8f74dcc4035c',1,'frc::robot::Constants::Robot']]],
+  ['max_5fjerk',['max_jerk',['../classfrc_1_1robot_1_1Constants_1_1Robot.html#a1e45e1eca74311c861d60e2568a78d04',1,'frc::robot::Constants::Robot']]],
+  ['max_5fvelocity',['max_velocity',['../classfrc_1_1robot_1_1Constants_1_1Robot.html#ad76c27af068d7f819d380eca8e6bc2bd',1,'frc::robot::Constants::Robot']]],
+  ['mdrivecontrol',['mDriveControl',['../classfrc_1_1robot_1_1Robot.html#a51c73a03817d9d51e0184a6c7df19491',1,'frc::robot::Robot']]],
+  ['mdrivetrain',['mDriveTrain',['../classfrc_1_1robot_1_1Robot.html#ab4c44ba13fdb8f579017fb5e6ff16e07',1,'frc::robot::Robot']]],
+  ['mledring',['mLedring',['../classfrc_1_1robot_1_1Robot.html#af0a0c26b0cc93a4517a6ba11afd96750',1,'frc::robot::Robot']]],
+  ['moi',['mOI',['../classfrc_1_1robot_1_1Robot.html#ad5f0a723bc87c2c17b53ada9e240d1ef',1,'frc::robot::Robot']]],
+  ['msubsystemlooper',['mSubsystemLooper',['../classfrc_1_1robot_1_1Robot.html#ab34c96f0ce3576592a124efc5058ec56',1,'frc::robot::Robot']]],
+  ['mwantedstate',['mWantedState',['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#a839a8a59aa067e1eee2258d13752daef',1,'frc::robot::subsystems::Ledring']]]
 ];

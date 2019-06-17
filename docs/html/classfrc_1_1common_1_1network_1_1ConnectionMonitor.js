@@ -3,6 +3,8 @@ var classfrc_1_1common_1_1network_1_1ConnectionMonitor =
     [ "ConnectionMonitor", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a1c58aa368fb6217bd70b1cea368e45dc", null ],
     [ "getInstance", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#acd49b283134e5fb686e39e66c4958ed7", null ],
     [ "isConnected", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a8642fbc4db52eaa987ebfa1b3041a613", null ],
+    [ "justConnected", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#adc4cb48b5f84867e945d8546b3b3caf6", null ],
+    [ "justDisconnected", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aff6d24d352f1eddc359f8e5cc54a9f6f", null ],
     [ "start", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a1f302c3b6642a338582f7a6a42d28643", null ],
     [ "stop", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a9d70eceaa961f829f355ad975f4e6878", null ],
     [ "update", "classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#a77a0a6e0323236304b2e4a85809a126a", null ],

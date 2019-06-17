@@ -90,16 +90,14 @@ $(document).ready(function(){initNavTree('classfrc_1_1robot_1_1Constants_1_1Enco
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a062e6717b639751f180f081f9a08f573"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#a062e6717b639751f180f081f9a08f573">ticks_per_rev</a> = 360</td></tr>
+<tr class="memitem:a062e6717b639751f180f081f9a08f573"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#a062e6717b639751f180f081f9a08f573">ticks_per_rev</a> = 360 * 4</td></tr>
 <tr class="separator:a062e6717b639751f180f081f9a08f573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a5d640d45a42c160e254c0b298e9da"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#ae3a5d640d45a42c160e254c0b298e9da">wheel_circ</a> = 18.84956</td></tr>
-<tr class="separator:ae3a5d640d45a42c160e254c0b298e9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af281902fb9c2b80804bca45d8cb93b48"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#af281902fb9c2b80804bca45d8cb93b48">wheel_diameter</a> = 6.0</td></tr>
-<tr class="separator:af281902fb9c2b80804bca45d8cb93b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a480971eb9563ab4eae8ddcdf5ed7be"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#a9a480971eb9563ab4eae8ddcdf5ed7be">ticks_per_tick</a> = 1</td></tr>
+<tr class="separator:a9a480971eb9563ab4eae8ddcdf5ed7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00035">35</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00026">26</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a062e6717b639751f180f081f9a08f573"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a062e6717b639751f180f081f9a08f573">&#9670;&nbsp;</a></span>ticks_per_rev</h2>
@@ -111,7 +109,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final int frc.robot.Constants.EncoderInfo.ticks_per_rev = 360</td>
+          <td class="memname">final int frc.robot.Constants.EncoderInfo.ticks_per_rev = 360 * 4</td>
         </tr>
       </table>
   </td>
@@ -121,12 +119,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00036">36</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00027">27</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
 
 </div>
 </div>
-<a id="ae3a5d640d45a42c160e254c0b298e9da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3a5d640d45a42c160e254c0b298e9da">&#9670;&nbsp;</a></span>wheel_circ</h2>
+<a id="a9a480971eb9563ab4eae8ddcdf5ed7be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a480971eb9563ab4eae8ddcdf5ed7be">&#9670;&nbsp;</a></span>ticks_per_tick</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +133,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final double frc.robot.Constants.EncoderInfo.wheel_circ = 18.84956</td>
+          <td class="memname">final int frc.robot.Constants.EncoderInfo.ticks_per_tick = 1</td>
         </tr>
       </table>
   </td>
@@ -145,31 +143,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00037">37</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
-
-</div>
-</div>
-<a id="af281902fb9c2b80804bca45d8cb93b48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af281902fb9c2b80804bca45d8cb93b48">&#9670;&nbsp;</a></span>wheel_diameter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final double frc.robot.Constants.EncoderInfo.wheel_diameter = 6.0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00038">38</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Constants_8java_source.html#l00028">28</a> of file <a class="el" href="Constants_8java_source.html">Constants.java</a>.</p>
 
 </div>
 </div>

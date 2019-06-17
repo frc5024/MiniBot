@@ -1,5 +1,6 @@
 package frc.robot.subsystems;
 
+import frc.common.loopables.LoopableSubsystem;
 import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
 
@@ -16,33 +17,27 @@ import frc.robot.Constants;
  *  To control the Ledring, a state must be requested via setWantedState();
  *  this will be completed via the update() function that is called in the robot's periodic loop
  */
-public class Ledring extends Subsystem {
+public class Ledring extends LoopableSubsystem {
     public enum WantedState {
         kOff,
-        kSolid
+        kSolid,
+        kStrobe
     }
 
     private static Ledring instance = null;
-    private final RobotLogger logger = RobotLogger.getInstance();
 
     private WantedState mWantedState;
 
     private Solenoid led;
 
     protected boolean isEnabled = false;
+    private int ticker = 0;
 
     public Ledring(){
         logger.log("[Ledring] Constructing \"solenoid\" for led control", Level.kRobot);
         this.led = new Solenoid(Constants.PCM.ledring);
     }
 
-    @Override
-    /**
-     * Called by WPIlib's Scheduler during initalization
-     */
-    public void initDefaultCommand() {
-        // setDefaultCommand(new TriggerDrive());
-    }
 
     public static Ledring getInstance() {
         if (instance == null) {
@@ -62,15 +57,29 @@ public class Ledring extends Subsystem {
      * The reason this subsystem is updated, and not directly 
      * controlled, is that it is still used while the robot is disabled.
      */
-    public void update() {
+    @Override
+    public void periodicOutput() {
         switch (mWantedState) {
         case kSolid:
             led.set(true);
+            break;
+        case kStrobe:
+            if (ticker == Constants.ledring_strobe_rate) {
+                set(!isEnabled);
+                ticker = 0;
+            }
+
+            ticker += 1;
             break;
         default:
             led.set(false);
             break;
         }
+    }
+
+    private void set(boolean on) {
+        this.isEnabled = on;
+        led.set(on);
     }
 
     /**
@@ -81,6 +90,16 @@ public class Ledring extends Subsystem {
     }
     
     public void reset() {
-        
+        set(false);
+    }
+
+    @Override
+    public void stop() {
+        set(false);
+    }
+
+    @Override
+    public boolean checkHealth() {
+        return false;
     }
 }

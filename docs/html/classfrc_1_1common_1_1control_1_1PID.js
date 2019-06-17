@@ -2,6 +2,7 @@ var classfrc_1_1common_1_1control_1_1PID =
 [
     [ "PID", "classfrc_1_1common_1_1control_1_1PID.html#a89cf713d3b4eaede30f4bf8cd0b363f4", null ],
     [ "feed", "classfrc_1_1common_1_1control_1_1PID.html#a2f489714a730083fc7db7e23cc850d3f", null ],
+    [ "getError", "classfrc_1_1common_1_1control_1_1PID.html#abdac8d3dee7f26f72938a21542f8d176", null ],
     [ "setGains", "classfrc_1_1common_1_1control_1_1PID.html#ae2a7281b6788f763478f477ed483cdd8", null ],
     [ "setSetpoint", "classfrc_1_1common_1_1control_1_1PID.html#a3bbbc076a05cc9101658b7400624f241", null ],
     [ "integral", "classfrc_1_1common_1_1control_1_1PID.html#a5d24cca31a43674d886014ac72fded85", null ],

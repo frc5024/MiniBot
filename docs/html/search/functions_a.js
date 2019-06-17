@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keepcameraawake',['keepCameraAwake',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a0eda89996a5c6bed130f4ec67884b929',1,'frc::common::wrappers::Camera']]]
+  ['justconnected',['justConnected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#adc4cb48b5f84867e945d8546b3b3caf6',1,'frc::common::network::ConnectionMonitor']]],
+  ['justdisconnected',['justDisconnected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aff6d24d352f1eddc359f8e5cc54a9f6f',1,'frc::common::network::ConnectionMonitor']]]
 ];
