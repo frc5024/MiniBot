@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basicpath_2ejava',['BasicPath.java',['../BasicPath_8java.html',1,'']]]
+  ['autochooser_2ejava',['AutoChooser.java',['../AutoChooser_8java.html',1,'']]]
 ];

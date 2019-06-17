@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['peakcurrent',['peakCurrent',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#a2ccdf85b387c90973aa7ecbf87504647',1,'frc::robot::Constants::DriveTrain']]],
-  ['previous_5ferror',['previous_error',['../classfrc_1_1common_1_1control_1_1PID.html#a34980fe7cd599ae909f49a4ace41cd4f',1,'frc::common::control::PID']]],
-  ['prevvalue',['prevValue',['../classvision_1_1WebcamVideoStream.html#a7d7f7ffddce3e924e41753926004da9f',1,'vision::WebcamVideoStream']]],
-  ['processed',['processed',['../namespacevision.html#ac7084170209c1b86d843924f5ddd33d2',1,'vision']]]
+  ['orange_5fblur',['orange_blur',['../namespacevision.html#a23a49810b1ca7fb6e9600ef4617ce0ce',1,'vision']]],
+  ['outputstream',['outputStream',['../classvision_1_1VideoShow.html#afee260fdab08ecb0e3e90d290a686b2b',1,'vision::VideoShow']]]
 ];

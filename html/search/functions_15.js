@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['warn',['warn',['../classfrc_1_1common_1_1PeriodicLogger.html#a2d966c2ecb42fe7915e593db40db91b4',1,'frc::common::PeriodicLogger']]],
-  ['watch',['watch',['../classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#ad8687f1cbfea35319e880e6dc308a552',1,'frc::common::tasks::RiologBackupTask']]]
+  ['virtualgearshifter',['VirtualGearShifter',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#aa5937776a0bccb884caadc00517e15da',1,'frc::common::control::VirtualGearShifter']]],
+  ['visioninterface',['VisionInterface',['../classfrc_1_1common_1_1network_1_1VisionInterface.html#ae6c4fcf49ce302761cdf61e10c14612d',1,'frc::common::network::VisionInterface']]]
 ];

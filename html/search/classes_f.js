@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['wanteddrivemethod',['WantedDriveMethod',['../enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedDriveMethod.html',1,'frc::robot::subsystems::Superstructure']]],
-  ['wantedstate',['WantedState',['../enumfrc_1_1robot_1_1subsystems_1_1Ledring_1_1WantedState.html',1,'frc::robot::subsystems::Ledring']]],
-  ['wantedstate',['WantedState',['../enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedState.html',1,'frc::robot::subsystems::Superstructure']]],
-  ['webcamvideostream',['WebcamVideoStream',['../classvision_1_1WebcamVideoStream.html',1,'vision']]]
+  ['videoshow',['VideoShow',['../classvision_1_1VideoShow.html',1,'vision']]],
+  ['virtualgearshifter',['VirtualGearShifter',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html',1,'frc::common::control']]],
+  ['visioninterface',['VisionInterface',['../classfrc_1_1common_1_1network_1_1VisionInterface.html',1,'frc::common::network']]]
 ];

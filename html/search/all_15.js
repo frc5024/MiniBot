@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['wanteddrivemethod',['WantedDriveMethod',['../enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedDriveMethod.html',1,'frc::robot::subsystems::Superstructure']]],
-  ['wantedstate',['WantedState',['../enumfrc_1_1robot_1_1subsystems_1_1Ledring_1_1WantedState.html',1,'frc::robot::subsystems::Ledring']]],
-  ['wantedstate',['WantedState',['../enumfrc_1_1robot_1_1subsystems_1_1Superstructure_1_1WantedState.html',1,'frc::robot::subsystems::Superstructure']]],
-  ['warn',['warn',['../classfrc_1_1common_1_1PeriodicLogger.html#a2d966c2ecb42fe7915e593db40db91b4',1,'frc::common::PeriodicLogger']]],
-  ['watch',['watch',['../classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html#ad8687f1cbfea35319e880e6dc308a552',1,'frc::common::tasks::RiologBackupTask']]],
-  ['webcam',['webcam',['../classvision_1_1WebcamVideoStream.html#a97531ec7c83ff586182a37db74d4a7ec',1,'vision.WebcamVideoStream.webcam()'],['../namespacevision.html#a2994a58e51e7604a107355e8c18f4c89',1,'vision.webcam()']]],
-  ['webcamvideostream',['WebcamVideoStream',['../classvision_1_1WebcamVideoStream.html',1,'vision']]],
-  ['wheel_5fcirc',['wheel_circ',['../classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#ae3a5d640d45a42c160e254c0b298e9da',1,'frc::robot::Constants::EncoderInfo']]],
-  ['wheel_5fdiameter',['wheel_diameter',['../classfrc_1_1robot_1_1Constants_1_1EncoderInfo.html#af281902fb9c2b80804bca45d8cb93b48',1,'frc::robot::Constants::EncoderInfo']]]
+  ['v_5ffocal_5flength',['V_FOCAL_LENGTH',['../namespacevision.html#a6356873199b0c1c82c5cdb832047586d',1,'vision']]],
+  ['verticalaspect',['verticalAspect',['../namespacevision.html#a7401ffcbf49150024bdbfb14efd3f66c',1,'vision']]],
+  ['verticalview',['verticalView',['../namespacevision.html#a21f8ef50c6f1c31c6f8cd04846668127',1,'vision']]],
+  ['videoshow',['VideoShow',['../classvision_1_1VideoShow.html',1,'vision']]],
+  ['virtualgearshifter',['VirtualGearShifter',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html#aa5937776a0bccb884caadc00517e15da',1,'frc::common::control::VirtualGearShifter']]],
+  ['virtualgearshifter',['VirtualGearShifter',['../classfrc_1_1common_1_1control_1_1VirtualGearShifter.html',1,'frc::common::control']]],
+  ['virtualgearshifter_2ejava',['VirtualGearShifter.java',['../VirtualGearShifter_8java.html',1,'']]],
+  ['vision',['vision',['../namespacevision.html',1,'']]],
+  ['vision_2epy',['vision.py',['../vision_8py.html',1,'']]],
+  ['vision_5fthread',['vision_thread',['../classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html#a5bb16666483becefd12115a2f0ccca05',1,'frc::robot::Constants::PeriodicTiming']]],
+  ['visioninterface',['VisionInterface',['../classfrc_1_1common_1_1network_1_1VisionInterface.html',1,'frc::common::network']]],
+  ['visioninterface',['VisionInterface',['../classfrc_1_1common_1_1network_1_1VisionInterface.html#ae6c4fcf49ce302761cdf61e10c14612d',1,'frc::common::network::VisionInterface']]],
+  ['visioninterface_2ejava',['VisionInterface.java',['../VisionInterface_8java.html',1,'']]]
 ];
