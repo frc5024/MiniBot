@@ -33,7 +33,9 @@ public class Ledring extends LoopableSubsystem {
     protected boolean isEnabled = false;
     private int ticker = 0;
 
-    public Ledring(){
+    public Ledring() {
+        this.name = "Ledring";
+
         logger.log("[Ledring] Constructing \"solenoid\" for led control", Level.kRobot);
         this.led = new Solenoid(Constants.PCM.ledring);
     }

@@ -38,7 +38,9 @@ public class DriveTrain extends LoopableSubsystem {
 
     protected boolean is_moving, is_turning = false;
 
-    public DriveTrain(){
+    public DriveTrain() {
+        this.name = "DriveTrain";
+        
         /* Create both gearbox objects */
         logger.log("[DriveTrain] Constructing GearBoxes out of motor pairs", Level.kRobot);
         mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
