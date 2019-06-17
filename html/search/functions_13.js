@@ -6,7 +6,6 @@ var searchData=
   ['teleopperiodic',['teleopPeriodic',['../classfrc_1_1robot_1_1Robot.html#ae807171661cbc29081bc10f06d6831e7',1,'frc::robot::Robot']]],
   ['testperiodic',['testPeriodic',['../classfrc_1_1robot_1_1Robot.html#abd152f34b9f33d5cdf835aa61331f33e',1,'frc::robot::Robot']]],
   ['threshold_5fvideo',['threshold_video',['../namespacevision.html#a10ef6c5d3401ab42e112a4f0ae9a191c',1,'vision']]],
-  ['timedexecute',['timedExecute',['../classfrc_1_1common_1_1loopers_1_1SubsystemLooper.html#ae0fb0570737fff8478877e9b6b781703',1,'frc::common::loopers::SubsystemLooper']]],
   ['tostring',['toString',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#aa0e8650ec9104fde98453b867307805d',1,'frc::common::utils::RobotLogger']]],
   ['translaterotation',['translateRotation',['../namespacevision.html#a439b655b10c4edcbeb4b33f494f4b2c4',1,'vision']]]
 ];
