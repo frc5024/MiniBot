@@ -29,8 +29,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AutoChooser_8java.html",
-"classfrc_1_1common_1_1utils_1_1FileUtils.html#ab4cd1c4fcb5f7da51fb396ac8a05f751",
-"classvision_1_1VideoShow.html#a630211b256226727ab4c4487490adf0c"
+"classfrc_1_1common_1_1wrappers_1_1Camera.html#a0eda89996a5c6bed130f4ec67884b929",
+"dir_6d1affd51a62bf41ebc4e289393d9b1b.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -23,8 +23,8 @@ var searchData=
   ['follow',['Follow',['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Follow.html#a9580fec41495e1a2117999caa03769c1',1,'frc.robot.autonomous.actions.Follow.Follow(Waypoint...waypoints)'],['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Follow.html#a0a078b5f8d699a35844f0587262d1bf8',1,'frc.robot.autonomous.actions.Follow.Follow(boolean isReverse, Waypoint[] waypoints)']]],
   ['follow_2ejava',['Follow.java',['../Follow_8java.html',1,'']]],
   ['fov',['fov',['../classfrc_1_1robot_1_1Constants_1_1MainCamera.html#a71531cc238a0e45a5ce14be8d04d4e60',1,'frc::robot::Constants::MainCamera']]],
-  ['fps',['fps',['../classvision_1_1FPS.html#a80808e72fad5a4086a69755a2b4067dd',1,'vision.FPS.fps()'],['../namespacevision.html#a4141fb3113a3748a93e7be1774910f3d',1,'vision.fps()']]],
   ['fps',['FPS',['../classvision_1_1FPS.html',1,'vision']]],
+  ['fps',['fps',['../classvision_1_1FPS.html#a80808e72fad5a4086a69755a2b4067dd',1,'vision.FPS.fps()'],['../namespacevision.html#a4141fb3113a3748a93e7be1774910f3d',1,'vision.fps()']]],
   ['frame',['frame',['../classvision_1_1VideoShow.html#a57bd47d9906f972f653c3e0659d0cbe3',1,'vision.VideoShow.frame()'],['../namespacevision.html#a95ba436dff5a21c9cc35cc11c6144282',1,'vision.frame()']]],
   ['frc',['frc',['../namespacefrc.html',1,'']]],
   ['front',['front',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#adc46c62d73138f4e547d7f9f26217ac0',1,'frc::common::wrappers::GearBox']]],
@@ -33,10 +33,9 @@ var searchData=
   ['network',['network',['../namespacefrc_1_1common_1_1network.html',1,'frc::common']]],
   ['robot',['robot',['../namespacefrc_1_1robot.html',1,'frc']]],
   ['sequences',['sequences',['../namespacefrc_1_1robot_1_1autonomous_1_1sequences.html',1,'frc::robot::autonomous']]],
-  ['statebase',['statebase',['../namespacefrc_1_1common_1_1statebase.html',1,'frc::common']]],
+  ['spatial',['spatial',['../namespacefrc_1_1common_1_1spatial.html',1,'frc::common']]],
   ['subsystems',['subsystems',['../namespacefrc_1_1robot_1_1subsystems.html',1,'frc::robot']]],
   ['tasks',['tasks',['../namespacefrc_1_1common_1_1tasks.html',1,'frc::common']]],
   ['utils',['utils',['../namespacefrc_1_1common_1_1utils.html',1,'frc::common']]],
-  ['wpilib',['wpilib',['../namespacefrc_1_1common_1_1wpilib.html',1,'frc::common']]],
   ['wrappers',['wrappers',['../namespacefrc_1_1common_1_1wrappers.html',1,'frc::common']]]
 ];

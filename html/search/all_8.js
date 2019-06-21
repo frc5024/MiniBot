@@ -1,7 +1,6 @@
 var searchData=
 [
   ['h_5ffocal_5flength',['H_FOCAL_LENGTH',['../namespacevision.html#a7384b31c63cde748cef35f3441cf1842',1,'vision']]],
-  ['headingto',['HeadingTo',['../classfrc_1_1common_1_1utils_1_1Point.html#a44ac7584232143dfedd33a92ed889775',1,'frc::common::utils::Point']]],
   ['hold',['Hold',['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Hold.html',1,'frc::robot::autonomous::actions']]],
   ['hold_2ejava',['Hold.java',['../Hold_8java.html',1,'']]],
   ['holdcurrent',['holdCurrent',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#ab63f72686d72bec96317e2b61949c40e',1,'frc::robot::Constants::DriveTrain']]],
