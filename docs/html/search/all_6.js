@@ -30,10 +30,9 @@ var searchData=
   ['network',['network',['../namespacefrc_1_1common_1_1network.html',1,'frc::common']]],
   ['robot',['robot',['../namespacefrc_1_1robot.html',1,'frc']]],
   ['sequences',['sequences',['../namespacefrc_1_1robot_1_1autonomous_1_1sequences.html',1,'frc::robot::autonomous']]],
-  ['statebase',['statebase',['../namespacefrc_1_1common_1_1statebase.html',1,'frc::common']]],
+  ['spatial',['spatial',['../namespacefrc_1_1common_1_1spatial.html',1,'frc::common']]],
   ['subsystems',['subsystems',['../namespacefrc_1_1robot_1_1subsystems.html',1,'frc::robot']]],
   ['tasks',['tasks',['../namespacefrc_1_1common_1_1tasks.html',1,'frc::common']]],
   ['utils',['utils',['../namespacefrc_1_1common_1_1utils.html',1,'frc::common']]],
-  ['wpilib',['wpilib',['../namespacefrc_1_1common_1_1wpilib.html',1,'frc::common']]],
   ['wrappers',['wrappers',['../namespacefrc_1_1common_1_1wrappers.html',1,'frc::common']]]
 ];

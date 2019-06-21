@@ -23,6 +23,7 @@ var hierarchy =
     [ "frc.common.utils.RobotLogger.Level", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html", null ],
     [ "frc.common.utils.Line", "classfrc_1_1common_1_1utils_1_1Line.html", null ],
     [ "frc.common.control.LinearDeadband", "classfrc_1_1common_1_1control_1_1LinearDeadband.html", null ],
+    [ "frc.common.spatial.Location", "classfrc_1_1common_1_1spatial_1_1Location.html", null ],
     [ "frc.common.loopables.LoopableSubsystem", "classfrc_1_1common_1_1loopables_1_1LoopableSubsystem.html", [
       [ "frc.robot.subsystems.DriveTrain", "classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html", null ],
       [ "frc.robot.subsystems.Ledring", "classfrc_1_1robot_1_1subsystems_1_1Ledring.html", null ]
@@ -42,20 +43,16 @@ var hierarchy =
     [ "frc.common.PeriodicLogger", "classfrc_1_1common_1_1PeriodicLogger.html", null ],
     [ "frc.robot.Constants.PeriodicTiming", "classfrc_1_1robot_1_1Constants_1_1PeriodicTiming.html", null ],
     [ "frc.common.control.PID", "classfrc_1_1common_1_1control_1_1PID.html", null ],
-    [ "frc.common.utils.Point", "classfrc_1_1common_1_1utils_1_1Point.html", null ],
     [ "frc.common.tasks.RiologBackupTask", "classfrc_1_1common_1_1tasks_1_1RiologBackupTask.html", null ],
     [ "frc.robot.Constants.Robot", "classfrc_1_1robot_1_1Constants_1_1Robot.html", null ],
     [ "frc.common.utils.RobotLogger", "classfrc_1_1common_1_1utils_1_1RobotLogger.html", null ],
     [ "frc.common.control.SlewLimiter", "classfrc_1_1common_1_1control_1_1SlewLimiter.html", null ],
-    [ "frc.common.statebase.State", "classfrc_1_1common_1_1statebase_1_1State.html", null ],
-    [ "frc.common.statebase.StateMachine", "classfrc_1_1common_1_1statebase_1_1StateMachine.html", null ],
-    [ "frc.common.statebase.Subsystem", "classfrc_1_1common_1_1statebase_1_1Subsystem.html", null ],
     [ "frc.common.wrappers.TankTrajectory", "classfrc_1_1common_1_1wrappers_1_1TankTrajectory.html", null ],
     [ "io.github.frc5024.MiniBot.TestTest", "classio_1_1github_1_1frc5024_1_1MiniBot_1_1TestTest.html", null ],
+    [ "frc.common.spatial.Translation2d", "classfrc_1_1common_1_1spatial_1_1Translation2d.html", null ],
     [ "vision.VideoShow", "classvision_1_1VideoShow.html", null ],
     [ "frc.common.control.VirtualGearShifter", "classfrc_1_1common_1_1control_1_1VirtualGearShifter.html", null ],
     [ "frc.common.network.VisionInterface", "classfrc_1_1common_1_1network_1_1VisionInterface.html", null ],
-    [ "frc.common.statebase.Want", "classfrc_1_1common_1_1statebase_1_1Want.html", null ],
     [ "frc.robot.subsystems.Ledring.WantedState", "enumfrc_1_1robot_1_1subsystems_1_1Ledring_1_1WantedState.html", null ],
     [ "vision.WebcamVideoStream", "classvision_1_1WebcamVideoStream.html", null ],
     [ "Command", null, [
@@ -68,9 +65,6 @@ var hierarchy =
     ] ],
     [ "CommandGroup", null, [
       [ "frc.robot.autonomous.sequences.HoldPosition", "classfrc_1_1robot_1_1autonomous_1_1sequences_1_1HoldPosition.html", null ]
-    ] ],
-    [ "Subsystem", null, [
-      [ "frc.common.wpilib.RRSubsystem", "classfrc_1_1common_1_1wpilib_1_1RRSubsystem.html", null ]
     ] ],
     [ "TimedRobot", null, [
       [ "frc.robot.Robot", "classfrc_1_1robot_1_1Robot.html", null ]

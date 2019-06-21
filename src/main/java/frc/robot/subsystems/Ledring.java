@@ -13,15 +13,13 @@ import frc.robot.Constants;
 /**
  * The Subsystem in control of the robot's ringlight
  * 
- * Usage:
- *  To control the Ledring, a state must be requested via setWantedState();
- *  this will be completed via the update() function that is called in the robot's periodic loop
+ * Usage: To control the Ledring, a state must be requested via
+ * setWantedState(); this will be completed via the periodicOutput() function
+ * that is called by the SubsystemLooper
  */
 public class Ledring extends LoopableSubsystem {
     public enum WantedState {
-        kOff,
-        kSolid,
-        kStrobe
+        kOff, kSolid, kStrobe
     }
 
     private static Ledring instance = null;
@@ -40,7 +38,11 @@ public class Ledring extends LoopableSubsystem {
         this.led = new Solenoid(Constants.PCM.ledring);
     }
 
-
+    /**
+     * Get the current instance of the Ledring
+     * 
+     * @return Current Ledring instance object
+     */
     public static Ledring getInstance() {
         if (instance == null) {
             instance = new Ledring();
@@ -49,15 +51,20 @@ public class Ledring extends LoopableSubsystem {
         return instance;
     }
 
+    /**
+     * Set the wanted state / mode for the Ledring
+     * 
+     * @param state Wanted state
+     */
     public void setWantedState(WantedState state) {
         mWantedState = state;
         logger.log("[Ledring] Wanted state set to: " + state);
     }
 
     /**
-     * When called, will update to display the wanted state. 
-     * The reason this subsystem is updated, and not directly 
-     * controlled, is that it is still used while the robot is disabled.
+     * When called, will update to display the wanted state. The reason this
+     * subsystem is updated, and not directly controlled, is that it is still used
+     * while the robot is disabled.
      */
     @Override
     public void periodicOutput() {
@@ -79,6 +86,9 @@ public class Ledring extends LoopableSubsystem {
         }
     }
 
+    /**
+     * Send CAN data and update telemetry at the same time
+     */
     private void set(boolean on) {
         this.isEnabled = on;
         led.set(on);
@@ -90,17 +100,32 @@ public class Ledring extends LoopableSubsystem {
     public void outputTelemetry() {
         SmartDashboard.putBoolean("Ledring enabled", isEnabled);
     }
-    
+
+    /**
+     * called by wrappers and the SubsystemLooper.
+     * 
+     * This should reset the Ledring so that it was essentially re-constructed
+     */
     public void reset() {
         set(false);
     }
 
     @Override
+    /**
+     * called by wrappers and the SubsystemLooper.
+     * 
+     * This should do the same as reset since there are no moving parts here
+     */
     public void stop() {
-        set(false);
+        reset();
     }
 
     @Override
+    /**
+     * Used by the StatusReporter to keep track of the robot's health. Some
+     * subsystems may use sensor data to feed this (think elevator that passed it's
+     * safety limits)
+     */
     public boolean checkHealth() {
         return false;
     }

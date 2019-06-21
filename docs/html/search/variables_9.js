@@ -8,6 +8,5 @@ var searchData=
   ['is_5fconnected',['is_connected',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aea76caaade05ce897f9488fa37944064',1,'frc::common::network::ConnectionMonitor']]],
   ['is_5finverse_5fmotion',['is_inverse_motion',['../classfrc_1_1common_1_1wrappers_1_1GearBox.html#a0eb3980af458b017b9d3e8ed239119b7',1,'frc::common::wrappers::GearBox']]],
   ['is_5fmoving',['is_moving',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#ac322c733b533a0d596620775e1e92fe6',1,'frc::robot::subsystems::DriveTrain']]],
-  ['isenabled',['isEnabled',['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#ac0f4e61f11412aa0d26c59e90ca529ce',1,'frc::robot::subsystems::Ledring']]],
-  ['isnew',['isNew',['../classfrc_1_1common_1_1statebase_1_1StateMachine.html#acc5adfd375411dd68f1f2b09eda22b98',1,'frc::common::statebase::StateMachine']]]
+  ['isenabled',['isEnabled',['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#ac0f4e61f11412aa0d26c59e90ca529ce',1,'frc::robot::subsystems::Ledring']]]
 ];

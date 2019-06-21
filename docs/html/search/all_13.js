@@ -20,5 +20,7 @@ var searchData=
   ['timeout',['timeout',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#af0318c1fa5e53e5aa060523e02bf5fed',1,'frc::common::network::ConnectionMonitor']]],
   ['timestamp',['timestamp',['../classfrc_1_1common_1_1network_1_1ConnectionMonitor.html#aec7d18f02195d7048019e3d8eec3208e',1,'frc.common.network.ConnectionMonitor.timestamp()'],['../namespacevision.html#a09b08c325a6955f3083ce576a75b680e',1,'vision.timestamp()']]],
   ['tostring',['toString',['../classfrc_1_1common_1_1utils_1_1RobotLogger.html#aa0e8650ec9104fde98453b867307805d',1,'frc::common::utils::RobotLogger']]],
-  ['translaterotation',['translateRotation',['../namespacevision.html#af0d8e635a26de0e8fb07ec8f2b490c43',1,'vision']]]
+  ['translaterotation',['translateRotation',['../namespacevision.html#af0d8e635a26de0e8fb07ec8f2b490c43',1,'vision']]],
+  ['translation2d',['Translation2d',['../classfrc_1_1common_1_1spatial_1_1Translation2d.html',1,'frc.common.spatial.Translation2d'],['../classfrc_1_1common_1_1spatial_1_1Translation2d.html#a315a781e031ad321d5fa60a1c8c4a122',1,'frc.common.spatial.Translation2d.Translation2d()'],['../classfrc_1_1common_1_1spatial_1_1Translation2d.html#a793391c4ccaac0b9255b2e52dd9eabad',1,'frc.common.spatial.Translation2d.Translation2d(double x, double y)'],['../classfrc_1_1common_1_1spatial_1_1Translation2d.html#af812578066aa56ad866568c0af2a66eb',1,'frc.common.spatial.Translation2d.Translation2d(final Translation2d other)'],['../classfrc_1_1common_1_1spatial_1_1Translation2d.html#a7b3f8eea4096d9cf991f517ca816f922',1,'frc.common.spatial.Translation2d.Translation2d(final Translation2d start, final Translation2d end)']]],
+  ['translation2d_2ejava',['Translation2d.java',['../Translation2d_8java.html',1,'']]]
 ];

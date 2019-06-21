@@ -9,9 +9,6 @@ var dir_326f55a2356b5038dee65e134910f6be =
     [ "Line.java", "Line_8java.html", [
       [ "Line", "classfrc_1_1common_1_1utils_1_1Line.html", "classfrc_1_1common_1_1utils_1_1Line" ]
     ] ],
-    [ "Point.java", "Point_8java.html", [
-      [ "Point", "classfrc_1_1common_1_1utils_1_1Point.html", "classfrc_1_1common_1_1utils_1_1Point" ]
-    ] ],
     [ "RobotLogger.java", "RobotLogger_8java.html", [
       [ "RobotLogger", "classfrc_1_1common_1_1utils_1_1RobotLogger.html", "classfrc_1_1common_1_1utils_1_1RobotLogger" ],
       [ "Level", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level.html", "enumfrc_1_1common_1_1utils_1_1RobotLogger_1_1Level" ]

@@ -12,6 +12,9 @@ import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import jaci.pathfinder.modifiers.TankModifier;
 
+/**
+ * This is based off Jaci's Pathfinder v1 library.
+ */
 public class Follow extends Command {
     private RobotLogger logger = RobotLogger.getInstance();
 

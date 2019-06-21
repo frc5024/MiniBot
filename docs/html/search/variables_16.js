@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../classfrc_1_1common_1_1utils_1_1Point.html#a5027a47aac1d4a4faa5f4c6ee20d4ea0',1,'frc::common::utils::Point']]]
+  ['x',['x',['../classfrc_1_1common_1_1spatial_1_1Translation2d.html#a658e0b3370e0d4fe8a4e357a8d126507',1,'frc::common::spatial::Translation2d']]]
 ];

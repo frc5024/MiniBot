@@ -10,4 +10,13 @@ public class AutoChooser {
     public AutoChooser() {
         chooser.setDefaultOption("Do Nothing", new HoldPosition());
     }
+
+    /**
+     * Get the selected CommandGroup
+     * 
+     * @return Driver's selection
+     */
+    public CommandGroup getSelection() {
+        return chooser.getSelected();
+    }
 }

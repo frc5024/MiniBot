@@ -20,7 +20,8 @@ import frc.common.wrappers.TankTrajectory;
 /**
  * The Subsystem in control of the robot's drivebase.
  * 
- * Although this is a LoopableSubsystem, we are not using it's buffering features for now.
+ * Although this is a LoopableSubsystem, we are not using it's buffering
+ * features for now.
  */
 public class DriveTrain extends LoopableSubsystem {
     private static DriveTrain instance = null;
@@ -40,17 +41,22 @@ public class DriveTrain extends LoopableSubsystem {
 
     public DriveTrain() {
         this.name = "DriveTrain";
-        
+
         /* Create both gearbox objects */
         logger.log("[DriveTrain] Constructing GearBoxes out of motor pairs", Level.kRobot);
-        mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
-        mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.rightFrontMotor), new WPI_TalonSRX(Constants.DriveTrain.rightRearMotor));
+        mLeftGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.leftFrontMotor),
+                new WPI_TalonSRX(Constants.DriveTrain.leftRearMotor));
+        mRightGearbox = new GearBox(new WPI_TalonSRX(Constants.DriveTrain.rightFrontMotor),
+                new WPI_TalonSRX(Constants.DriveTrain.rightRearMotor));
 
         /* Enable current limiting on each gearbox */
-        logger.log("[DriveTrain] Limiting current on both gearboxes. Peak: " + Constants.DriveTrain.peakCurrent + "A, Hold: "
-                + Constants.DriveTrain.holdCurrent + "A, Timeout: " + Constants.DriveTrain.holdCurrent + "ms", Level.kRobot);
-        mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.holdCurrent);
-        mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent, Constants.DriveTrain.currentTimeout);
+        logger.log("[DriveTrain] Limiting current on both gearboxes. Peak: " + Constants.DriveTrain.peakCurrent
+                + "A, Hold: " + Constants.DriveTrain.holdCurrent + "A, Timeout: " + Constants.DriveTrain.holdCurrent
+                + "ms", Level.kRobot);
+        mLeftGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent,
+                Constants.DriveTrain.holdCurrent);
+        mRightGearbox.limitCurrent(Constants.DriveTrain.peakCurrent, Constants.DriveTrain.holdCurrent,
+                Constants.DriveTrain.currentTimeout);
 
         /* Create a DifferentialDrive out of each gearbox */
         mDrivebase = new DifferentialDrive(mLeftGearbox.getMaster(), mRightGearbox.getMaster());
@@ -65,6 +71,11 @@ public class DriveTrain extends LoopableSubsystem {
 
     }
 
+    /**
+     * Get the current instance of this class.
+     * 
+     * @return DriveTrain instance
+     */
     public static DriveTrain getInstance() {
         if (instance == null) {
             instance = new DriveTrain();
@@ -76,7 +87,7 @@ public class DriveTrain extends LoopableSubsystem {
     /**
      * The standard wrapper around WPIlib's joystick-based drive function
      * 
-     * @param speed Forward speed (from -1.0 to 1.0)
+     * @param speed    Forward speed (from -1.0 to 1.0)
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
     public void arcadeDrive(double speed, double rotation) {
@@ -89,7 +100,7 @@ public class DriveTrain extends LoopableSubsystem {
     /**
      * Drive the robot with artificial acceleration and gear shifting
      * 
-     * @param speed Forward speed (from -1.0 to 1.0)
+     * @param speed    Forward speed (from -1.0 to 1.0)
      * @param rotation Rotation of robot (from -1.0 to 1.0)
      */
     public void raiderDrive(double speed, double rotation) {
@@ -104,10 +115,11 @@ public class DriveTrain extends LoopableSubsystem {
     }
 
     /**
-     * The standard wrapper around WPIlib's joystick-based drive function with optional input scaling
+     * The standard wrapper around WPIlib's joystick-based drive function with
+     * optional input scaling
      * 
-     * @param speed Forward speed (from -1.0 to 1.0)
-     * @param rotation Rotation of robot (from -1.0 to 1.0)
+     * @param speed             Forward speed (from -1.0 to 1.0)
+     * @param rotation          Rotation of robot (from -1.0 to 1.0)
      * @param is_inputs_squared Should WPIlib try to scale the inputs
      */
     public void arcadeDrive(double speed, double rotation, boolean is_inputs_squared) {
@@ -120,12 +132,13 @@ public class DriveTrain extends LoopableSubsystem {
     /**
      * Wrapper around 254's drive interface.
      * 
-     * The "turning" stick controls the curvature of the robot's path rather than its rate of heading change. 
-     * This helps make the robot more controllable at high speeds. Also handles the robot's quick turn 
-     * functionality - "quick turn" overrides constant-curvature turning for turn-in-place maneuvers.
+     * The "turning" stick controls the curvature of the robot's path rather than
+     * its rate of heading change. This helps make the robot more controllable at
+     * high speeds. Also handles the robot's quick turn functionality - "quick turn"
+     * overrides constant-curvature turning for turn-in-place maneuvers.
      * 
-     * @param speed Forward speed (from -1.0 to 1.0)
-     * @param rotation Rotation of robot (from -1.0 to 1.0)
+     * @param speed         Forward speed (from -1.0 to 1.0)
+     * @param rotation      Rotation of robot (from -1.0 to 1.0)
      * @param is_quick_turn Is quick turn functionality enabled?
      */
     public void cheesyDrive(double speed, double rotation, boolean is_quick_turn) {
@@ -134,8 +147,14 @@ public class DriveTrain extends LoopableSubsystem {
         mDrivebase.curvatureDrive(speed, rotation, is_quick_turn);
     }
 
+    /**
+     * A passthrough to WPILib's TankDrive method
+     * 
+     * @param l Left speed
+     * @param r Right speed
+     */
     public void tankDrive(double l, double r) {
-        this.is_moving = (l+r != 0.0);
+        this.is_moving = (l + r != 0.0);
         this.is_turning = (l != r);
         mDrivebase.tankDrive(l, r);
     }
@@ -145,7 +164,7 @@ public class DriveTrain extends LoopableSubsystem {
      * 
      * @param on Should the brakes be enabled?
      */
-    public void setBrakes(boolean on){
+    public void setBrakes(boolean on) {
         NeutralMode mode = on ? NeutralMode.Brake : NeutralMode.Coast;
         String mode_string = on ? "Brake" : "Coast";
 
@@ -162,7 +181,7 @@ public class DriveTrain extends LoopableSubsystem {
      * 
      * @return Number of ticks
      */
-    public int getLeftGearboxTicks(){
+    public int getLeftGearboxTicks() {
         return this.mLeftGearbox.getTicks();
     }
 
@@ -182,12 +201,12 @@ public class DriveTrain extends LoopableSubsystem {
         SmartDashboard.putNumber("DriveTrin Left Gearbox Ticks", getLeftGearboxTicks());
         SmartDashboard.putNumber("DriveTrin Right Gearbox Ticks", getRightGearboxTicks());
     }
-    
+
     /**
      * Use DriveTrain components to load a pre-generated motiont profile
      * 
-     * @param filename Motion profile filename / path
-     * @param swap_paths Should left and right be swapped?
+     * @param filename    Motion profile filename / path
+     * @param swap_paths  Should left and right be swapped?
      * @param invert_gyro Is the gyro backwards?
      * @param invert_path Should this path be loaded in inverse mode?
      * 
@@ -199,12 +218,22 @@ public class DriveTrain extends LoopableSubsystem {
                 invert_gyro, invert_path);
     }
 
+    /**
+     * Get the robot's gyro
+     * 
+     * @return The robot's gyro object
+     */
     public AHRS getGyro() {
         return this.gyro;
     }
 
+    /**
+     * Called by wrappers and the SubsystemLooper.
+     * 
+     * This should reset the DriveTrain so that it was essentially re-constructed
+     */
     public void reset() {
-        // Reset encoders, gyro
+        // Reset gyro
         this.gyro.reset();
 
         // Set all outputs to 0.0
@@ -213,12 +242,22 @@ public class DriveTrain extends LoopableSubsystem {
     }
 
     @Override
+    /**
+     * Called by wrappers and the SubsystemLooper
+     * 
+     * This should be treated like a failsafe.
+     */
     public void stop() {
         this.mLeftGearbox.getMaster().set(0.0);
         this.mRightGearbox.getMaster().set(0.0);
     }
 
     @Override
+    /**
+     * Used by the StatusReporter to keep track of the robot's health. Some
+     * subsystems may use sensor data to feed this (think elevator that passed it's
+     * safety limits)
+     */
     public boolean checkHealth() {
         return false;
     }

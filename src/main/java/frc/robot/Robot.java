@@ -4,6 +4,7 @@ import edu.wpi.first.networktables.NetworkTable;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.CommandGroup;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -19,7 +20,7 @@ import frc.common.utils.RobotLogger;
 import frc.common.utils.RobotLogger.Level;
 import frc.common.network.NetworkTables;
 import frc.common.network.ConnectionMonitor;
-
+import frc.robot.autonomous.AutoChooser;
 import frc.robot.commands.DriveControl;
 
 import frc.robot.subsystems.DriveTrain;
@@ -53,6 +54,10 @@ public class Robot extends TimedRobot {
 
 	/* Commands */
 	public DriveControl mDriveControl;
+
+	/* Auto */
+	public AutoChooser chooser;
+	private CommandGroup mAutoCommand;
 
 	@Override
 	public void robotInit() {
@@ -106,8 +111,11 @@ public class Robot extends TimedRobot {
 		/* Start the SubsystemLooper */
 		logger.log("Setting up the Subsystem Looper", Level.kRobot);
 		mSubsystemLooper.start(Constants.PeriodicTiming.subsystem_looper);
-	}
 
+		/* Create the Autonomous chooser */
+		logger.log("Creating AutoChooser", Level.kRobot);
+		this.chooser = new AutoChooser();
+	}
 
 	@Override
 	public void robotPeriodic() {
@@ -119,11 +127,7 @@ public class Robot extends TimedRobot {
 			mLedring.setWantedState(Ledring.WantedState.kOff);
 		}
 
-		// Run the superstructure's periodic function
-		updateTimestamp();
-
 	}
-
 
 	@Override
 	public void disabledInit() {
@@ -137,7 +141,8 @@ public class Robot extends TimedRobot {
 		// Set robot to coast
 		// This allows for "clutch saves" in games
 		// along with allowing us to easily push our bots around.
-		// This will also force a CAN packet to all talons
+		// This will also force a CAN packet to all talons and may cause a "loop
+		// overrun" error. Ignore it
 		mDriveTrain.setBrakes(false);
 	}
 
@@ -148,6 +153,7 @@ public class Robot extends TimedRobot {
 		/* Run all updaters */
 		updateSmartdashboard();
 		updateTimestamp();
+		mSubsystemLooper.update();
 	}
 
 	@Override
@@ -158,6 +164,10 @@ public class Robot extends TimedRobot {
 
 		// Start recording video on driverstation computer
 		Shuffleboard.startRecording();
+
+		// There is no going back. create the Auto command
+		this.mAutoCommand = chooser.getSelection();
+		this.mAutoCommand.start();
 	}
 
 	@Override
@@ -167,6 +177,7 @@ public class Robot extends TimedRobot {
 		/* Run all updaters */
 		updateSmartdashboard();
 		updateTimestamp();
+		mSubsystemLooper.update();
 	}
 
 	@Override
@@ -193,6 +204,7 @@ public class Robot extends TimedRobot {
 		/* Run all updaters */
 		updateSmartdashboard();
 		updateTimestamp();
+		mSubsystemLooper.update();
 	}
 
 	@Override
@@ -203,11 +215,12 @@ public class Robot extends TimedRobot {
 	 * Asks all Subsystems to push their telemetry data to SmartDashboard
 	 */
 	private void updateSmartdashboard() {
-		mDriveTrain.outputTelemetry();
+		mSubsystemLooper.outputTelemetry();
 	}
 
 	/**
-	 * Asks the FPGA how long it has been powered on, then stores the value in last_timestamp
+	 * Asks the FPGA how long it has been powered on, then stores the value in
+	 * last_timestamp
 	 */
 	private void updateTimestamp() {
 		this.last_timestamp = Timer.getFPGATimestamp();
@@ -220,4 +233,3 @@ public class Robot extends TimedRobot {
 		System.out.println("Current time: " + this.last_timestamp);
 	}
 }
-

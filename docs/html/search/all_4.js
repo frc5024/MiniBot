@@ -11,7 +11,6 @@ var searchData=
   ['disabledinit',['disabledInit',['../classfrc_1_1robot_1_1Robot.html#ac19810fbf26efd4cd47cbd7568b4ad2a',1,'frc::robot::Robot']]],
   ['disabledperiodic',['disabledPeriodic',['../classfrc_1_1robot_1_1Robot.html#a2bc1b0ce100e4783ba3d549e6ac07ae3',1,'frc::robot::Robot']]],
   ['display',['display',['../classfrc_1_1common_1_1PeriodicLogger.html#a3a9fb64a290faedd9314106639d1f060',1,'frc::common::PeriodicLogger']]],
-  ['distanceto',['distanceTo',['../classfrc_1_1common_1_1utils_1_1Point.html#af6c9e9df2fc4b1900d39c24a63d3b9a0',1,'frc.common.utils.Point.distanceTo(Point p)'],['../classfrc_1_1common_1_1utils_1_1Point.html#a2b4782a339a688efcb6a9daff72f1933',1,'frc.common.utils.Point.distanceTo(Point p, double scale)']]],
   ['doonce',['doOnce',['../classfrc_1_1common_1_1wrappers_1_1OneShotCommand.html#ac1d3621c8b452e28b5fa3f674d0bc1e2',1,'frc.common.wrappers.OneShotCommand.doOnce()'],['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Hold.html#ac3bc34d016eed6b58a582fe570bb6b70',1,'frc.robot.autonomous.actions.Hold.doOnce()'],['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1SetBrakes.html#a62f1a6575c03029e2a081127eb2f189e',1,'frc.robot.autonomous.actions.SetBrakes.doOnce()']]],
   ['drivecontrol',['DriveControl',['../classfrc_1_1robot_1_1commands_1_1DriveControl.html',1,'frc.robot.commands.DriveControl'],['../classfrc_1_1robot_1_1commands_1_1DriveControl.html#a9b98a9fe0cb24b4d789566f9bbacb02f',1,'frc.robot.commands.DriveControl.DriveControl()']]],
   ['drivecontrol_2ejava',['DriveControl.java',['../DriveControl_8java.html',1,'']]],

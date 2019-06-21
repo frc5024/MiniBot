@@ -14,8 +14,9 @@ var searchData=
   ['cap',['cap',['../namespacevision.html#a146ff5d55f5b9199922944bde0e94337',1,'vision']]],
   ['checkball',['checkBall',['../namespacevision.html#a8fbc7124b25b8089cd86a2442207159f',1,'vision']]],
   ['checkcontours',['checkContours',['../namespacevision.html#ae9b3e71a0daadee09469432a4870e5c0',1,'vision']]],
-  ['checkhealth',['checkHealth',['../classfrc_1_1common_1_1loopables_1_1LoopableSubsystem.html#aba969f66568d49c2746354c5c570d987',1,'frc.common.loopables.LoopableSubsystem.checkHealth()'],['../classfrc_1_1common_1_1statebase_1_1Subsystem.html#a7aced63c6341f580ac00cafe8956189a',1,'frc.common.statebase.Subsystem.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a619b1a1be584e2796d0dfe4df0d5daad',1,'frc.robot.subsystems.DriveTrain.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#aa82275fb05c52689f18f294ed37183a1',1,'frc.robot.subsystems.Ledring.checkHealth()']]],
+  ['checkhealth',['checkHealth',['../classfrc_1_1common_1_1loopables_1_1LoopableSubsystem.html#aba969f66568d49c2746354c5c570d987',1,'frc.common.loopables.LoopableSubsystem.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a619b1a1be584e2796d0dfe4df0d5daad',1,'frc.robot.subsystems.DriveTrain.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#aa82275fb05c52689f18f294ed37183a1',1,'frc.robot.subsystems.Ledring.checkHealth()']]],
   ['cheesydrive',['cheesyDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#addf5a73d7aa474591ad287f88cdabfcd',1,'frc::robot::subsystems::DriveTrain']]],
+  ['chooser',['chooser',['../classfrc_1_1robot_1_1Robot.html#ae75847daef1789cd22e7b8405e356ba2',1,'frc::robot::Robot']]],
   ['config',['config',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a82bcb25c5aac2cb1ec08089f837606a5',1,'frc::common::wrappers::EncoderWrapper']]],
   ['configdefault',['configDefault',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a64c5bf345599f902c3a830976ba57cea',1,'frc::common::wrappers::EncoderWrapper']]],
   ['configfile',['configFile',['../namespacevision.html#aef2bea527c3411b9d55d81dbe71f8dad',1,'vision']]],
@@ -30,8 +31,6 @@ var searchData=
   ['cubic',['cubic',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#a481d457ce3db793c61def798deb69eb8',1,'frc::common::control::CubicDeadband']]],
   ['cubicdeadband',['CubicDeadband',['../classfrc_1_1common_1_1control_1_1CubicDeadband.html',1,'frc.common.control.CubicDeadband'],['../classfrc_1_1common_1_1control_1_1CubicDeadband.html#aa9b8dd82f390ff88cd1f790f3509f1ad',1,'frc.common.control.CubicDeadband.CubicDeadband()']]],
   ['cubicdeadband_2ejava',['CubicDeadband.java',['../CubicDeadband_8java.html',1,'']]],
-  ['current_5fstate',['current_state',['../classfrc_1_1common_1_1statebase_1_1StateMachine.html#aa2cea681621a2f4a525d0a2d8702e8de',1,'frc::common::statebase::StateMachine']]],
-  ['current_5fwant',['current_want',['../classfrc_1_1common_1_1statebase_1_1StateMachine.html#a70d0c8212e5a2292f9db713a247ce0b0',1,'frc::common::statebase::StateMachine']]],
   ['currenttimeout',['currentTimeout',['../classfrc_1_1robot_1_1Constants_1_1DriveTrain.html#aab1c9de9556f5348ea7bde7d8a62e691',1,'frc::robot::Constants::DriveTrain']]],
   ['curvaturedrive',['curvatureDrive',['../classfrc_1_1common_1_1drive_1_1DifferentialDrive.html#a9c89fc56693eedbe2c035f96955b72e6',1,'frc::common::drive::DifferentialDrive']]]
 ];
