@@ -39,6 +39,6 @@ var searchData=
   ['looper',['Looper',['../classfrc_1_1common_1_1loopers_1_1Looper.html',1,'frc::common::loopers']]],
   ['looper',['Looper',['../classfrc_1_1common_1_1loopers_1_1Looper.html#ab402eb28cc13e3a2e97219df52a45223',1,'frc::common::loopers::Looper']]],
   ['looper_2ejava',['Looper.java',['../Looper_8java.html',1,'']]],
-  ['lower_5fgreen',['lower_green',['../namespacevision.html#a2cff2e4f1caf268b7a56b9960930161a',1,'vision']]],
-  ['lower_5forange',['lower_orange',['../namespacevision.html#a8454ab01b5c782ee8f88431e1a62ea0b',1,'vision']]]
+  ['lower_5fgreen',['lower_green',['../namespacevision.html#ada3234b1469b97c935b87fa2cab839a5',1,'vision']]],
+  ['lower_5forange',['lower_orange',['../namespacevision.html#ae533118e875dee27a7a5659792f4d507',1,'vision']]]
 ];

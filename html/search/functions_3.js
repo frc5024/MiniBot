@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['calculatedistance',['calculateDistance',['../namespacevision.html#a914b5b2a937ea3ca9438961c5548feff',1,'vision']]],
-  ['calculatepitch',['calculatePitch',['../namespacevision.html#a9f6c2f5613d360e5b754e0fafd60ee20',1,'vision']]],
-  ['calculateyaw',['calculateYaw',['../namespacevision.html#aa72b3813cd659059b81e5518de50fb19',1,'vision']]],
+  ['calculatedistance',['calculateDistance',['../namespacevision.html#a7991ffd418cc849614fc2aadb7dc2110',1,'vision']]],
+  ['calculatepitch',['calculatePitch',['../namespacevision.html#a26ed0788525dc2c9c07d2e2f7e3a5c34',1,'vision']]],
+  ['calculateyaw',['calculateYaw',['../namespacevision.html#a857e5661a7742ed753880870b4eca57d',1,'vision']]],
   ['camera',['Camera',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a2a09a73f127eb4fb45df43b618c855c3',1,'frc.common.wrappers.Camera.Camera(String name, int http_port)'],['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a817fcc4219ed99bc6de2d058901db895',1,'frc.common.wrappers.Camera.Camera(String name, int http_port, int usb_port)']]],
-  ['checkball',['checkBall',['../namespacevision.html#a90838611c8922214bf364c3a13d05201',1,'vision']]],
-  ['checkcontours',['checkContours',['../namespacevision.html#a68e3491dba646266e6f95b6674735f79',1,'vision']]],
+  ['checkball',['checkBall',['../namespacevision.html#a8fbc7124b25b8089cd86a2442207159f',1,'vision']]],
+  ['checkcontours',['checkContours',['../namespacevision.html#ae9b3e71a0daadee09469432a4870e5c0',1,'vision']]],
   ['checkhealth',['checkHealth',['../classfrc_1_1common_1_1loopables_1_1LoopableSubsystem.html#aba969f66568d49c2746354c5c570d987',1,'frc.common.loopables.LoopableSubsystem.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#a619b1a1be584e2796d0dfe4df0d5daad',1,'frc.robot.subsystems.DriveTrain.checkHealth()'],['../classfrc_1_1robot_1_1subsystems_1_1Ledring.html#aa82275fb05c52689f18f294ed37183a1',1,'frc.robot.subsystems.Ledring.checkHealth()']]],
   ['cheesydrive',['cheesyDrive',['../classfrc_1_1robot_1_1subsystems_1_1DriveTrain.html#addf5a73d7aa474591ad287f88cdabfcd',1,'frc::robot::subsystems::DriveTrain']]],
   ['config',['config',['../classfrc_1_1common_1_1wrappers_1_1EncoderWrapper.html#a82bcb25c5aac2cb1ec08089f837606a5',1,'frc::common::wrappers::EncoderWrapper']]],

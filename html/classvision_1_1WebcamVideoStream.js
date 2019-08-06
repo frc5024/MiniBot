@@ -1,11 +1,11 @@
 var classvision_1_1WebcamVideoStream =
 [
-    [ "__init__", "classvision_1_1WebcamVideoStream.html#a3ef24204bcc7012b63db1c52d13cbf51", null ],
-    [ "getError", "classvision_1_1WebcamVideoStream.html#ab1763c7fcc6b6171692a52c42808af8f", null ],
-    [ "read", "classvision_1_1WebcamVideoStream.html#a04ef7ed07efde83ba9f26468cba8ce0e", null ],
-    [ "start", "classvision_1_1WebcamVideoStream.html#a6116362dab932857a71525da55f3b66a", null ],
-    [ "stop", "classvision_1_1WebcamVideoStream.html#a3c67568966c7a6d61ab33881085a5202", null ],
-    [ "update", "classvision_1_1WebcamVideoStream.html#aa3624c5dc4ace98f79d051dceab3eabb", null ],
+    [ "__init__", "classvision_1_1WebcamVideoStream.html#ab2faef9e67965c8beb115da8d22215d7", null ],
+    [ "getError", "classvision_1_1WebcamVideoStream.html#a8892706a3acff9345c4ed2080a0c75a6", null ],
+    [ "read", "classvision_1_1WebcamVideoStream.html#ac3afa4b5183ec2617bba03dfb90cc647", null ],
+    [ "start", "classvision_1_1WebcamVideoStream.html#a295a54e4a88648f2bc3c814edb3c1779", null ],
+    [ "stop", "classvision_1_1WebcamVideoStream.html#ae18f46fd3fe6ac066d0fe011ef53e2a2", null ],
+    [ "update", "classvision_1_1WebcamVideoStream.html#a9c79128739ecf7fc1846d15e20910902", null ],
     [ "autoExpose", "classvision_1_1WebcamVideoStream.html#a3d5895ab9a90795cb633c86ff4526c05", null ],
     [ "img", "classvision_1_1WebcamVideoStream.html#a12f21c978e7fa12ab052c60c9838f98a", null ],
     [ "name", "classvision_1_1WebcamVideoStream.html#adbe3db60c5420bf134353827a954173e", null ],

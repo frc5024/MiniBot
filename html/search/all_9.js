@@ -4,7 +4,7 @@ var searchData=
   ['github',['github',['../namespaceio_1_1github.html',1,'io']]],
   ['image_5fheight',['image_height',['../namespacevision.html#aacf00728bd17c3c9cdb13d86138b6c01',1,'vision']]],
   ['image_5fwidth',['image_width',['../namespacevision.html#acd2eced70797b09275172b0fcad0de9b',1,'vision']]],
-  ['img',['img',['../classvision_1_1WebcamVideoStream.html#a12f21c978e7fa12ab052c60c9838f98a',1,'vision.WebcamVideoStream.img()'],['../namespacevision.html#a4d75f26096249b7b9664bdb6b1f0e791',1,'vision.img()']]],
+  ['img',['img',['../classvision_1_1WebcamVideoStream.html#a12f21c978e7fa12ab052c60c9838f98a',1,'vision.WebcamVideoStream.img()'],['../namespacevision.html#acba3636ea29c39a5aeaded4731bc644e',1,'vision.img()']]],
   ['info',['info',['../classfrc_1_1common_1_1PeriodicLogger.html#a5683fbcbff6a71f254d3a34e9cc15e8e',1,'frc::common::PeriodicLogger']]],
   ['initialize',['initialize',['../classfrc_1_1robot_1_1autonomous_1_1actions_1_1Follow.html#a79181cb6c550c3a5a07e1b34831ac9f9',1,'frc.robot.autonomous.actions.Follow.initialize()'],['../classfrc_1_1robot_1_1commands_1_1DriveControl.html#a12973fb2b2400ddb3adece9d40e05df4',1,'frc.robot.commands.DriveControl.initialize()']]],
   ['initnt',['initNT',['../classfrc_1_1common_1_1wrappers_1_1Camera.html#a061dcd7f65ddff2c44844551703ee766',1,'frc::common::wrappers::Camera']]],

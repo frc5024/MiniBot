@@ -5,7 +5,7 @@ var searchData=
   ['autochooser',['AutoChooser',['../classfrc_1_1robot_1_1autonomous_1_1AutoChooser.html#a6f1febef2d9e575a3a1bfe4574bb5a3d',1,'frc::robot::autonomous::AutoChooser']]],
   ['autochooser',['AutoChooser',['../classfrc_1_1robot_1_1autonomous_1_1AutoChooser.html',1,'frc::robot::autonomous']]],
   ['autochooser_2ejava',['AutoChooser.java',['../AutoChooser_8java.html',1,'']]],
-  ['autoexpose',['autoExpose',['../classvision_1_1WebcamVideoStream.html#a3d5895ab9a90795cb633c86ff4526c05',1,'vision::WebcamVideoStream']]],
+  ['autoexpose',['autoExpose',['../classvision_1_1WebcamVideoStream.html#a3d5895ab9a90795cb633c86ff4526c05',1,'vision.WebcamVideoStream.autoExpose()'],['../namespacevision.html#ab3cac3cb934d1158a87a78cd547708a6',1,'vision.autoExpose()']]],
   ['autonomousinit',['autonomousInit',['../classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173',1,'frc::robot::Robot']]],
   ['autonomousperiodic',['autonomousPeriodic',['../classfrc_1_1robot_1_1Robot.html#a7dcfe7d0d65d1051eb095b8eb1aebd72',1,'frc::robot::Robot']]]
 ];
